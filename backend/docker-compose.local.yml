@@ -1,0 +1,42 @@
+# Overrides the Neon/Upstash URLs with local containers, for offline work and CI.
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: magnitude
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d magnitude"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  migrate:
+    environment: &local_urls
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/magnitude
+      DIRECT_DATABASE_URL: postgresql://postgres:postgres@postgres:5432/magnitude
+      REDIS_URL: redis://redis:6379/0
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  rating:
+    environment:
+      <<: *local_urls
+      PROBLEM_SERVICE_URL: http://problem:8001
+    depends_on:
+      redis:
+        condition: service_healthy
+
+volumes:
+  pgdata:

@@ -1,0 +1,39 @@
+# Runs the two services against Neon (Postgres) and Upstash (Redis), configured in backend/.env.
+#   docker compose up --build
+# Fully offline instead (local Postgres + Redis containers):
+#   docker compose -f docker-compose.yml -f docker-compose.local.yml up --build
+name: magnitude
+
+services:
+  problem:
+    build:
+      context: .
+      dockerfile: services/problem/Dockerfile
+    environment:
+      INTERNAL_API_KEY: ${INTERNAL_API_KEY:?set INTERNAL_API_KEY in backend/.env}
+    expose: ["8001"]
+    restart: unless-stopped
+
+  # One-shot: applies Alembic migrations, then exits. Uses DIRECT_DATABASE_URL (unpooled).
+  migrate:
+    build:
+      context: .
+      dockerfile: services/rating/Dockerfile
+    command: ["alembic", "upgrade", "head"]
+    env_file: .env
+    restart: "no"
+
+  rating:
+    build:
+      context: .
+      dockerfile: services/rating/Dockerfile
+    env_file: .env
+    environment:
+      PROBLEM_SERVICE_URL: http://problem:8001
+    ports: ["8000:8000"]
+    depends_on:
+      problem:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    restart: unless-stopped

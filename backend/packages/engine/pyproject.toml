@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "magnitude-engine"
+version = "0.1.0"
+description = "Pure game logic for Magnitude (Elo, problem generation, daily set). Mirrors lib/engine in the Next.js app."
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.setuptools]
+packages = ["magnitude_engine"]

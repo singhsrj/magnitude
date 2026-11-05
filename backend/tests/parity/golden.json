@@ -1,0 +1,9520 @@
+{
+ "rng": [
+  {
+   "seed": 0,
+   "values": [
+    0.26642920868471265,
+    0.0003297457005828619,
+    0.2232720274478197,
+    0.1462021479383111,
+    0.46732782293111086,
+    0.5450490827206522,
+    0.6152513844426721,
+    0.6489853798411787,
+    0.45600721263326705,
+    0.581218967679888,
+    0.24625753005966544,
+    0.09785169479437172,
+    0.9034309543203562,
+    0.40820372267626226,
+    0.7202955442480743,
+    0.6599067240022123,
+    0.8058585098478943,
+    0.6261914535425603,
+    0.5696913106366992,
+    0.12123633874580264,
+    0.24193100933916867,
+    0.8153759187553078,
+    0.323521607555449,
+    0.08783002896234393
+   ]
+  },
+  {
+   "seed": 1,
+   "values": [
+    0.6270739405881613,
+    0.002735721180215478,
+    0.5274470399599522,
+    0.9810509674716741,
+    0.9683778982143849,
+    0.281103502959013,
+    0.6128388606011868,
+    0.7207431411370635,
+    0.425796952098608,
+    0.9948229456786066,
+    0.45527112716808915,
+    0.48878831742331386,
+    0.13893358339555562,
+    0.40374476509168744,
+    0.24752389639616013,
+    0.15449313493445516,
+    0.48914389545097947,
+    0.0673698834143579,
+    0.3946193160954863,
+    0.7671080259606242,
+    0.28586167353205383,
+    0.19087357842363417,
+    0.042729709995910525,
+    0.42738195578567684
+   ]
+  },
+  {
+   "seed": 42,
+   "values": [
+    0.6011037519201636,
+    0.44829055899754167,
+    0.8524657934904099,
+    0.6697340414393693,
+    0.17481389874592423,
+    0.5265925421845168,
+    0.2732279943302274,
+    0.6247446539346129,
+    0.8654746483080089,
+    0.4723170551005751,
+    0.24992373422719538,
+    0.8820588334929198,
+    0.7457375649828464,
+    0.3070015134289861,
+    0.19725383794866502,
+    0.5007294877432287,
+    0.6866120179183781,
+    0.6106208984274417,
+    0.003842951962724328,
+    0.47078192373737693,
+    0.8373374259099364,
+    0.05120926629751921,
+    0.5923239905387163,
+    0.03153795562684536
+   ]
+  },
+  {
+   "seed": 99,
+   "values": [
+    0.2604658124037087,
+    0.8048227655235678,
+    0.5408715349622071,
+    0.6902434257790446,
+    0.001138708321377635,
+    0.8175430877599865,
+    0.011350846383720636,
+    0.10543650342151523,
+    0.3965785033069551,
+    0.6709415460936725,
+    0.36619195039384067,
+    0.06438777828589082,
+    0.3388576880097389,
+    0.7264174856245518,
+    0.2530496595427394,
+    0.18753175903111696,
+    0.4581664816942066,
+    0.7659944982733577,
+    0.49177114968188107,
+    0.2729956773109734,
+    0.5568143366836011,
+    0.7622525214683264,
+    0.3808714922051877,
+    0.7734983013942838
+   ]
+  },
+  {
+   "seed": 123456789,
+   "values": [
+    0.2577907438389957,
+    0.9707721115555614,
+    0.7853280142880976,
+    0.20616457983851433,
+    0.30307188746519387,
+    0.7470660470426083,
+    0.7787336520850658,
+    0.2845096290111542,
+    0.016536934999749064,
+    0.1614646923262626,
+    0.36590091581456363,
+    0.43085755431093276,
+    0.567488876869902,
+    0.17708068271167576,
+    0.49461501417681575,
+    0.8179059789981693,
+    0.5954374654684216,
+    0.42029806738719344,
+    0.7835729881189764,
+    0.8380719097331166,
+    0.05283161113038659,
+    0.3931114573497325,
+    0.7480319754686207,
+    0.42485382314771414
+   ]
+  },
+  {
+   "seed": 2147483648,
+   "values": [
+    0.8205775609239936,
+    0.4481089550536126,
+    0.7836112855002284,
+    0.5120457962621003,
+    0.8388098266441375,
+    0.4205148529727012,
+    0.8944806265644729,
+    0.9326926763169467,
+    0.6747888037934899,
+    0.4173516221344471,
+    0.7520525439176708,
+    0.5010397543665022,
+    0.3403281669598073,
+    0.9581121851224452,
+    0.13500668411143124,
+    0.6329791664611548,
+    0.4525297924410552,
+    0.9778232092503458,
+    0.8422936180140823,
+    0.22736566024832428,
+    0.2501462288200855,
+    0.5457336774561554,
+    0.13329570461064577,
+    0.9689932239707559
+   ]
+  },
+  {
+   "seed": 4294967295,
+   "values": [
+    0.8964226141106337,
+    0.189478256739676,
+    0.7156526781618595,
+    0.9440599093213677,
+    0.8452364315744489,
+    0.5391399988438934,
+    0.6804977387655526,
+    0.4755720964167267,
+    0.13585773925296962,
+    0.9884445976931602,
+    0.8714674517977983,
+    0.18934845877811313,
+    0.3436866346746683,
+    0.7386848733294755,
+    0.4759919897187501,
+    0.7567116804420948,
+    0.9159235202241689,
+    0.10207696096040308,
+    0.1436101261060685,
+    0.3921705954708159,
+    0.9202409950084984,
+    0.9238722093869001,
+    0.7916392679326236,
+    0.8520552832633257
+   ]
+  }
+ ],
+ "problems": [
+  {
+   "skill": "multiplication",
+   "seed": 7919,
+   "target": 900,
+   "problem": {
+    "id": "multiplication-1fnyz0",
+    "skill": "multiplication",
+    "left": {
+     "text": "9 × 7",
+     "value": 63
+    },
+    "right": {
+     "text": "8 × 3",
+     "value": 24
+    },
+    "rating": 894,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 15838,
+   "target": 1000,
+   "problem": {
+    "id": "multiplication-acijnx",
+    "skill": "multiplication",
+    "left": {
+     "text": "17 × 5",
+     "value": 85
+    },
+    "right": {
+     "text": "16 × 4",
+     "value": 64
+    },
+    "rating": 992,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 23757,
+   "target": 1100,
+   "problem": {
+    "id": "multiplication-snrh",
+    "skill": "multiplication",
+    "left": {
+     "text": "25 × 18",
+     "value": 450
+    },
+    "right": {
+     "text": "25 × 28",
+     "value": 700
+    },
+    "rating": 1088,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 31676,
+   "target": 1200,
+   "problem": {
+    "id": "multiplication-6lu02g",
+    "skill": "multiplication",
+    "left": {
+     "text": "9 × 9",
+     "value": 81
+    },
+    "right": {
+     "text": "8 × 10",
+     "value": 80
+    },
+    "rating": 1249,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 39595,
+   "target": 1300,
+   "problem": {
+    "id": "multiplication-8ivmhu",
+    "skill": "multiplication",
+    "left": {
+     "text": "14 × 57",
+     "value": 798
+    },
+    "right": {
+     "text": "14 × 59",
+     "value": 826
+    },
+    "rating": 1302,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 47514,
+   "target": 1400,
+   "problem": {
+    "id": "multiplication-38llg8",
+    "skill": "multiplication",
+    "left": {
+     "text": "50 × 57",
+     "value": 2850
+    },
+    "right": {
+     "text": "48 × 58",
+     "value": 2784
+    },
+    "rating": 1411,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 55433,
+   "target": 1500,
+   "problem": {
+    "id": "multiplication-726wni",
+    "skill": "multiplication",
+    "left": {
+     "text": "463 × 77",
+     "value": 35651
+    },
+    "right": {
+     "text": "506 × 74",
+     "value": 37444
+    },
+    "rating": 1504,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 63352,
+   "target": 1600,
+   "problem": {
+    "id": "multiplication-cek6bq",
+    "skill": "multiplication",
+    "left": {
+     "text": "244 × 82",
+     "value": 20008
+    },
+    "right": {
+     "text": "266 × 76",
+     "value": 20216
+    },
+    "rating": 1600,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 71271,
+   "target": 1700,
+   "problem": {
+    "id": "multiplication-6chb05",
+    "skill": "multiplication",
+    "left": {
+     "text": "502 × 169",
+     "value": 84838
+    },
+    "right": {
+     "text": "486 × 173",
+     "value": 84078
+    },
+    "rating": 1700,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 79190,
+   "target": 1800,
+   "problem": {
+    "id": "multiplication-fzhon8",
+    "skill": "multiplication",
+    "left": {
+     "text": "220 × 230",
+     "value": 50600
+    },
+    "right": {
+     "text": "238 × 213",
+     "value": 50694
+    },
+    "rating": 1805,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 87109,
+   "target": 1900,
+   "problem": {
+    "id": "multiplication-g4z5e9",
+    "skill": "multiplication",
+    "left": {
+     "text": "273 × 214",
+     "value": 58422
+    },
+    "right": {
+     "text": "232 × 252",
+     "value": 58464
+    },
+    "rating": 1896,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 95028,
+   "target": 800,
+   "problem": {
+    "id": "multiplication-418hox",
+    "skill": "multiplication",
+    "left": {
+     "text": "6 × 7",
+     "value": 42
+    },
+    "right": {
+     "text": "5 × 3",
+     "value": 15
+    },
+    "rating": 866,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 102947,
+   "target": 900,
+   "problem": {
+    "id": "multiplication-dv96wr",
+    "skill": "multiplication",
+    "left": {
+     "text": "9 × 3",
+     "value": 27
+    },
+    "right": {
+     "text": "8 × 9",
+     "value": 72
+    },
+    "rating": 901,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 110866,
+   "target": 1000,
+   "problem": {
+    "id": "multiplication-3mp68",
+    "skill": "multiplication",
+    "left": {
+     "text": "12 × 5",
+     "value": 60
+    },
+    "right": {
+     "text": "10 × 5",
+     "value": 50
+    },
+    "rating": 1005,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 118785,
+   "target": 1100,
+   "problem": {
+    "id": "multiplication-774wrd",
+    "skill": "multiplication",
+    "left": {
+     "text": "5 × 5",
+     "value": 25
+    },
+    "right": {
+     "text": "3 × 8",
+     "value": 24
+    },
+    "rating": 1075,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 126704,
+   "target": 1200,
+   "problem": {
+    "id": "multiplication-4bqhh1",
+    "skill": "multiplication",
+    "left": {
+     "text": "61 × 12",
+     "value": 732
+    },
+    "right": {
+     "text": "58 × 14",
+     "value": 812
+    },
+    "rating": 1209,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 134623,
+   "target": 1300,
+   "problem": {
+    "id": "multiplication-f8flqx",
+    "skill": "multiplication",
+    "left": {
+     "text": "93 × 28",
+     "value": 2604
+    },
+    "right": {
+     "text": "90 × 27",
+     "value": 2430
+    },
+    "rating": 1313,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 142542,
+   "target": 1400,
+   "problem": {
+    "id": "multiplication-enm5g7",
+    "skill": "multiplication",
+    "left": {
+     "text": "323 × 12",
+     "value": 3876
+    },
+    "right": {
+     "text": "340 × 11",
+     "value": 3740
+    },
+    "rating": 1393,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 150461,
+   "target": 1500,
+   "problem": {
+    "id": "multiplication-9axghy",
+    "skill": "multiplication",
+    "left": {
+     "text": "485 × 62",
+     "value": 30070
+    },
+    "right": {
+     "text": "458 × 69",
+     "value": 31602
+    },
+    "rating": 1493,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 158380,
+   "target": 1600,
+   "problem": {
+    "id": "multiplication-5ei56a",
+    "skill": "multiplication",
+    "left": {
+     "text": "23 × 35",
+     "value": 805
+    },
+    "right": {
+     "text": "26 × 31",
+     "value": 806
+    },
+    "rating": 1588,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 166299,
+   "target": 1700,
+   "problem": {
+    "id": "multiplication-e40w3v",
+    "skill": "multiplication",
+    "left": {
+     "text": "44 × 71",
+     "value": 3124
+    },
+    "right": {
+     "text": "40 × 78",
+     "value": 3120
+    },
+    "rating": 1668,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 174218,
+   "target": 1800,
+   "problem": {
+    "id": "multiplication-g16in7",
+    "skill": "multiplication",
+    "left": {
+     "text": "446 × 325",
+     "value": 144950
+    },
+    "right": {
+     "text": "496 × 291",
+     "value": 144336
+    },
+    "rating": 1797,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 182137,
+   "target": 1900,
+   "problem": {
+    "id": "multiplication-15byq0",
+    "skill": "multiplication",
+    "left": {
+     "text": "302 × 238",
+     "value": 71876
+    },
+    "right": {
+     "text": "315 × 228",
+     "value": 71820
+    },
+    "rating": 1902,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 190056,
+   "target": 800,
+   "problem": {
+    "id": "multiplication-8cfalb",
+    "skill": "multiplication",
+    "left": {
+     "text": "5 × 7",
+     "value": 35
+    },
+    "right": {
+     "text": "6 × 3",
+     "value": 18
+    },
+    "rating": 879,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 197975,
+   "target": 900,
+   "problem": {
+    "id": "multiplication-8lbbyb",
+    "skill": "multiplication",
+    "left": {
+     "text": "14 × 6",
+     "value": 84
+    },
+    "right": {
+     "text": "14 × 3",
+     "value": 42
+    },
+    "rating": 930,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 205894,
+   "target": 1000,
+   "problem": {
+    "id": "multiplication-7bezdb",
+    "skill": "multiplication",
+    "left": {
+     "text": "23 × 7",
+     "value": 161
+    },
+    "right": {
+     "text": "21 × 14",
+     "value": 294
+    },
+    "rating": 1014,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 213813,
+   "target": 1100,
+   "problem": {
+    "id": "multiplication-97zp5g",
+    "skill": "multiplication",
+    "left": {
+     "text": "59 × 11",
+     "value": 649
+    },
+    "right": {
+     "text": "55 × 21",
+     "value": 1155
+    },
+    "rating": 1100,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 221732,
+   "target": 1200,
+   "problem": {
+    "id": "multiplication-a92ezk",
+    "skill": "multiplication",
+    "left": {
+     "text": "6 × 9",
+     "value": 54
+    },
+    "right": {
+     "text": "5 × 11",
+     "value": 55
+    },
+    "rating": 1192,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 229651,
+   "target": 1300,
+   "problem": {
+    "id": "multiplication-553d50",
+    "skill": "multiplication",
+    "left": {
+     "text": "64 × 14",
+     "value": 896
+    },
+    "right": {
+     "text": "72 × 12",
+     "value": 864
+    },
+    "rating": 1303,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 237570,
+   "target": 1400,
+   "problem": {
+    "id": "multiplication-c1qvf4",
+    "skill": "multiplication",
+    "left": {
+     "text": "23 × 84",
+     "value": 1932
+    },
+    "right": {
+     "text": "21 × 90",
+     "value": 1890
+    },
+    "rating": 1393,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 245489,
+   "target": 1500,
+   "problem": {
+    "id": "multiplication-cv9e4f",
+    "skill": "multiplication",
+    "left": {
+     "text": "291 × 91",
+     "value": 26481
+    },
+    "right": {
+     "text": "302 × 84",
+     "value": 25368
+    },
+    "rating": 1494,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 253408,
+   "target": 1600,
+   "problem": {
+    "id": "multiplication-6w6gwm",
+    "skill": "multiplication",
+    "left": {
+     "text": "391 × 168",
+     "value": 65688
+    },
+    "right": {
+     "text": "370 × 183",
+     "value": 67710
+    },
+    "rating": 1581,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 261327,
+   "target": 1700,
+   "problem": {
+    "id": "multiplication-ckwfii",
+    "skill": "multiplication",
+    "left": {
+     "text": "129 × 93",
+     "value": 11997
+    },
+    "right": {
+     "text": "133 × 90",
+     "value": 11970
+    },
+    "rating": 1701,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 269246,
+   "target": 1800,
+   "problem": {
+    "id": "multiplication-fa47lk",
+    "skill": "multiplication",
+    "left": {
+     "text": "503 × 62",
+     "value": 31186
+    },
+    "right": {
+     "text": "445 × 70",
+     "value": 31150
+    },
+    "rating": 1817,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 277165,
+   "target": 1900,
+   "problem": {
+    "id": "multiplication-esnum",
+    "skill": "multiplication",
+    "left": {
+     "text": "966 × 198",
+     "value": 191268
+    },
+    "right": {
+     "text": "979 × 195",
+     "value": 190905
+    },
+    "rating": 1884,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 285084,
+   "target": 800,
+   "problem": {
+    "id": "multiplication-b8wh7j",
+    "skill": "multiplication",
+    "left": {
+     "text": "7 × 4",
+     "value": 28
+    },
+    "right": {
+     "text": "5 × 3",
+     "value": 15
+    },
+    "rating": 869,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 293003,
+   "target": 900,
+   "problem": {
+    "id": "multiplication-6tib3a",
+    "skill": "multiplication",
+    "left": {
+     "text": "13 × 6",
+     "value": 78
+    },
+    "right": {
+     "text": "13 × 4",
+     "value": 52
+    },
+    "rating": 960,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 300922,
+   "target": 1000,
+   "problem": {
+    "id": "multiplication-15k6r",
+    "skill": "multiplication",
+    "left": {
+     "text": "11 × 10",
+     "value": 110
+    },
+    "right": {
+     "text": "10 × 8",
+     "value": 80
+    },
+    "rating": 999,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 308841,
+   "target": 1100,
+   "problem": {
+    "id": "multiplication-b14k2l",
+    "skill": "multiplication",
+    "left": {
+     "text": "17 × 7",
+     "value": 119
+    },
+    "right": {
+     "text": "15 × 9",
+     "value": 135
+    },
+    "rating": 1083,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 316760,
+   "target": 1200,
+   "problem": {
+    "id": "multiplication-2a2qgl",
+    "skill": "multiplication",
+    "left": {
+     "text": "14 × 9",
+     "value": 126
+    },
+    "right": {
+     "text": "13 × 10",
+     "value": 130
+    },
+    "rating": 1198,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 324679,
+   "target": 1300,
+   "problem": {
+    "id": "multiplication-6jtj65",
+    "skill": "multiplication",
+    "left": {
+     "text": "175 × 22",
+     "value": 3850
+    },
+    "right": {
+     "text": "196 × 22",
+     "value": 4312
+    },
+    "rating": 1303,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 332598,
+   "target": 1400,
+   "problem": {
+    "id": "multiplication-b3qobe",
+    "skill": "multiplication",
+    "left": {
+     "text": "257 × 29",
+     "value": 7453
+    },
+    "right": {
+     "text": "254 × 31",
+     "value": 7874
+    },
+    "rating": 1400,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 340517,
+   "target": 1500,
+   "problem": {
+    "id": "multiplication-d16tay",
+    "skill": "multiplication",
+    "left": {
+     "text": "670 × 102",
+     "value": 68340
+    },
+    "right": {
+     "text": "770 × 96",
+     "value": 73920
+    },
+    "rating": 1506,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 348436,
+   "target": 1600,
+   "problem": {
+    "id": "multiplication-1bpawk",
+    "skill": "multiplication",
+    "left": {
+     "text": "290 × 207",
+     "value": 60030
+    },
+    "right": {
+     "text": "269 × 218",
+     "value": 58642
+    },
+    "rating": 1596,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 356355,
+   "target": 1700,
+   "problem": {
+    "id": "multiplication-5ohe9i",
+    "skill": "multiplication",
+    "left": {
+     "text": "221 × 59",
+     "value": 13039
+    },
+    "right": {
+     "text": "201 × 65",
+     "value": 13065
+    },
+    "rating": 1716,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 364274,
+   "target": 1800,
+   "problem": {
+    "id": "multiplication-6rl82r",
+    "skill": "multiplication",
+    "left": {
+     "text": "739 × 249",
+     "value": 184011
+    },
+    "right": {
+     "text": "729 × 251",
+     "value": 182979
+    },
+    "rating": 1787,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 372193,
+   "target": 1900,
+   "problem": {
+    "id": "multiplication-8ic24b",
+    "skill": "multiplication",
+    "left": {
+     "text": "534 × 183",
+     "value": 97722
+    },
+    "right": {
+     "text": "558 × 175",
+     "value": 97650
+    },
+    "rating": 1925,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 380112,
+   "target": 800,
+   "problem": {
+    "id": "multiplication-bbvnea",
+    "skill": "multiplication",
+    "left": {
+     "text": "10 × 4",
+     "value": 40
+    },
+    "right": {
+     "text": "9 × 3",
+     "value": 27
+    },
+    "rating": 922,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 388031,
+   "target": 900,
+   "problem": {
+    "id": "multiplication-7udnvn",
+    "skill": "multiplication",
+    "left": {
+     "text": "8 × 3",
+     "value": 24
+    },
+    "right": {
+     "text": "9 × 6",
+     "value": 54
+    },
+    "rating": 894,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 395950,
+   "target": 1000,
+   "problem": {
+    "id": "multiplication-4m8v3a",
+    "skill": "multiplication",
+    "left": {
+     "text": "15 × 14",
+     "value": 210
+    },
+    "right": {
+     "text": "17 × 7",
+     "value": 119
+    },
+    "rating": 998,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 403869,
+   "target": 1100,
+   "problem": {
+    "id": "multiplication-dwjj19",
+    "skill": "multiplication",
+    "left": {
+     "text": "16 × 11",
+     "value": 176
+    },
+    "right": {
+     "text": "18 × 9",
+     "value": 162
+    },
+    "rating": 1134,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 411788,
+   "target": 1200,
+   "problem": {
+    "id": "multiplication-bh79au",
+    "skill": "multiplication",
+    "left": {
+     "text": "513 × 6",
+     "value": 3078
+    },
+    "right": {
+     "text": "484 × 12",
+     "value": 5808
+    },
+    "rating": 1193,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 419707,
+   "target": 1300,
+   "problem": {
+    "id": "multiplication-colt0p",
+    "skill": "multiplication",
+    "left": {
+     "text": "20 × 75",
+     "value": 1500
+    },
+    "right": {
+     "text": "20 × 79",
+     "value": 1580
+    },
+    "rating": 1307,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 427626,
+   "target": 1400,
+   "problem": {
+    "id": "multiplication-f1uq41",
+    "skill": "multiplication",
+    "left": {
+     "text": "25 × 87",
+     "value": 2175
+    },
+    "right": {
+     "text": "25 × 85",
+     "value": 2125
+    },
+    "rating": 1395,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 435545,
+   "target": 1500,
+   "problem": {
+    "id": "multiplication-8gkegb",
+    "skill": "multiplication",
+    "left": {
+     "text": "165 × 80",
+     "value": 13200
+    },
+    "right": {
+     "text": "183 × 74",
+     "value": 13542
+    },
+    "rating": 1498,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 443464,
+   "target": 1600,
+   "problem": {
+    "id": "multiplication-3owocy",
+    "skill": "multiplication",
+    "left": {
+     "text": "513 × 177",
+     "value": 90801
+    },
+    "right": {
+     "text": "488 × 181",
+     "value": 88328
+    },
+    "rating": 1607,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 451383,
+   "target": 1700,
+   "problem": {
+    "id": "multiplication-1xs83v",
+    "skill": "multiplication",
+    "left": {
+     "text": "336 × 60",
+     "value": 20160
+    },
+    "right": {
+     "text": "314 × 64",
+     "value": 20096
+    },
+    "rating": 1702,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 459302,
+   "target": 1800,
+   "problem": {
+    "id": "multiplication-6561js",
+    "skill": "multiplication",
+    "left": {
+     "text": "885 × 220",
+     "value": 194700
+    },
+    "right": {
+     "text": "890 × 220",
+     "value": 195800
+    },
+    "rating": 1791,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 467221,
+   "target": 1900,
+   "problem": {
+    "id": "multiplication-55zg9",
+    "skill": "multiplication",
+    "left": {
+     "text": "421 × 199",
+     "value": 83779
+    },
+    "right": {
+     "text": "393 × 213",
+     "value": 83709
+    },
+    "rating": 1905,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "multiplication",
+   "seed": 475140,
+   "target": 800,
+   "problem": {
+    "id": "multiplication-9bwyot",
+    "skill": "multiplication",
+    "left": {
+     "text": "3 × 3",
+     "value": 9
+    },
+    "right": {
+     "text": "3 × 6",
+     "value": 18
+    },
+    "rating": 836,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 7919,
+   "target": 900,
+   "problem": {
+    "id": "percentages-e1c8df",
+    "skill": "percentages",
+    "left": {
+     "text": "35% of 90",
+     "value": 31.5
+    },
+    "right": {
+     "text": "70% of 120",
+     "value": 84
+    },
+    "rating": 892,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 15838,
+   "target": 1000,
+   "problem": {
+    "id": "percentages-2tu0w5",
+    "skill": "percentages",
+    "left": {
+     "text": "10% of 434",
+     "value": 43.4
+    },
+    "right": {
+     "text": "95% of 533",
+     "value": 506.35
+    },
+    "rating": 1006,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 23757,
+   "target": 1100,
+   "problem": {
+    "id": "percentages-4uey11",
+    "skill": "percentages",
+    "left": {
+     "text": "96% of 1602",
+     "value": 1537.92
+    },
+    "right": {
+     "text": "16% of 1158",
+     "value": 185.28
+    },
+    "rating": 1112,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 31676,
+   "target": 1200,
+   "problem": {
+    "id": "percentages-b0ttr",
+    "skill": "percentages",
+    "left": {
+     "text": "334",
+     "value": 334
+    },
+    "right": {
+     "text": "90% of 360",
+     "value": 324
+    },
+    "rating": 1223,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 39595,
+   "target": 1300,
+   "problem": {
+    "id": "percentages-aww3oy",
+    "skill": "percentages",
+    "left": {
+     "text": "441",
+     "value": 441
+    },
+    "right": {
+     "text": "65% of 659",
+     "value": 428.35
+    },
+    "rating": 1319,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 47514,
+   "target": 1400,
+   "problem": {
+    "id": "percentages-1j0i8h",
+    "skill": "percentages",
+    "left": {
+     "text": "25% of 571",
+     "value": 142.75
+    },
+    "right": {
+     "text": "144",
+     "value": 144
+    },
+    "rating": 1414,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 55433,
+   "target": 1500,
+   "problem": {
+    "id": "percentages-dye8yo",
+    "skill": "percentages",
+    "left": {
+     "text": "27% of 1301",
+     "value": 351.27
+    },
+    "right": {
+     "text": "355",
+     "value": 355
+    },
+    "rating": 1504,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 63352,
+   "target": 1600,
+   "problem": {
+    "id": "percentages-8tm2di",
+    "skill": "percentages",
+    "left": {
+     "text": "49% of 1482",
+     "value": 726.18
+    },
+    "right": {
+     "text": "719",
+     "value": 719
+    },
+    "rating": 1517,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 71271,
+   "target": 1700,
+   "problem": {
+    "id": "percentages-77y3fm",
+    "skill": "percentages",
+    "left": {
+     "text": "159",
+     "value": 159
+    },
+    "right": {
+     "text": "29% of 553",
+     "value": 160.37
+    },
+    "rating": 1470,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 79190,
+   "target": 1800,
+   "problem": {
+    "id": "percentages-9ix1df",
+    "skill": "percentages",
+    "left": {
+     "text": "663",
+     "value": 663
+    },
+    "right": {
+     "text": "39% of 1683",
+     "value": 656.37
+    },
+    "rating": 1524,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 87109,
+   "target": 1900,
+   "problem": {
+    "id": "percentages-6finia",
+    "skill": "percentages",
+    "left": {
+     "text": "564",
+     "value": 564
+    },
+    "right": {
+     "text": "45% of 1265",
+     "value": 569.25
+    },
+    "rating": 1513,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 95028,
+   "target": 800,
+   "problem": {
+    "id": "percentages-ro8o5",
+    "skill": "percentages",
+    "left": {
+     "text": "85% of 380",
+     "value": 323
+    },
+    "right": {
+     "text": "40% of 140",
+     "value": 56
+    },
+    "rating": 877,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 102947,
+   "target": 900,
+   "problem": {
+    "id": "percentages-9lovte",
+    "skill": "percentages",
+    "left": {
+     "text": "60% of 200",
+     "value": 120
+    },
+    "right": {
+     "text": "5% of 360",
+     "value": 18
+    },
+    "rating": 896,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 110866,
+   "target": 1000,
+   "problem": {
+    "id": "percentages-d14tjj",
+    "skill": "percentages",
+    "left": {
+     "text": "90% of 380",
+     "value": 342
+    },
+    "right": {
+     "text": "65% of 235",
+     "value": 152.75
+    },
+    "rating": 999,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 118785,
+   "target": 1100,
+   "problem": {
+    "id": "percentages-dvqo8y",
+    "skill": "percentages",
+    "left": {
+     "text": "20% of 847",
+     "value": 169.4
+    },
+    "right": {
+     "text": "45% of 684",
+     "value": 307.8
+    },
+    "rating": 1095,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 126704,
+   "target": 1200,
+   "problem": {
+    "id": "percentages-dkn35f",
+    "skill": "percentages",
+    "left": {
+     "text": "15% of 618",
+     "value": 92.7
+    },
+    "right": {
+     "text": "85% of 113",
+     "value": 96.05
+    },
+    "rating": 1195,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 134623,
+   "target": 1300,
+   "problem": {
+    "id": "percentages-8lv682",
+    "skill": "percentages",
+    "left": {
+     "text": "35% of 546",
+     "value": 191.1
+    },
+    "right": {
+     "text": "185",
+     "value": 185
+    },
+    "rating": 1298,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 142542,
+   "target": 1400,
+   "problem": {
+    "id": "percentages-83dqzp",
+    "skill": "percentages",
+    "left": {
+     "text": "5% of 383",
+     "value": 19.15
+    },
+    "right": {
+     "text": "19",
+     "value": 19
+    },
+    "rating": 1399,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 150461,
+   "target": 1500,
+   "problem": {
+    "id": "percentages-3dp08r",
+    "skill": "percentages",
+    "left": {
+     "text": "27",
+     "value": 27
+    },
+    "right": {
+     "text": "2% of 1369",
+     "value": 27.38
+    },
+    "rating": 1483,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 158380,
+   "target": 1600,
+   "problem": {
+    "id": "percentages-dupgwf",
+    "skill": "percentages",
+    "left": {
+     "text": "1106",
+     "value": 1106
+    },
+    "right": {
+     "text": "96% of 1164",
+     "value": 1117.44
+    },
+    "rating": 1499,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 166299,
+   "target": 1700,
+   "problem": {
+    "id": "percentages-eoj9v9",
+    "skill": "percentages",
+    "left": {
+     "text": "40% of 466",
+     "value": 186.4
+    },
+    "right": {
+     "text": "185",
+     "value": 185
+    },
+    "rating": 1470,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 174218,
+   "target": 1800,
+   "problem": {
+    "id": "percentages-ealgwg",
+    "skill": "percentages",
+    "left": {
+     "text": "609",
+     "value": 609
+    },
+    "right": {
+     "text": "31% of 1946",
+     "value": 603.26
+    },
+    "rating": 1538,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 182137,
+   "target": 1900,
+   "problem": {
+    "id": "percentages-4dny9v",
+    "skill": "percentages",
+    "left": {
+     "text": "303",
+     "value": 303
+    },
+    "right": {
+     "text": "16% of 1876",
+     "value": 300.16
+    },
+    "rating": 1536,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 190056,
+   "target": 800,
+   "problem": {
+    "id": "percentages-a6rd7w",
+    "skill": "percentages",
+    "left": {
+     "text": "45% of 50",
+     "value": 22.5
+    },
+    "right": {
+     "text": "30% of 360",
+     "value": 108
+    },
+    "rating": 818,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 197975,
+   "target": 900,
+   "problem": {
+    "id": "percentages-frw6p8",
+    "skill": "percentages",
+    "left": {
+     "text": "55% of 40",
+     "value": 22
+    },
+    "right": {
+     "text": "70% of 200",
+     "value": 140
+    },
+    "rating": 897,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 205894,
+   "target": 1000,
+   "problem": {
+    "id": "percentages-3b795n",
+    "skill": "percentages",
+    "left": {
+     "text": "30% of 497",
+     "value": 149.1
+    },
+    "right": {
+     "text": "10% of 99",
+     "value": 9.9
+    },
+    "rating": 999,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 213813,
+   "target": 1100,
+   "problem": {
+    "id": "percentages-ci0uez",
+    "skill": "percentages",
+    "left": {
+     "text": "4% of 182",
+     "value": 7.28
+    },
+    "right": {
+     "text": "97% of 1122",
+     "value": 1088.34
+    },
+    "rating": 1100,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 221732,
+   "target": 1200,
+   "problem": {
+    "id": "percentages-13vahk",
+    "skill": "percentages",
+    "left": {
+     "text": "141",
+     "value": 141
+    },
+    "right": {
+     "text": "50% of 290",
+     "value": 145
+    },
+    "rating": 1217,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 229651,
+   "target": 1300,
+   "problem": {
+    "id": "percentages-4yh6ib",
+    "skill": "percentages",
+    "left": {
+     "text": "397",
+     "value": 397
+    },
+    "right": {
+     "text": "75% of 514",
+     "value": 385.5
+    },
+    "rating": 1303,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 237570,
+   "target": 1400,
+   "problem": {
+    "id": "percentages-9h7r1i",
+    "skill": "percentages",
+    "left": {
+     "text": "68",
+     "value": 68
+    },
+    "right": {
+     "text": "8% of 873",
+     "value": 69.84
+    },
+    "rating": 1400,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 245489,
+   "target": 1500,
+   "problem": {
+    "id": "percentages-b86b6a",
+    "skill": "percentages",
+    "left": {
+     "text": "628",
+     "value": 628
+    },
+    "right": {
+     "text": "53% of 1196",
+     "value": 633.88
+    },
+    "rating": 1509,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 253408,
+   "target": 1600,
+   "problem": {
+    "id": "percentages-5tux8i",
+    "skill": "percentages",
+    "left": {
+     "text": "68% of 798",
+     "value": 542.64
+    },
+    "right": {
+     "text": "548",
+     "value": 548
+    },
+    "rating": 1480,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 261327,
+   "target": 1700,
+   "problem": {
+    "id": "percentages-3j7ixz",
+    "skill": "percentages",
+    "left": {
+     "text": "73% of 1835",
+     "value": 1339.55
+    },
+    "right": {
+     "text": "1353",
+     "value": 1353
+    },
+    "rating": 1529,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 269246,
+   "target": 1800,
+   "problem": {
+    "id": "percentages-clna2",
+    "skill": "percentages",
+    "left": {
+     "text": "10% of 1350",
+     "value": 135
+    },
+    "right": {
+     "text": "134",
+     "value": 134
+    },
+    "rating": 1536,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 277165,
+   "target": 1900,
+   "problem": {
+    "id": "percentages-4nlbd8",
+    "skill": "percentages",
+    "left": {
+     "text": "332",
+     "value": 332
+    },
+    "right": {
+     "text": "19% of 1765",
+     "value": 335.35
+    },
+    "rating": 1527,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 285084,
+   "target": 800,
+   "problem": {
+    "id": "percentages-6ijy5w",
+    "skill": "percentages",
+    "left": {
+     "text": "90% of 40",
+     "value": 36
+    },
+    "right": {
+     "text": "5% of 40",
+     "value": 2
+    },
+    "rating": 789,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 293003,
+   "target": 900,
+   "problem": {
+    "id": "percentages-apezkk",
+    "skill": "percentages",
+    "left": {
+     "text": "70% of 20",
+     "value": 14
+    },
+    "right": {
+     "text": "17",
+     "value": 17
+    },
+    "rating": 893,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 300922,
+   "target": 1000,
+   "problem": {
+    "id": "percentages-fg1prb",
+    "skill": "percentages",
+    "left": {
+     "text": "44% of 180",
+     "value": 79.2
+    },
+    "right": {
+     "text": "82% of 954",
+     "value": 782.28
+    },
+    "rating": 997,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 308841,
+   "target": 1100,
+   "problem": {
+    "id": "percentages-b4iwht",
+    "skill": "percentages",
+    "left": {
+     "text": "80% of 772",
+     "value": 617.6
+    },
+    "right": {
+     "text": "60% of 608",
+     "value": 364.8
+    },
+    "rating": 1098,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 316760,
+   "target": 1200,
+   "problem": {
+    "id": "percentages-5sm33q",
+    "skill": "percentages",
+    "left": {
+     "text": "245",
+     "value": 245
+    },
+    "right": {
+     "text": "95% of 250",
+     "value": 237.5
+    },
+    "rating": 1199,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 324679,
+   "target": 1300,
+   "problem": {
+    "id": "percentages-31bcp0",
+    "skill": "percentages",
+    "left": {
+     "text": "403",
+     "value": 403
+    },
+    "right": {
+     "text": "75% of 522",
+     "value": 391.5
+    },
+    "rating": 1305,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 332598,
+   "target": 1400,
+   "problem": {
+    "id": "percentages-brhops",
+    "skill": "percentages",
+    "left": {
+     "text": "188",
+     "value": 188
+    },
+    "right": {
+     "text": "50% of 373",
+     "value": 186.5
+    },
+    "rating": 1396,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 340517,
+   "target": 1500,
+   "problem": {
+    "id": "percentages-2gbksd",
+    "skill": "percentages",
+    "left": {
+     "text": "134",
+     "value": 134
+    },
+    "right": {
+     "text": "38% of 350",
+     "value": 133
+    },
+    "rating": 1454,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 348436,
+   "target": 1600,
+   "problem": {
+    "id": "percentages-cm9tbe",
+    "skill": "percentages",
+    "left": {
+     "text": "69% of 1800",
+     "value": 1242
+    },
+    "right": {
+     "text": "1254",
+     "value": 1254
+    },
+    "rating": 1532,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 356355,
+   "target": 1700,
+   "problem": {
+    "id": "percentages-65xysg",
+    "skill": "percentages",
+    "left": {
+     "text": "33% of 1416",
+     "value": 467.28
+    },
+    "right": {
+     "text": "88% of 538",
+     "value": 473.44
+    },
+    "rating": 1431,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 364274,
+   "target": 1800,
+   "problem": {
+    "id": "percentages-ag15tm",
+    "skill": "percentages",
+    "left": {
+     "text": "47% of 1928",
+     "value": 906.16
+    },
+    "right": {
+     "text": "915",
+     "value": 915
+    },
+    "rating": 1535,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 372193,
+   "target": 1900,
+   "problem": {
+    "id": "percentages-euyala",
+    "skill": "percentages",
+    "left": {
+     "text": "75",
+     "value": 75
+    },
+    "right": {
+     "text": "5% of 1490",
+     "value": 74.5
+    },
+    "rating": 1551,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 380112,
+   "target": 800,
+   "problem": {
+    "id": "percentages-bvuwdl",
+    "skill": "percentages",
+    "left": {
+     "text": "20% of 100",
+     "value": 20
+    },
+    "right": {
+     "text": "10% of 50",
+     "value": 5
+    },
+    "rating": 823,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 388031,
+   "target": 900,
+   "problem": {
+    "id": "percentages-cbnjk1",
+    "skill": "percentages",
+    "left": {
+     "text": "75% of 995",
+     "value": 746.25
+    },
+    "right": {
+     "text": "80% of 96",
+     "value": 76.8
+    },
+    "rating": 903,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 395950,
+   "target": 1000,
+   "problem": {
+    "id": "percentages-dgq77u",
+    "skill": "percentages",
+    "left": {
+     "text": "15% of 300",
+     "value": 45
+    },
+    "right": {
+     "text": "15% of 190",
+     "value": 28.5
+    },
+    "rating": 994,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 403869,
+   "target": 1100,
+   "problem": {
+    "id": "percentages-41lqdz",
+    "skill": "percentages",
+    "left": {
+     "text": "20% of 206",
+     "value": 41.2
+    },
+    "right": {
+     "text": "49",
+     "value": 49
+    },
+    "rating": 1100,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 411788,
+   "target": 1200,
+   "problem": {
+    "id": "percentages-g6gb8i",
+    "skill": "percentages",
+    "left": {
+     "text": "80% of 1444",
+     "value": 1155.2
+    },
+    "right": {
+     "text": "39% of 1702",
+     "value": 663.78
+    },
+    "rating": 1199,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 419707,
+   "target": 1300,
+   "problem": {
+    "id": "percentages-u6whn",
+    "skill": "percentages",
+    "left": {
+     "text": "85",
+     "value": 85
+    },
+    "right": {
+     "text": "65% of 130",
+     "value": 84.5
+    },
+    "rating": 1302,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 427626,
+   "target": 1400,
+   "problem": {
+    "id": "percentages-9bcxpi",
+    "skill": "percentages",
+    "left": {
+     "text": "57% of 325",
+     "value": 185.25
+    },
+    "right": {
+     "text": "183",
+     "value": 183
+    },
+    "rating": 1407,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 435545,
+   "target": 1500,
+   "problem": {
+    "id": "percentages-5dyugr",
+    "skill": "percentages",
+    "left": {
+     "text": "685",
+     "value": 685
+    },
+    "right": {
+     "text": "58% of 1169",
+     "value": 678.02
+    },
+    "rating": 1500,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 443464,
+   "target": 1600,
+   "problem": {
+    "id": "percentages-9czz4t",
+    "skill": "percentages",
+    "left": {
+     "text": "551",
+     "value": 551
+    },
+    "right": {
+     "text": "53% of 1029",
+     "value": 545.37
+    },
+    "rating": 1492,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 451383,
+   "target": 1700,
+   "problem": {
+    "id": "percentages-dox5d6",
+    "skill": "percentages",
+    "left": {
+     "text": "55% of 956",
+     "value": 525.8
+    },
+    "right": {
+     "text": "531",
+     "value": 531
+    },
+    "rating": 1435,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 459302,
+   "target": 1800,
+   "problem": {
+    "id": "percentages-7k7aud",
+    "skill": "percentages",
+    "left": {
+     "text": "50% of 995",
+     "value": 497.5
+    },
+    "right": {
+     "text": "493",
+     "value": 493
+    },
+    "rating": 1444,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 467221,
+   "target": 1900,
+   "problem": {
+    "id": "percentages-5dyckh",
+    "skill": "percentages",
+    "left": {
+     "text": "783",
+     "value": 783
+    },
+    "right": {
+     "text": "85% of 930",
+     "value": 790.5
+    },
+    "rating": 1436,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "percentages",
+   "seed": 475140,
+   "target": 800,
+   "problem": {
+    "id": "percentages-1i6gw2",
+    "skill": "percentages",
+    "left": {
+     "text": "85% of 50",
+     "value": 42.5
+    },
+    "right": {
+     "text": "15% of 40",
+     "value": 6
+    },
+    "rating": 798,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 7919,
+   "target": 900,
+   "problem": {
+    "id": "fractions-9ed4zj",
+    "skill": "fractions",
+    "left": {
+     "text": "6/8",
+     "value": 0.75
+    },
+    "right": {
+     "text": "1/3",
+     "value": 0.3333333333333333
+    },
+    "rating": 874,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 15838,
+   "target": 1000,
+   "problem": {
+    "id": "fractions-36w002",
+    "skill": "fractions",
+    "left": {
+     "text": "3/5",
+     "value": 0.6
+    },
+    "right": {
+     "text": "2/3",
+     "value": 0.6666666666666666
+    },
+    "rating": 995,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 23757,
+   "target": 1100,
+   "problem": {
+    "id": "fractions-416ehv",
+    "skill": "fractions",
+    "left": {
+     "text": "9/10",
+     "value": 0.9
+    },
+    "right": {
+     "text": "8/10",
+     "value": 0.8
+    },
+    "rating": 1101,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 31676,
+   "target": 1200,
+   "problem": {
+    "id": "fractions-ch7adt",
+    "skill": "fractions",
+    "left": {
+     "text": "9/49",
+     "value": 0.1836734693877551
+    },
+    "right": {
+     "text": "1/7",
+     "value": 0.14285714285714285
+    },
+    "rating": 1200,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 39595,
+   "target": 1300,
+   "problem": {
+    "id": "fractions-ccm05",
+    "skill": "fractions",
+    "left": {
+     "text": "5/9",
+     "value": 0.5555555555555556
+    },
+    "right": {
+     "text": "12/21",
+     "value": 0.5714285714285714
+    },
+    "rating": 1302,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 47514,
+   "target": 1400,
+   "problem": {
+    "id": "fractions-91kdqz",
+    "skill": "fractions",
+    "left": {
+     "text": "9/14",
+     "value": 0.6428571428571429
+    },
+    "right": {
+     "text": "14/22",
+     "value": 0.6363636363636364
+    },
+    "rating": 1420,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 55433,
+   "target": 1500,
+   "problem": {
+    "id": "fractions-1yv81j",
+    "skill": "fractions",
+    "left": {
+     "text": "23/50",
+     "value": 0.46
+    },
+    "right": {
+     "text": "7/15",
+     "value": 0.4666666666666667
+    },
+    "rating": 1486,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 63352,
+   "target": 1600,
+   "problem": {
+    "id": "fractions-8x2uod",
+    "skill": "fractions",
+    "left": {
+     "text": "15/58",
+     "value": 0.25862068965517243
+    },
+    "right": {
+     "text": "7/27",
+     "value": 0.25925925925925924
+    },
+    "rating": 1683,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 71271,
+   "target": 1700,
+   "problem": {
+    "id": "fractions-72e41c",
+    "skill": "fractions",
+    "left": {
+     "text": "31/38",
+     "value": 0.8157894736842105
+    },
+    "right": {
+     "text": "46/56",
+     "value": 0.8214285714285714
+    },
+    "rating": 1613,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 79190,
+   "target": 1800,
+   "problem": {
+    "id": "fractions-df9m0y",
+    "skill": "fractions",
+    "left": {
+     "text": "11/36",
+     "value": 0.3055555555555556
+    },
+    "right": {
+     "text": "15/49",
+     "value": 0.30612244897959184
+    },
+    "rating": 1715,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 87109,
+   "target": 1900,
+   "problem": {
+    "id": "fractions-48xqff",
+    "skill": "fractions",
+    "left": {
+     "text": "41/49",
+     "value": 0.8367346938775511
+    },
+    "right": {
+     "text": "10/12",
+     "value": 0.8333333333333334
+    },
+    "rating": 1580,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 95028,
+   "target": 800,
+   "problem": {
+    "id": "fractions-42f2fg",
+    "skill": "fractions",
+    "left": {
+     "text": "5/6",
+     "value": 0.8333333333333334
+    },
+    "right": {
+     "text": "1/8",
+     "value": 0.125
+    },
+    "rating": 879,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 102947,
+   "target": 900,
+   "problem": {
+    "id": "fractions-269o0q",
+    "skill": "fractions",
+    "left": {
+     "text": "1/4",
+     "value": 0.25
+    },
+    "right": {
+     "text": "1/9",
+     "value": 0.1111111111111111
+    },
+    "rating": 899,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 110866,
+   "target": 1000,
+   "problem": {
+    "id": "fractions-gahoee",
+    "skill": "fractions",
+    "left": {
+     "text": "3/6",
+     "value": 0.5
+    },
+    "right": {
+     "text": "5/8",
+     "value": 0.625
+    },
+    "rating": 1005,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 118785,
+   "target": 1100,
+   "problem": {
+    "id": "fractions-3usn1q",
+    "skill": "fractions",
+    "left": {
+     "text": "4/37",
+     "value": 0.10810810810810811
+    },
+    "right": {
+     "text": "1/5",
+     "value": 0.2
+    },
+    "rating": 1099,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 126704,
+   "target": 1200,
+   "problem": {
+    "id": "fractions-4yc64n",
+    "skill": "fractions",
+    "left": {
+     "text": "8/10",
+     "value": 0.8
+    },
+    "right": {
+     "text": "5/6",
+     "value": 0.8333333333333334
+    },
+    "rating": 1201,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 134623,
+   "target": 1300,
+   "problem": {
+    "id": "fractions-diydm2",
+    "skill": "fractions",
+    "left": {
+     "text": "8/21",
+     "value": 0.38095238095238093
+    },
+    "right": {
+     "text": "22/49",
+     "value": 0.4489795918367347
+    },
+    "rating": 1300,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 142542,
+   "target": 1400,
+   "problem": {
+    "id": "fractions-cj3dzl",
+    "skill": "fractions",
+    "left": {
+     "text": "18/22",
+     "value": 0.8181818181818182
+    },
+    "right": {
+     "text": "10/12",
+     "value": 0.8333333333333334
+    },
+    "rating": 1401,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 150461,
+   "target": 1500,
+   "problem": {
+    "id": "fractions-s29f7",
+    "skill": "fractions",
+    "left": {
+     "text": "18/23",
+     "value": 0.782608695652174
+    },
+    "right": {
+     "text": "14/18",
+     "value": 0.7777777777777778
+    },
+    "rating": 1480,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 158380,
+   "target": 1600,
+   "problem": {
+    "id": "fractions-finlps",
+    "skill": "fractions",
+    "left": {
+     "text": "39/40",
+     "value": 0.975
+    },
+    "right": {
+     "text": "51/52",
+     "value": 0.9807692307692307
+    },
+    "rating": 1625,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 166299,
+   "target": 1700,
+   "problem": {
+    "id": "fractions-3r1ea8",
+    "skill": "fractions",
+    "left": {
+     "text": "35/45",
+     "value": 0.7777777777777778
+    },
+    "right": {
+     "text": "39/50",
+     "value": 0.78
+    },
+    "rating": 1692,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 174218,
+   "target": 1800,
+   "problem": {
+    "id": "fractions-d7fdlo",
+    "skill": "fractions",
+    "left": {
+     "text": "35/47",
+     "value": 0.7446808510638298
+    },
+    "right": {
+     "text": "37/50",
+     "value": 0.74
+    },
+    "rating": 1626,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 182137,
+   "target": 1900,
+   "problem": {
+    "id": "fractions-focc2c",
+    "skill": "fractions",
+    "left": {
+     "text": "20/22",
+     "value": 0.9090909090909091
+    },
+    "right": {
+     "text": "44/48",
+     "value": 0.9166666666666666
+    },
+    "rating": 1554,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 190056,
+   "target": 800,
+   "problem": {
+    "id": "fractions-o876m",
+    "skill": "fractions",
+    "left": {
+     "text": "1/7",
+     "value": 0.14285714285714285
+    },
+    "right": {
+     "text": "2/3",
+     "value": 0.6666666666666666
+    },
+    "rating": 836,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 197975,
+   "target": 900,
+   "problem": {
+    "id": "fractions-267lsg",
+    "skill": "fractions",
+    "left": {
+     "text": "3/4",
+     "value": 0.75
+    },
+    "right": {
+     "text": "3/7",
+     "value": 0.42857142857142855
+    },
+    "rating": 906,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 205894,
+   "target": 1000,
+   "problem": {
+    "id": "fractions-22bwr",
+    "skill": "fractions",
+    "left": {
+     "text": "1/10",
+     "value": 0.1
+    },
+    "right": {
+     "text": "3/12",
+     "value": 0.25
+    },
+    "rating": 1007,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 213813,
+   "target": 1100,
+   "problem": {
+    "id": "fractions-6cshnc",
+    "skill": "fractions",
+    "left": {
+     "text": "7/10",
+     "value": 0.7
+    },
+    "right": {
+     "text": "2/3",
+     "value": 0.6666666666666666
+    },
+    "rating": 1101,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 221732,
+   "target": 1200,
+   "problem": {
+    "id": "fractions-fhonyf",
+    "skill": "fractions",
+    "left": {
+     "text": "31/40",
+     "value": 0.775
+    },
+    "right": {
+     "text": "10/51",
+     "value": 0.19607843137254902
+    },
+    "rating": 1203,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 229651,
+   "target": 1300,
+   "problem": {
+    "id": "fractions-gboteg",
+    "skill": "fractions",
+    "left": {
+     "text": "7/16",
+     "value": 0.4375
+    },
+    "right": {
+     "text": "11/24",
+     "value": 0.4583333333333333
+    },
+    "rating": 1302,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 237570,
+   "target": 1400,
+   "problem": {
+    "id": "fractions-4akm6x",
+    "skill": "fractions",
+    "left": {
+     "text": "5/50",
+     "value": 0.1
+    },
+    "right": {
+     "text": "2/21",
+     "value": 0.09523809523809523
+    },
+    "rating": 1401,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 245489,
+   "target": 1500,
+   "problem": {
+    "id": "fractions-e9fpmp",
+    "skill": "fractions",
+    "left": {
+     "text": "53/60",
+     "value": 0.8833333333333333
+    },
+    "right": {
+     "text": "34/40",
+     "value": 0.85
+    },
+    "rating": 1472,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 253408,
+   "target": 1600,
+   "problem": {
+    "id": "fractions-72h20p",
+    "skill": "fractions",
+    "left": {
+     "text": "28/44",
+     "value": 0.6363636363636364
+    },
+    "right": {
+     "text": "19/30",
+     "value": 0.6333333333333333
+    },
+    "rating": 1615,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 261327,
+   "target": 1700,
+   "problem": {
+    "id": "fractions-54c2dh",
+    "skill": "fractions",
+    "left": {
+     "text": "7/34",
+     "value": 0.20588235294117646
+    },
+    "right": {
+     "text": "12/58",
+     "value": 0.20689655172413793
+    },
+    "rating": 1637,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 269246,
+   "target": 1800,
+   "problem": {
+    "id": "fractions-edfzks",
+    "skill": "fractions",
+    "left": {
+     "text": "35/58",
+     "value": 0.603448275862069
+    },
+    "right": {
+     "text": "12/20",
+     "value": 0.6
+    },
+    "rating": 1592,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 277165,
+   "target": 1900,
+   "problem": {
+    "id": "fractions-3twpra",
+    "skill": "fractions",
+    "left": {
+     "text": "31/51",
+     "value": 0.6078431372549019
+    },
+    "right": {
+     "text": "20/33",
+     "value": 0.6060606060606061
+    },
+    "rating": 1672,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 285084,
+   "target": 800,
+   "problem": {
+    "id": "fractions-49bzzy",
+    "skill": "fractions",
+    "left": {
+     "text": "3/5",
+     "value": 0.6
+    },
+    "right": {
+     "text": "1/4",
+     "value": 0.25
+    },
+    "rating": 859,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 293003,
+   "target": 900,
+   "problem": {
+    "id": "fractions-7lvu88",
+    "skill": "fractions",
+    "left": {
+     "text": "6/7",
+     "value": 0.8571428571428571
+    },
+    "right": {
+     "text": "1/9",
+     "value": 0.1111111111111111
+    },
+    "rating": 894,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 300922,
+   "target": 1000,
+   "problem": {
+    "id": "fractions-95r2qd",
+    "skill": "fractions",
+    "left": {
+     "text": "6/10",
+     "value": 0.6
+    },
+    "right": {
+     "text": "3/7",
+     "value": 0.42857142857142855
+    },
+    "rating": 997,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 308841,
+   "target": 1100,
+   "problem": {
+    "id": "fractions-ub6on",
+    "skill": "fractions",
+    "left": {
+     "text": "4/5",
+     "value": 0.8
+    },
+    "right": {
+     "text": "9/10",
+     "value": 0.9
+    },
+    "rating": 1101,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 316760,
+   "target": 1200,
+   "problem": {
+    "id": "fractions-eltcc2",
+    "skill": "fractions",
+    "left": {
+     "text": "9/22",
+     "value": 0.4090909090909091
+    },
+    "right": {
+     "text": "5/14",
+     "value": 0.35714285714285715
+    },
+    "rating": 1200,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 324679,
+   "target": 1300,
+   "problem": {
+    "id": "fractions-adk3bw",
+    "skill": "fractions",
+    "left": {
+     "text": "15/23",
+     "value": 0.6521739130434783
+    },
+    "right": {
+     "text": "4/6",
+     "value": 0.6666666666666666
+    },
+    "rating": 1304,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 332598,
+   "target": 1400,
+   "problem": {
+    "id": "fractions-cyrp4j",
+    "skill": "fractions",
+    "left": {
+     "text": "10/54",
+     "value": 0.18518518518518517
+    },
+    "right": {
+     "text": "4/23",
+     "value": 0.17391304347826086
+    },
+    "rating": 1390,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 340517,
+   "target": 1500,
+   "problem": {
+    "id": "fractions-5j5aei",
+    "skill": "fractions",
+    "left": {
+     "text": "28/37",
+     "value": 0.7567567567567568
+    },
+    "right": {
+     "text": "29/39",
+     "value": 0.7435897435897436
+    },
+    "rating": 1508,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 348436,
+   "target": 1600,
+   "problem": {
+    "id": "fractions-amdqbv",
+    "skill": "fractions",
+    "left": {
+     "text": "5/8",
+     "value": 0.625
+    },
+    "right": {
+     "text": "32/51",
+     "value": 0.6274509803921569
+    },
+    "rating": 1561,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 356355,
+   "target": 1700,
+   "problem": {
+    "id": "fractions-32m4z4",
+    "skill": "fractions",
+    "left": {
+     "text": "40/57",
+     "value": 0.7017543859649122
+    },
+    "right": {
+     "text": "17/24",
+     "value": 0.7083333333333334
+    },
+    "rating": 1559,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 364274,
+   "target": 1800,
+   "problem": {
+    "id": "fractions-82fn9e",
+    "skill": "fractions",
+    "left": {
+     "text": "25/59",
+     "value": 0.423728813559322
+    },
+    "right": {
+     "text": "17/40",
+     "value": 0.425
+    },
+    "rating": 1691,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 372193,
+   "target": 1900,
+   "problem": {
+    "id": "fractions-2ncikp",
+    "skill": "fractions",
+    "left": {
+     "text": "23/56",
+     "value": 0.4107142857142857
+    },
+    "right": {
+     "text": "18/44",
+     "value": 0.4090909090909091
+    },
+    "rating": 1669,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 380112,
+   "target": 800,
+   "problem": {
+    "id": "fractions-86w4kq",
+    "skill": "fractions",
+    "left": {
+     "text": "3/6",
+     "value": 0.5
+    },
+    "right": {
+     "text": "1/5",
+     "value": 0.2
+    },
+    "rating": 881,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 388031,
+   "target": 900,
+   "problem": {
+    "id": "fractions-f71b96",
+    "skill": "fractions",
+    "left": {
+     "text": "1/4",
+     "value": 0.25
+    },
+    "right": {
+     "text": "5/9",
+     "value": 0.5555555555555556
+    },
+    "rating": 900,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 395950,
+   "target": 1000,
+   "problem": {
+    "id": "fractions-38bc6k",
+    "skill": "fractions",
+    "left": {
+     "text": "2/9",
+     "value": 0.2222222222222222
+    },
+    "right": {
+     "text": "1/13",
+     "value": 0.07692307692307693
+    },
+    "rating": 998,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 403869,
+   "target": 1100,
+   "problem": {
+    "id": "fractions-20h58g",
+    "skill": "fractions",
+    "left": {
+     "text": "13/24",
+     "value": 0.5416666666666666
+    },
+    "right": {
+     "text": "3/4",
+     "value": 0.75
+    },
+    "rating": 1103,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 411788,
+   "target": 1200,
+   "problem": {
+    "id": "fractions-3ary98",
+    "skill": "fractions",
+    "left": {
+     "text": "5/30",
+     "value": 0.16666666666666666
+    },
+    "right": {
+     "text": "5/20",
+     "value": 0.25
+    },
+    "rating": 1198,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 419707,
+   "target": 1300,
+   "problem": {
+    "id": "fractions-a5e596",
+    "skill": "fractions",
+    "left": {
+     "text": "10/12",
+     "value": 0.8333333333333334
+    },
+    "right": {
+     "text": "19/22",
+     "value": 0.8636363636363636
+    },
+    "rating": 1302,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 427626,
+   "target": 1400,
+   "problem": {
+    "id": "fractions-gczly5",
+    "skill": "fractions",
+    "left": {
+     "text": "16/18",
+     "value": 0.8888888888888888
+    },
+    "right": {
+     "text": "21/24",
+     "value": 0.875
+    },
+    "rating": 1402,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 435545,
+   "target": 1500,
+   "problem": {
+    "id": "fractions-ggefe2",
+    "skill": "fractions",
+    "left": {
+     "text": "29/60",
+     "value": 0.48333333333333334
+    },
+    "right": {
+     "text": "9/18",
+     "value": 0.5
+    },
+    "rating": 1434,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 443464,
+   "target": 1600,
+   "problem": {
+    "id": "fractions-8eg3bk",
+    "skill": "fractions",
+    "left": {
+     "text": "40/43",
+     "value": 0.9302325581395349
+    },
+    "right": {
+     "text": "38/41",
+     "value": 0.926829268292683
+    },
+    "rating": 1656,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 451383,
+   "target": 1700,
+   "problem": {
+    "id": "fractions-sgthf",
+    "skill": "fractions",
+    "left": {
+     "text": "35/42",
+     "value": 0.8333333333333334
+    },
+    "right": {
+     "text": "34/41",
+     "value": 0.8292682926829268
+    },
+    "rating": 1629,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 459302,
+   "target": 1800,
+   "problem": {
+    "id": "fractions-dfytdw",
+    "skill": "fractions",
+    "left": {
+     "text": "25/28",
+     "value": 0.8928571428571429
+    },
+    "right": {
+     "text": "41/46",
+     "value": 0.8913043478260869
+    },
+    "rating": 1701,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 467221,
+   "target": 1900,
+   "problem": {
+    "id": "fractions-4dg4kn",
+    "skill": "fractions",
+    "left": {
+     "text": "35/39",
+     "value": 0.8974358974358975
+    },
+    "right": {
+     "text": "26/29",
+     "value": 0.896551724137931
+    },
+    "rating": 1743,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "fractions",
+   "seed": 475140,
+   "target": 800,
+   "problem": {
+    "id": "fractions-8qf86d",
+    "skill": "fractions",
+    "left": {
+     "text": "7/9",
+     "value": 0.7777777777777778
+    },
+    "right": {
+     "text": "1/3",
+     "value": 0.3333333333333333
+    },
+    "rating": 879,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 7919,
+   "target": 900,
+   "problem": {
+    "id": "powers-d74wrf",
+    "skill": "powers",
+    "left": {
+     "text": "2⁶",
+     "value": 64
+    },
+    "right": {
+     "text": "2⁵",
+     "value": 32
+    },
+    "rating": 897,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 15838,
+   "target": 1000,
+   "problem": {
+    "id": "powers-fy2o0q",
+    "skill": "powers",
+    "left": {
+     "text": "3⁵",
+     "value": 243
+    },
+    "right": {
+     "text": "13²",
+     "value": 169
+    },
+    "rating": 997,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 23757,
+   "target": 1100,
+   "problem": {
+    "id": "powers-2j7r5f",
+    "skill": "powers",
+    "left": {
+     "text": "4⁴",
+     "value": 256
+    },
+    "right": {
+     "text": "8⁵",
+     "value": 32768
+    },
+    "rating": 1103,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 31676,
+   "target": 1200,
+   "problem": {
+    "id": "powers-gdipb4",
+    "skill": "powers",
+    "left": {
+     "text": "13³",
+     "value": 2197
+    },
+    "right": {
+     "text": "7⁴",
+     "value": 2401
+    },
+    "rating": 1205,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 39595,
+   "target": 1300,
+   "problem": {
+    "id": "powers-9smovl",
+    "skill": "powers",
+    "left": {
+     "text": "5⁵",
+     "value": 3125
+    },
+    "right": {
+     "text": "55²",
+     "value": 3025
+    },
+    "rating": 1301,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 47514,
+   "target": 1400,
+   "problem": {
+    "id": "powers-6ve7f8",
+    "skill": "powers",
+    "left": {
+     "text": "15⁵",
+     "value": 759375
+    },
+    "right": {
+     "text": "10⁶",
+     "value": 1000000
+    },
+    "rating": 1372,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 55433,
+   "target": 1500,
+   "problem": {
+    "id": "powers-11pda",
+    "skill": "powers",
+    "left": {
+     "text": "13⁷",
+     "value": 62748517
+    },
+    "right": {
+     "text": "15⁷",
+     "value": 170859375
+    },
+    "rating": 1507,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 63352,
+   "target": 1600,
+   "problem": {
+    "id": "powers-exnrf9",
+    "skill": "powers",
+    "left": {
+     "text": "12⁸",
+     "value": 429981696
+    },
+    "right": {
+     "text": "13⁸",
+     "value": 815730721
+    },
+    "rating": 1598,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 71271,
+   "target": 1700,
+   "problem": {
+    "id": "powers-6vooox",
+    "skill": "powers",
+    "left": {
+     "text": "56⁴",
+     "value": 9834496
+    },
+    "right": {
+     "text": "10⁷",
+     "value": 10000000
+    },
+    "rating": 1702,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 79190,
+   "target": 1800,
+   "problem": {
+    "id": "powers-fwgph6",
+    "skill": "powers",
+    "left": {
+     "text": "9⁷",
+     "value": 4782969
+    },
+    "right": {
+     "text": "168³",
+     "value": 4741632
+    },
+    "rating": 1727,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 87109,
+   "target": 1900,
+   "problem": {
+    "id": "powers-jtrf6",
+    "skill": "powers",
+    "left": {
+     "text": "610²",
+     "value": 372100
+    },
+    "right": {
+     "text": "13⁵",
+     "value": 371293
+    },
+    "rating": 1739,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 95028,
+   "target": 800,
+   "problem": {
+    "id": "powers-3t7g1p",
+    "skill": "powers",
+    "left": {
+     "text": "3³",
+     "value": 27
+    },
+    "right": {
+     "text": "2³",
+     "value": 8
+    },
+    "rating": 831,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 102947,
+   "target": 900,
+   "problem": {
+    "id": "powers-axsiub",
+    "skill": "powers",
+    "left": {
+     "text": "3²",
+     "value": 9
+    },
+    "right": {
+     "text": "3⁵",
+     "value": 243
+    },
+    "rating": 897,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 110866,
+   "target": 1000,
+   "problem": {
+    "id": "powers-1c8nf8",
+    "skill": "powers",
+    "left": {
+     "text": "5³",
+     "value": 125
+    },
+    "right": {
+     "text": "10²",
+     "value": 100
+    },
+    "rating": 1005,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 118785,
+   "target": 1100,
+   "problem": {
+    "id": "powers-7soz7",
+    "skill": "powers",
+    "left": {
+     "text": "4⁵",
+     "value": 1024
+    },
+    "right": {
+     "text": "6⁴",
+     "value": 1296
+    },
+    "rating": 1101,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 126704,
+   "target": 1200,
+   "problem": {
+    "id": "powers-82jh90",
+    "skill": "powers",
+    "left": {
+     "text": "5⁸",
+     "value": 390625
+    },
+    "right": {
+     "text": "2⁶",
+     "value": 64
+    },
+    "rating": 1208,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 134623,
+   "target": 1300,
+   "problem": {
+    "id": "powers-6udril",
+    "skill": "powers",
+    "left": {
+     "text": "5⁶",
+     "value": 15625
+    },
+    "right": {
+     "text": "11⁴",
+     "value": 14641
+    },
+    "rating": 1311,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 142542,
+   "target": 1400,
+   "problem": {
+    "id": "powers-ds4o6s",
+    "skill": "powers",
+    "left": {
+     "text": "31⁴",
+     "value": 923521
+    },
+    "right": {
+     "text": "16⁵",
+     "value": 1048576
+    },
+    "rating": 1435,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 150461,
+   "target": 1500,
+   "problem": {
+    "id": "powers-9et8w8",
+    "skill": "powers",
+    "left": {
+     "text": "12⁷",
+     "value": 35831808
+    },
+    "right": {
+     "text": "13⁷",
+     "value": 62748517
+    },
+    "rating": 1498,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 158380,
+   "target": 1600,
+   "problem": {
+    "id": "powers-ccetyi",
+    "skill": "powers",
+    "left": {
+     "text": "30⁴",
+     "value": 810000
+    },
+    "right": {
+     "text": "7⁷",
+     "value": 823543
+    },
+    "rating": 1597,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 166299,
+   "target": 1700,
+   "problem": {
+    "id": "powers-2ozl56",
+    "skill": "powers",
+    "left": {
+     "text": "90⁴",
+     "value": 65610000
+    },
+    "right": {
+     "text": "13⁷",
+     "value": 62748517
+    },
+    "rating": 1698,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 174218,
+   "target": 1800,
+   "problem": {
+    "id": "powers-g16in7",
+    "skill": "powers",
+    "left": {
+     "text": "109⁴",
+     "value": 141158161
+    },
+    "right": {
+     "text": "8⁹",
+     "value": 134217728
+    },
+    "rating": 1720,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 182137,
+   "target": 1900,
+   "problem": {
+    "id": "powers-6ruuyu",
+    "skill": "powers",
+    "left": {
+     "text": "16⁸",
+     "value": 4294967296
+    },
+    "right": {
+     "text": "24⁷",
+     "value": 4586471424
+    },
+    "rating": 1846,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 190056,
+   "target": 800,
+   "problem": {
+    "id": "powers-2ag6gg",
+    "skill": "powers",
+    "left": {
+     "text": "2³",
+     "value": 8
+    },
+    "right": {
+     "text": "2⁵",
+     "value": 32
+    },
+    "rating": 832,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 197975,
+   "target": 900,
+   "problem": {
+    "id": "powers-60e1v4",
+    "skill": "powers",
+    "left": {
+     "text": "2⁵",
+     "value": 32
+    },
+    "right": {
+     "text": "13²",
+     "value": 169
+    },
+    "rating": 897,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 205894,
+   "target": 1000,
+   "problem": {
+    "id": "powers-7bezdb",
+    "skill": "powers",
+    "left": {
+     "text": "10²",
+     "value": 100
+    },
+    "right": {
+     "text": "9²",
+     "value": 81
+    },
+    "rating": 1000,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 213813,
+   "target": 1100,
+   "problem": {
+    "id": "powers-ukdeo",
+    "skill": "powers",
+    "left": {
+     "text": "8⁴",
+     "value": 4096
+    },
+    "right": {
+     "text": "7⁴",
+     "value": 2401
+    },
+    "rating": 1091,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 221732,
+   "target": 1200,
+   "problem": {
+    "id": "powers-a92ezk",
+    "skill": "powers",
+    "left": {
+     "text": "6⁶",
+     "value": 46656
+    },
+    "right": {
+     "text": "8⁶",
+     "value": 262144
+    },
+    "rating": 1208,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 229651,
+   "target": 1300,
+   "problem": {
+    "id": "powers-g5qyn7",
+    "skill": "powers",
+    "left": {
+     "text": "15²",
+     "value": 225
+    },
+    "right": {
+     "text": "9⁷",
+     "value": 4782969
+    },
+    "rating": 1315,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 237570,
+   "target": 1400,
+   "problem": {
+    "id": "powers-4s6551",
+    "skill": "powers",
+    "left": {
+     "text": "12⁵",
+     "value": 248832
+    },
+    "right": {
+     "text": "6⁷",
+     "value": 279936
+    },
+    "rating": 1385,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 245489,
+   "target": 1500,
+   "problem": {
+    "id": "powers-c99w2k",
+    "skill": "powers",
+    "left": {
+     "text": "14⁶",
+     "value": 7529536
+    },
+    "right": {
+     "text": "25⁵",
+     "value": 9765625
+    },
+    "rating": 1473,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 253408,
+   "target": 1600,
+   "problem": {
+    "id": "powers-7ybpko",
+    "skill": "powers",
+    "left": {
+     "text": "7⁶",
+     "value": 117649
+    },
+    "right": {
+     "text": "342²",
+     "value": 116964
+    },
+    "rating": 1604,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 261327,
+   "target": 1700,
+   "problem": {
+    "id": "powers-ckwfii",
+    "skill": "powers",
+    "left": {
+     "text": "8⁹",
+     "value": 134217728
+    },
+    "right": {
+     "text": "43⁵",
+     "value": 147008443
+    },
+    "rating": 1672,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 269246,
+   "target": 1800,
+   "problem": {
+    "id": "powers-2l470n",
+    "skill": "powers",
+    "left": {
+     "text": "15⁸",
+     "value": 2562890625
+    },
+    "right": {
+     "text": "11⁹",
+     "value": 2357947691
+    },
+    "rating": 1801,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 277165,
+   "target": 1900,
+   "problem": {
+    "id": "powers-esnum",
+    "skill": "powers",
+    "left": {
+     "text": "1023²",
+     "value": 1046529
+    },
+    "right": {
+     "text": "16⁵",
+     "value": 1048576
+    },
+    "rating": 1792,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 285084,
+   "target": 800,
+   "problem": {
+    "id": "powers-5q4ihr",
+    "skill": "powers",
+    "left": {
+     "text": "2²",
+     "value": 4
+    },
+    "right": {
+     "text": "2³",
+     "value": 8
+    },
+    "rating": 809,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 293003,
+   "target": 900,
+   "problem": {
+    "id": "powers-55tduc",
+    "skill": "powers",
+    "left": {
+     "text": "4²",
+     "value": 16
+    },
+    "right": {
+     "text": "3⁵",
+     "value": 243
+    },
+    "rating": 900,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 300922,
+   "target": 1000,
+   "problem": {
+    "id": "powers-eexjg5",
+    "skill": "powers",
+    "left": {
+     "text": "6²",
+     "value": 36
+    },
+    "right": {
+     "text": "2⁵",
+     "value": 32
+    },
+    "rating": 1003,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 308841,
+   "target": 1100,
+   "problem": {
+    "id": "powers-ab81ud",
+    "skill": "powers",
+    "left": {
+     "text": "4³",
+     "value": 64
+    },
+    "right": {
+     "text": "8⁵",
+     "value": 32768
+    },
+    "rating": 1103,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 316760,
+   "target": 1200,
+   "problem": {
+    "id": "powers-3t17cy",
+    "skill": "powers",
+    "left": {
+     "text": "4⁹",
+     "value": 262144
+    },
+    "right": {
+     "text": "11²",
+     "value": 121
+    },
+    "rating": 1191,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 324679,
+   "target": 1300,
+   "problem": {
+    "id": "powers-9iip8x",
+    "skill": "powers",
+    "left": {
+     "text": "11³",
+     "value": 1331
+    },
+    "right": {
+     "text": "6⁴",
+     "value": 1296
+    },
+    "rating": 1282,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 332598,
+   "target": 1400,
+   "problem": {
+    "id": "powers-4tk1de",
+    "skill": "powers",
+    "left": {
+     "text": "12⁶",
+     "value": 2985984
+    },
+    "right": {
+     "text": "13⁶",
+     "value": 4826809
+    },
+    "rating": 1399,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 340517,
+   "target": 1500,
+   "problem": {
+    "id": "powers-5ccq64",
+    "skill": "powers",
+    "left": {
+     "text": "11⁵",
+     "value": 161051
+    },
+    "right": {
+     "text": "54³",
+     "value": 157464
+    },
+    "rating": 1501,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 348436,
+   "target": 1600,
+   "problem": {
+    "id": "powers-4afbto",
+    "skill": "powers",
+    "left": {
+     "text": "15⁸",
+     "value": 2562890625
+    },
+    "right": {
+     "text": "4⁶",
+     "value": 4096
+    },
+    "rating": 1582,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 356355,
+   "target": 1700,
+   "problem": {
+    "id": "powers-14fyg9",
+    "skill": "powers",
+    "left": {
+     "text": "145³",
+     "value": 3048625
+    },
+    "right": {
+     "text": "12⁶",
+     "value": 2985984
+    },
+    "rating": 1633,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 364274,
+   "target": 1800,
+   "problem": {
+    "id": "powers-6rl82r",
+    "skill": "powers",
+    "left": {
+     "text": "145⁴",
+     "value": 442050625
+    },
+    "right": {
+     "text": "12⁸",
+     "value": 429981696
+    },
+    "rating": 1820,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 372193,
+   "target": 1900,
+   "problem": {
+    "id": "powers-d26u67",
+    "skill": "powers",
+    "left": {
+     "text": "7⁷",
+     "value": 823543
+    },
+    "right": {
+     "text": "907²",
+     "value": 822649
+    },
+    "rating": 1833,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 380112,
+   "target": 800,
+   "problem": {
+    "id": "powers-2fod2i",
+    "skill": "powers",
+    "left": {
+     "text": "2²",
+     "value": 4
+    },
+    "right": {
+     "text": "2⁴",
+     "value": 16
+    },
+    "rating": 803,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 388031,
+   "target": 900,
+   "problem": {
+    "id": "powers-eswmno",
+    "skill": "powers",
+    "left": {
+     "text": "4³",
+     "value": 64
+    },
+    "right": {
+     "text": "2⁵",
+     "value": 32
+    },
+    "rating": 897,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 395950,
+   "target": 1000,
+   "problem": {
+    "id": "powers-3oicr8",
+    "skill": "powers",
+    "left": {
+     "text": "10²",
+     "value": 100
+    },
+    "right": {
+     "text": "9²",
+     "value": 81
+    },
+    "rating": 1000,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 403869,
+   "target": 1100,
+   "problem": {
+    "id": "powers-2bxq6p",
+    "skill": "powers",
+    "left": {
+     "text": "7⁵",
+     "value": 16807
+    },
+    "right": {
+     "text": "8⁴",
+     "value": 4096
+    },
+    "rating": 1098,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 411788,
+   "target": 1200,
+   "problem": {
+    "id": "powers-9bj5ac",
+    "skill": "powers",
+    "left": {
+     "text": "8⁵",
+     "value": 32768
+    },
+    "right": {
+     "text": "9⁵",
+     "value": 59049
+    },
+    "rating": 1198,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 419707,
+   "target": 1300,
+   "problem": {
+    "id": "powers-egkfio",
+    "skill": "powers",
+    "left": {
+     "text": "10⁵",
+     "value": 100000
+    },
+    "right": {
+     "text": "12⁶",
+     "value": 2985984
+    },
+    "rating": 1298,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 427626,
+   "target": 1400,
+   "problem": {
+    "id": "powers-71ob04",
+    "skill": "powers",
+    "left": {
+     "text": "8⁷",
+     "value": 2097152
+    },
+    "right": {
+     "text": "12⁶",
+     "value": 2985984
+    },
+    "rating": 1400,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 435545,
+   "target": 1500,
+   "problem": {
+    "id": "powers-caf7qy",
+    "skill": "powers",
+    "left": {
+     "text": "13⁴",
+     "value": 28561
+    },
+    "right": {
+     "text": "16⁷",
+     "value": 268435456
+    },
+    "rating": 1486,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 443464,
+   "target": 1600,
+   "problem": {
+    "id": "powers-eoj6gl",
+    "skill": "powers",
+    "left": {
+     "text": "5⁹",
+     "value": 1953125
+    },
+    "right": {
+     "text": "124³",
+     "value": 1906624
+    },
+    "rating": 1601,
+    "answer": "left"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 451383,
+   "target": 1700,
+   "problem": {
+    "id": "powers-8wwlmm",
+    "skill": "powers",
+    "left": {
+     "text": "9⁷",
+     "value": 4782969
+    },
+    "right": {
+     "text": "169³",
+     "value": 4826809
+    },
+    "rating": 1723,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 459302,
+   "target": 1800,
+   "problem": {
+    "id": "powers-8c2dj4",
+    "skill": "powers",
+    "left": {
+     "text": "12⁹",
+     "value": 5159780352
+    },
+    "right": {
+     "text": "43⁶",
+     "value": 6321363049
+    },
+    "rating": 1768,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 467221,
+   "target": 1900,
+   "problem": {
+    "id": "powers-970dd3",
+    "skill": "powers",
+    "left": {
+     "text": "63⁵",
+     "value": 992436543
+    },
+    "right": {
+     "text": "10⁹",
+     "value": 1000000000
+    },
+    "rating": 1966,
+    "answer": "right"
+   }
+  },
+  {
+   "skill": "powers",
+   "seed": 475140,
+   "target": 800,
+   "problem": {
+    "id": "powers-eql9c5",
+    "skill": "powers",
+    "left": {
+     "text": "5²",
+     "value": 25
+    },
+    "right": {
+     "text": "2³",
+     "value": 8
+    },
+    "rating": 830,
+    "answer": "left"
+   }
+  }
+ ],
+ "sequences": [
+  {
+   "skill": "multiplication",
+   "seed": 2024,
+   "targets": [
+    800,
+    900,
+    1000,
+    1100,
+    1200,
+    1300,
+    1400,
+    1500,
+    1600,
+    1700,
+    1800,
+    1900,
+    800,
+    900,
+    1000,
+    1100,
+    1200,
+    1300,
+    1400,
+    1500,
+    1600,
+    1700,
+    1800,
+    1900,
+    800,
+    900,
+    1000,
+    1100,
+    1200,
+    1300,
+    1400,
+    1500,
+    1600,
+    1700,
+    1800,
+    1900,
+    800,
+    900,
+    1000,
+    1100
+   ],
+   "problems": [
+    {
+     "id": "multiplication-2sqon2",
+     "skill": "multiplication",
+     "left": {
+      "text": "3 × 10",
+      "value": 30
+     },
+     "right": {
+      "text": "3 × 3",
+      "value": 9
+     },
+     "rating": 838,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-6mb8j6",
+     "skill": "multiplication",
+     "left": {
+      "text": "6 × 7",
+      "value": 42
+     },
+     "right": {
+      "text": "6 × 3",
+      "value": 18
+     },
+     "rating": 876,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-47qwb8",
+     "skill": "multiplication",
+     "left": {
+      "text": "8 × 4",
+      "value": 32
+     },
+     "right": {
+      "text": "6 × 6",
+      "value": 36
+     },
+     "rating": 1009,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-ds10uk",
+     "skill": "multiplication",
+     "left": {
+      "text": "52 × 9",
+      "value": 468
+     },
+     "right": {
+      "text": "49 × 17",
+      "value": 833
+     },
+     "rating": 1081,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-4wulm9",
+     "skill": "multiplication",
+     "left": {
+      "text": "12 × 71",
+      "value": 852
+     },
+     "right": {
+      "text": "12 × 64",
+      "value": 768
+     },
+     "rating": 1211,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-box6ju",
+     "skill": "multiplication",
+     "left": {
+      "text": "52 × 35",
+      "value": 1820
+     },
+     "right": {
+      "text": "45 × 38",
+      "value": 1710
+     },
+     "rating": 1300,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-eh54gr",
+     "skill": "multiplication",
+     "left": {
+      "text": "62 × 83",
+      "value": 5146
+     },
+     "right": {
+      "text": "66 × 75",
+      "value": 4950
+     },
+     "rating": 1403,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-3zmgia",
+     "skill": "multiplication",
+     "left": {
+      "text": "296 × 48",
+      "value": 14208
+     },
+     "right": {
+      "text": "261 × 53",
+      "value": 13833
+     },
+     "rating": 1497,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-9hp4k5",
+     "skill": "multiplication",
+     "left": {
+      "text": "173 × 46",
+      "value": 7958
+     },
+     "right": {
+      "text": "203 × 39",
+      "value": 7917
+     },
+     "rating": 1604,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-bdj6z6",
+     "skill": "multiplication",
+     "left": {
+      "text": "902 × 221",
+      "value": 199342
+     },
+     "right": {
+      "text": "1019 × 199",
+      "value": 202781
+     },
+     "rating": 1697,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-bbedpa",
+     "skill": "multiplication",
+     "left": {
+      "text": "492 × 137",
+      "value": 67404
+     },
+     "right": {
+      "text": "433 × 156",
+      "value": 67548
+     },
+     "rating": 1810,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-2jcvso",
+     "skill": "multiplication",
+     "left": {
+      "text": "297 × 257",
+      "value": 76329
+     },
+     "right": {
+      "text": "290 × 263",
+      "value": 76270
+     },
+     "rating": 1906,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-8pfnoz",
+     "skill": "multiplication",
+     "left": {
+      "text": "7 × 3",
+      "value": 21
+     },
+     "right": {
+      "text": "8 × 7",
+      "value": 56
+     },
+     "rating": 886,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-88yv73",
+     "skill": "multiplication",
+     "left": {
+      "text": "8 × 3",
+      "value": 24
+     },
+     "right": {
+      "text": "6 × 7",
+      "value": 42
+     },
+     "rating": 901,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-e67aa6",
+     "skill": "multiplication",
+     "left": {
+      "text": "14 × 7",
+      "value": 98
+     },
+     "right": {
+      "text": "16 × 9",
+      "value": 144
+     },
+     "rating": 1001,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-g7auib",
+     "skill": "multiplication",
+     "left": {
+      "text": "16 × 4",
+      "value": 64
+     },
+     "right": {
+      "text": "17 × 4",
+      "value": 68
+     },
+     "rating": 1103,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-6o1hpp",
+     "skill": "multiplication",
+     "left": {
+      "text": "7 × 10",
+      "value": 70
+     },
+     "right": {
+      "text": "8 × 9",
+      "value": 72
+     },
+     "rating": 1171,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-495s8a",
+     "skill": "multiplication",
+     "left": {
+      "text": "54 × 57",
+      "value": 3078
+     },
+     "right": {
+      "text": "56 × 50",
+      "value": 2800
+     },
+     "rating": 1297,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-a8scyp",
+     "skill": "multiplication",
+     "left": {
+      "text": "371 × 42",
+      "value": 15582
+     },
+     "right": {
+      "text": "363 × 40",
+      "value": 14520
+     },
+     "rating": 1420,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-byqvel",
+     "skill": "multiplication",
+     "left": {
+      "text": "772 × 94",
+      "value": 72568
+     },
+     "right": {
+      "text": "682 × 115",
+      "value": 78430
+     },
+     "rating": 1511,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-fsxj77",
+     "skill": "multiplication",
+     "left": {
+      "text": "53 × 86",
+      "value": 4558
+     },
+     "right": {
+      "text": "61 × 75",
+      "value": 4575
+     },
+     "rating": 1598,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-altt4u",
+     "skill": "multiplication",
+     "left": {
+      "text": "806 × 234",
+      "value": 188604
+     },
+     "right": {
+      "text": "784 × 244",
+      "value": 191296
+     },
+     "rating": 1710,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-4sas98",
+     "skill": "multiplication",
+     "left": {
+      "text": "394 × 228",
+      "value": 89832
+     },
+     "right": {
+      "text": "382 × 234",
+      "value": 89388
+     },
+     "rating": 1755,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-993pxp",
+     "skill": "multiplication",
+     "left": {
+      "text": "405 × 288",
+      "value": 116640
+     },
+     "right": {
+      "text": "420 × 278",
+      "value": 116760
+     },
+     "rating": 1907,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-73pujf",
+     "skill": "multiplication",
+     "left": {
+      "text": "5 × 10",
+      "value": 50
+     },
+     "right": {
+      "text": "3 × 8",
+      "value": 24
+     },
+     "rating": 895,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-6n5hev",
+     "skill": "multiplication",
+     "left": {
+      "text": "6 × 3",
+      "value": 18
+     },
+     "right": {
+      "text": "5 × 5",
+      "value": 25
+     },
+     "rating": 906,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-81se19",
+     "skill": "multiplication",
+     "left": {
+      "text": "10 × 4",
+      "value": 40
+     },
+     "right": {
+      "text": "12 × 4",
+      "value": 48
+     },
+     "rating": 991,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-c1vkru",
+     "skill": "multiplication",
+     "left": {
+      "text": "12 × 7",
+      "value": 84
+     },
+     "right": {
+      "text": "13 × 6",
+      "value": 78
+     },
+     "rating": 1099,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-1jdcyf",
+     "skill": "multiplication",
+     "left": {
+      "text": "99 × 23",
+      "value": 2277
+     },
+     "right": {
+      "text": "100 × 18",
+      "value": 1800
+     },
+     "rating": 1206,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-x71rd",
+     "skill": "multiplication",
+     "left": {
+      "text": "201 × 28",
+      "value": 5628
+     },
+     "right": {
+      "text": "213 × 31",
+      "value": 6603
+     },
+     "rating": 1301,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-3cf0hc",
+     "skill": "multiplication",
+     "left": {
+      "text": "40 × 70",
+      "value": 2800
+     },
+     "right": {
+      "text": "35 × 82",
+      "value": 2870
+     },
+     "rating": 1407,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-bfmjn1",
+     "skill": "multiplication",
+     "left": {
+      "text": "145 × 40",
+      "value": 5800
+     },
+     "right": {
+      "text": "159 × 36",
+      "value": 5724
+     },
+     "rating": 1503,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-5lczwg",
+     "skill": "multiplication",
+     "left": {
+      "text": "394 × 52",
+      "value": 20488
+     },
+     "right": {
+      "text": "450 × 46",
+      "value": 20700
+     },
+     "rating": 1602,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-54hkz5",
+     "skill": "multiplication",
+     "left": {
+      "text": "111 × 210",
+      "value": 23310
+     },
+     "right": {
+      "text": "129 × 180",
+      "value": 23220
+     },
+     "rating": 1694,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-nwka7",
+     "skill": "multiplication",
+     "left": {
+      "text": "730 × 252",
+      "value": 183960
+     },
+     "right": {
+      "text": "716 × 256",
+      "value": 183296
+     },
+     "rating": 1826,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-g63luu",
+     "skill": "multiplication",
+     "left": {
+      "text": "435 × 141",
+      "value": 61335
+     },
+     "right": {
+      "text": "441 × 139",
+      "value": 61299
+     },
+     "rating": 1917,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-2rupgo",
+     "skill": "multiplication",
+     "left": {
+      "text": "3 × 4",
+      "value": 12
+     },
+     "right": {
+      "text": "3 × 3",
+      "value": 9
+     },
+     "rating": 871,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-cf5odj",
+     "skill": "multiplication",
+     "left": {
+      "text": "17 × 5",
+      "value": 85
+     },
+     "right": {
+      "text": "15 × 3",
+      "value": 45
+     },
+     "rating": 936,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-9vve20",
+     "skill": "multiplication",
+     "left": {
+      "text": "9 × 3",
+      "value": 27
+     },
+     "right": {
+      "text": "8 × 3",
+      "value": 24
+     },
+     "rating": 991,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-cpqphg",
+     "skill": "multiplication",
+     "left": {
+      "text": "6 × 7",
+      "value": 42
+     },
+     "right": {
+      "text": "4 × 10",
+      "value": 40
+     },
+     "rating": 1092,
+     "answer": "left"
+    }
+   ]
+  },
+  {
+   "skill": "percentages",
+   "seed": 2024,
+   "targets": [
+    800,
+    900,
+    1000,
+    1100,
+    1200,
+    1300,
+    1400,
+    1500,
+    1600,
+    1700,
+    1800,
+    1900,
+    800,
+    900,
+    1000,
+    1100,
+    1200,
+    1300,
+    1400,
+    1500,
+    1600,
+    1700,
+    1800,
+    1900,
+    800,
+    900,
+    1000,
+    1100,
+    1200,
+    1300,
+    1400,
+    1500,
+    1600,
+    1700,
+    1800,
+    1900,
+    800,
+    900,
+    1000,
+    1100
+   ],
+   "problems": [
+    {
+     "id": "percentages-fwmiys",
+     "skill": "percentages",
+     "left": {
+      "text": "70% of 20",
+      "value": 14
+     },
+     "right": {
+      "text": "45% of 290",
+      "value": 130.5
+     },
+     "rating": 752,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-1b4zql",
+     "skill": "percentages",
+     "left": {
+      "text": "50% of 100",
+      "value": 50
+     },
+     "right": {
+      "text": "40% of 70",
+      "value": 28
+     },
+     "rating": 911,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-1ywxch",
+     "skill": "percentages",
+     "left": {
+      "text": "40% of 130",
+      "value": 52
+     },
+     "right": {
+      "text": "42",
+      "value": 42
+     },
+     "rating": 999,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-bvcdc4",
+     "skill": "percentages",
+     "left": {
+      "text": "28% of 1154",
+      "value": 323.12
+     },
+     "right": {
+      "text": "6% of 848",
+      "value": 50.88
+     },
+     "rating": 1097,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-dly8bz",
+     "skill": "percentages",
+     "left": {
+      "text": "31",
+      "value": 31
+     },
+     "right": {
+      "text": "10% of 320",
+      "value": 32
+     },
+     "rating": 1212,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-febit0",
+     "skill": "percentages",
+     "left": {
+      "text": "65% of 593",
+      "value": 385.45
+     },
+     "right": {
+      "text": "45% of 828",
+      "value": 372.6
+     },
+     "rating": 1300,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-apcff9",
+     "skill": "percentages",
+     "left": {
+      "text": "41% of 895",
+      "value": 366.95
+     },
+     "right": {
+      "text": "378",
+      "value": 378
+     },
+     "rating": 1392,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-bm0bkh",
+     "skill": "percentages",
+     "left": {
+      "text": "20% of 1754",
+      "value": 350.8
+     },
+     "right": {
+      "text": "347",
+      "value": 347
+     },
+     "rating": 1519,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-881sme",
+     "skill": "percentages",
+     "left": {
+      "text": "207",
+      "value": 207
+     },
+     "right": {
+      "text": "42% of 497",
+      "value": 208.74
+     },
+     "rating": 1465,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-9vd031",
+     "skill": "percentages",
+     "left": {
+      "text": "73% of 350",
+      "value": 255.5
+     },
+     "right": {
+      "text": "253",
+      "value": 253
+     },
+     "rating": 1430,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-c8pk6p",
+     "skill": "percentages",
+     "left": {
+      "text": "1225",
+      "value": 1225
+     },
+     "right": {
+      "text": "74% of 1639",
+      "value": 1212.86
+     },
+     "rating": 1523,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-cipwc5",
+     "skill": "percentages",
+     "left": {
+      "text": "1858",
+      "value": 1858
+     },
+     "right": {
+      "text": "96% of 1916",
+      "value": 1839.36
+     },
+     "rating": 1531,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-1ddw8a",
+     "skill": "percentages",
+     "left": {
+      "text": "60% of 320",
+      "value": 192
+     },
+     "right": {
+      "text": "15% of 130",
+      "value": 19.5
+     },
+     "rating": 865,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-667zuw",
+     "skill": "percentages",
+     "left": {
+      "text": "65% of 310",
+      "value": 201.5
+     },
+     "right": {
+      "text": "20% of 180",
+      "value": 36
+     },
+     "rating": 893,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-2d828v",
+     "skill": "percentages",
+     "left": {
+      "text": "85% of 270",
+      "value": 229.5
+     },
+     "right": {
+      "text": "90% of 360",
+      "value": 324
+     },
+     "rating": 1007,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-28fxdz",
+     "skill": "percentages",
+     "left": {
+      "text": "91% of 249",
+      "value": 226.59
+     },
+     "right": {
+      "text": "11% of 659",
+      "value": 72.49
+     },
+     "rating": 1100,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-8gaugv",
+     "skill": "percentages",
+     "left": {
+      "text": "20% of 320",
+      "value": 64
+     },
+     "right": {
+      "text": "66",
+      "value": 66
+     },
+     "rating": 1214,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-d8kx6f",
+     "skill": "percentages",
+     "left": {
+      "text": "30% of 838",
+      "value": 251.4
+     },
+     "right": {
+      "text": "231",
+      "value": 231
+     },
+     "rating": 1299,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-dxlpnj",
+     "skill": "percentages",
+     "left": {
+      "text": "69% of 228",
+      "value": 157.32
+     },
+     "right": {
+      "text": "159",
+      "value": 159
+     },
+     "rating": 1397,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-3wcj0u",
+     "skill": "percentages",
+     "left": {
+      "text": "5% of 777",
+      "value": 38.85
+     },
+     "right": {
+      "text": "39",
+      "value": 39
+     },
+     "rating": 1504,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-9z8qnb",
+     "skill": "percentages",
+     "left": {
+      "text": "520",
+      "value": 520
+     },
+     "right": {
+      "text": "32% of 1640",
+      "value": 524.8
+     },
+     "rating": 1530,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-8h8lj5",
+     "skill": "percentages",
+     "left": {
+      "text": "31% of 1847",
+      "value": 572.57
+     },
+     "right": {
+      "text": "578",
+      "value": 578
+     },
+     "rating": 1535,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-9s4lzu",
+     "skill": "percentages",
+     "left": {
+      "text": "911",
+      "value": 911
+     },
+     "right": {
+      "text": "55% of 1640",
+      "value": 902
+     },
+     "rating": 1523,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-6495oa",
+     "skill": "percentages",
+     "left": {
+      "text": "1104",
+      "value": 1104
+     },
+     "right": {
+      "text": "71% of 1571",
+      "value": 1115.41
+     },
+     "rating": 1517,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-4xf974",
+     "skill": "percentages",
+     "left": {
+      "text": "55% of 30",
+      "value": 16.5
+     },
+     "right": {
+      "text": "90% of 110",
+      "value": 99
+     },
+     "rating": 783,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-7enzmb",
+     "skill": "percentages",
+     "left": {
+      "text": "35% of 100",
+      "value": 35
+     },
+     "right": {
+      "text": "30% of 240",
+      "value": 72
+     },
+     "rating": 898,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-7to8hu",
+     "skill": "percentages",
+     "left": {
+      "text": "89% of 493",
+      "value": 438.77
+     },
+     "right": {
+      "text": "4% of 268",
+      "value": 10.72
+     },
+     "rating": 1014,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-18zorp",
+     "skill": "percentages",
+     "left": {
+      "text": "10% of 340",
+      "value": 34
+     },
+     "right": {
+      "text": "50% of 60",
+      "value": 30
+     },
+     "rating": 1100,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-8g49d0",
+     "skill": "percentages",
+     "left": {
+      "text": "95% of 210",
+      "value": 199.5
+     },
+     "right": {
+      "text": "205",
+      "value": 205
+     },
+     "rating": 1199,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-9wrwix",
+     "skill": "percentages",
+     "left": {
+      "text": "145",
+      "value": 145
+     },
+     "right": {
+      "text": "83% of 170",
+      "value": 141.1
+     },
+     "rating": 1298,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-d6h2wd",
+     "skill": "percentages",
+     "left": {
+      "text": "64% of 1117",
+      "value": 714.88
+     },
+     "right": {
+      "text": "693",
+      "value": 693
+     },
+     "rating": 1402,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-6vkeee",
+     "skill": "percentages",
+     "left": {
+      "text": "8% of 361",
+      "value": 28.88
+     },
+     "right": {
+      "text": "29",
+      "value": 29
+     },
+     "rating": 1507,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-b8l403",
+     "skill": "percentages",
+     "left": {
+      "text": "1164",
+      "value": 1164
+     },
+     "right": {
+      "text": "63% of 1867",
+      "value": 1176.21
+     },
+     "rating": 1527,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-d61jzd",
+     "skill": "percentages",
+     "left": {
+      "text": "51% of 1949",
+      "value": 993.99
+     },
+     "right": {
+      "text": "984",
+      "value": 984
+     },
+     "rating": 1532,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-3ncert",
+     "skill": "percentages",
+     "left": {
+      "text": "1739",
+      "value": 1739
+     },
+     "right": {
+      "text": "95% of 1812",
+      "value": 1721.4
+     },
+     "rating": 1527,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-13guzl",
+     "skill": "percentages",
+     "left": {
+      "text": "73% of 1999",
+      "value": 1459.27
+     },
+     "right": {
+      "text": "1474",
+      "value": 1474
+     },
+     "rating": 1534,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-g8l82s",
+     "skill": "percentages",
+     "left": {
+      "text": "30% of 320",
+      "value": 96
+     },
+     "right": {
+      "text": "45% of 40",
+      "value": 18
+     },
+     "rating": 802,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-awvkp5",
+     "skill": "percentages",
+     "left": {
+      "text": "5% of 50",
+      "value": 2.5
+     },
+     "right": {
+      "text": "60% of 270",
+      "value": 162
+     },
+     "rating": 902,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-f17o6x",
+     "skill": "percentages",
+     "left": {
+      "text": "85% of 393",
+      "value": 334.05
+     },
+     "right": {
+      "text": "15% of 390",
+      "value": 58.5
+     },
+     "rating": 996,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-b3ej9",
+     "skill": "percentages",
+     "left": {
+      "text": "125",
+      "value": 125
+     },
+     "right": {
+      "text": "80% of 170",
+      "value": 136
+     },
+     "rating": 1091,
+     "answer": "right"
+    }
+   ]
+  },
+  {
+   "skill": "fractions",
+   "seed": 2024,
+   "targets": [
+    800,
+    900,
+    1000,
+    1100,
+    1200,
+    1300,
+    1400,
+    1500,
+    1600,
+    1700,
+    1800,
+    1900,
+    800,
+    900,
+    1000,
+    1100,
+    1200,
+    1300,
+    1400,
+    1500,
+    1600,
+    1700,
+    1800,
+    1900,
+    800,
+    900,
+    1000,
+    1100,
+    1200,
+    1300,
+    1400,
+    1500,
+    1600,
+    1700,
+    1800,
+    1900,
+    800,
+    900,
+    1000,
+    1100
+   ],
+   "problems": [
+    {
+     "id": "fractions-55gyxo",
+     "skill": "fractions",
+     "left": {
+      "text": "1/9",
+      "value": 0.1111111111111111
+     },
+     "right": {
+      "text": "3/4",
+      "value": 0.75
+     },
+     "rating": 862,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-e11rcr",
+     "skill": "fractions",
+     "left": {
+      "text": "3/8",
+      "value": 0.375
+     },
+     "right": {
+      "text": "2/3",
+      "value": 0.6666666666666666
+     },
+     "rating": 895,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-5es2lq",
+     "skill": "fractions",
+     "left": {
+      "text": "3/8",
+      "value": 0.375
+     },
+     "right": {
+      "text": "2/7",
+      "value": 0.2857142857142857
+     },
+     "rating": 999,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-f48vj9",
+     "skill": "fractions",
+     "left": {
+      "text": "6/9",
+      "value": 0.6666666666666666
+     },
+     "right": {
+      "text": "9/12",
+      "value": 0.75
+     },
+     "rating": 1106,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-5xvcf3",
+     "skill": "fractions",
+     "left": {
+      "text": "7/8",
+      "value": 0.875
+     },
+     "right": {
+      "text": "13/14",
+      "value": 0.9285714285714286
+     },
+     "rating": 1207,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-2pu4at",
+     "skill": "fractions",
+     "left": {
+      "text": "3/36",
+      "value": 0.08333333333333333
+     },
+     "right": {
+      "text": "1/11",
+      "value": 0.09090909090909091
+     },
+     "rating": 1294,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-6i36bc",
+     "skill": "fractions",
+     "left": {
+      "text": "9/13",
+      "value": 0.6923076923076923
+     },
+     "right": {
+      "text": "13/19",
+      "value": 0.6842105263157895
+     },
+     "rating": 1393,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-9z1mft",
+     "skill": "fractions",
+     "left": {
+      "text": "22/39",
+      "value": 0.5641025641025641
+     },
+     "right": {
+      "text": "29/50",
+      "value": 0.58
+     },
+     "rating": 1487,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-2o0aqt",
+     "skill": "fractions",
+     "left": {
+      "text": "44/56",
+      "value": 0.7857142857142857
+     },
+     "right": {
+      "text": "24/30",
+      "value": 0.8
+     },
+     "rating": 1515,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-95xv28",
+     "skill": "fractions",
+     "left": {
+      "text": "21/53",
+      "value": 0.39622641509433965
+     },
+     "right": {
+      "text": "13/33",
+      "value": 0.3939393939393939
+     },
+     "rating": 1616,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-7k9vyf",
+     "skill": "fractions",
+     "left": {
+      "text": "25/55",
+      "value": 0.45454545454545453
+     },
+     "right": {
+      "text": "27/59",
+      "value": 0.4576271186440678
+     },
+     "rating": 1640,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-c608bw",
+     "skill": "fractions",
+     "left": {
+      "text": "15/48",
+      "value": 0.3125
+     },
+     "right": {
+      "text": "14/45",
+      "value": 0.3111111111111111
+     },
+     "rating": 1651,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-6pk9g1",
+     "skill": "fractions",
+     "left": {
+      "text": "2/3",
+      "value": 0.6666666666666666
+     },
+     "right": {
+      "text": "1/4",
+      "value": 0.25
+     },
+     "rating": 822,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-f90o0t",
+     "skill": "fractions",
+     "left": {
+      "text": "2/4",
+      "value": 0.5
+     },
+     "right": {
+      "text": "2/3",
+      "value": 0.6666666666666666
+     },
+     "rating": 901,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-bn3og",
+     "skill": "fractions",
+     "left": {
+      "text": "4/8",
+      "value": 0.5
+     },
+     "right": {
+      "text": "2/6",
+      "value": 0.3333333333333333
+     },
+     "rating": 1003,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-66rm4n",
+     "skill": "fractions",
+     "left": {
+      "text": "2/20",
+      "value": 0.1
+     },
+     "right": {
+      "text": "2/13",
+      "value": 0.15384615384615385
+     },
+     "rating": 1101,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-deqsov",
+     "skill": "fractions",
+     "left": {
+      "text": "54/55",
+      "value": 0.9818181818181818
+     },
+     "right": {
+      "text": "2/48",
+      "value": 0.041666666666666664
+     },
+     "rating": 1197,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-e6his9",
+     "skill": "fractions",
+     "left": {
+      "text": "5/8",
+      "value": 0.625
+     },
+     "right": {
+      "text": "24/41",
+      "value": 0.5853658536585366
+     },
+     "rating": 1306,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-dk7z3h",
+     "skill": "fractions",
+     "left": {
+      "text": "43/59",
+      "value": 0.7288135593220338
+     },
+     "right": {
+      "text": "14/20",
+      "value": 0.7
+     },
+     "rating": 1425,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-cz9n39",
+     "skill": "fractions",
+     "left": {
+      "text": "32/45",
+      "value": 0.7111111111111111
+     },
+     "right": {
+      "text": "25/36",
+      "value": 0.6944444444444444
+     },
+     "rating": 1489,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-5wp8x0",
+     "skill": "fractions",
+     "left": {
+      "text": "30/40",
+      "value": 0.75
+     },
+     "right": {
+      "text": "41/54",
+      "value": 0.7592592592592593
+     },
+     "rating": 1564,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-f5ioli",
+     "skill": "fractions",
+     "left": {
+      "text": "43/52",
+      "value": 0.8269230769230769
+     },
+     "right": {
+      "text": "18/22",
+      "value": 0.8181818181818182
+     },
+     "rating": 1537,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-6p84q8",
+     "skill": "fractions",
+     "left": {
+      "text": "36/41",
+      "value": 0.8780487804878049
+     },
+     "right": {
+      "text": "42/48",
+      "value": 0.875
+     },
+     "rating": 1667,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-4nsylq",
+     "skill": "fractions",
+     "left": {
+      "text": "34/36",
+      "value": 0.9444444444444444
+     },
+     "right": {
+      "text": "15/16",
+      "value": 0.9375
+     },
+     "rating": 1527,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-cqfke9",
+     "skill": "fractions",
+     "left": {
+      "text": "4/5",
+      "value": 0.8
+     },
+     "right": {
+      "text": "1/5",
+      "value": 0.2
+     },
+     "rating": 851,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-dy9poh",
+     "skill": "fractions",
+     "left": {
+      "text": "2/3",
+      "value": 0.6666666666666666
+     },
+     "right": {
+      "text": "2/4",
+      "value": 0.5
+     },
+     "rating": 901,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-4p5awb",
+     "skill": "fractions",
+     "left": {
+      "text": "4/9",
+      "value": 0.4444444444444444
+     },
+     "right": {
+      "text": "5/8",
+      "value": 0.625
+     },
+     "rating": 998,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-aecuig",
+     "skill": "fractions",
+     "left": {
+      "text": "1/5",
+      "value": 0.2
+     },
+     "right": {
+      "text": "2/9",
+      "value": 0.2222222222222222
+     },
+     "rating": 1103,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-76iyxa",
+     "skill": "fractions",
+     "left": {
+      "text": "18/22",
+      "value": 0.8181818181818182
+     },
+     "right": {
+      "text": "12/13",
+      "value": 0.9230769230769231
+     },
+     "rating": 1205,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-aosvy4",
+     "skill": "fractions",
+     "left": {
+      "text": "22/30",
+      "value": 0.7333333333333333
+     },
+     "right": {
+      "text": "12/18",
+      "value": 0.6666666666666666
+     },
+     "rating": 1305,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-eumgdd",
+     "skill": "fractions",
+     "left": {
+      "text": "23/45",
+      "value": 0.5111111111111111
+     },
+     "right": {
+      "text": "13/24",
+      "value": 0.5416666666666666
+     },
+     "rating": 1388,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-9iv68o",
+     "skill": "fractions",
+     "left": {
+      "text": "27/53",
+      "value": 0.5094339622641509
+     },
+     "right": {
+      "text": "21/42",
+      "value": 0.5
+     },
+     "rating": 1529,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-f67xcq",
+     "skill": "fractions",
+     "left": {
+      "text": "11/27",
+      "value": 0.4074074074074074
+     },
+     "right": {
+      "text": "9/22",
+      "value": 0.4090909090909091
+     },
+     "rating": 1579,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-ck2dz0",
+     "skill": "fractions",
+     "left": {
+      "text": "19/32",
+      "value": 0.59375
+     },
+     "right": {
+      "text": "22/37",
+      "value": 0.5945945945945946
+     },
+     "rating": 1714,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-cp0ucf",
+     "skill": "fractions",
+     "left": {
+      "text": "33/52",
+      "value": 0.6346153846153846
+     },
+     "right": {
+      "text": "19/30",
+      "value": 0.6333333333333333
+     },
+     "rating": 1700,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-5xbxbi",
+     "skill": "fractions",
+     "left": {
+      "text": "30/44",
+      "value": 0.6818181818181818
+     },
+     "right": {
+      "text": "40/58",
+      "value": 0.6896551724137931
+     },
+     "rating": 1580,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-awxwin",
+     "skill": "fractions",
+     "left": {
+      "text": "4/5",
+      "value": 0.8
+     },
+     "right": {
+      "text": "1/4",
+      "value": 0.25
+     },
+     "rating": 845,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-po3em",
+     "skill": "fractions",
+     "left": {
+      "text": "2/4",
+      "value": 0.5
+     },
+     "right": {
+      "text": "2/9",
+      "value": 0.2222222222222222
+     },
+     "rating": 899,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-asulpx",
+     "skill": "fractions",
+     "left": {
+      "text": "3/6",
+      "value": 0.5
+     },
+     "right": {
+      "text": "3/5",
+      "value": 0.6
+     },
+     "rating": 992,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-7low6t",
+     "skill": "fractions",
+     "left": {
+      "text": "6/25",
+      "value": 0.24
+     },
+     "right": {
+      "text": "13/15",
+      "value": 0.8666666666666667
+     },
+     "rating": 1103,
+     "answer": "right"
+    }
+   ]
+  },
+  {
+   "skill": "powers",
+   "seed": 2024,
+   "targets": [
+    800,
+    900,
+    1000,
+    1100,
+    1200,
+    1300,
+    1400,
+    1500,
+    1600,
+    1700,
+    1800,
+    1900,
+    800,
+    900,
+    1000,
+    1100,
+    1200,
+    1300,
+    1400,
+    1500,
+    1600,
+    1700,
+    1800,
+    1900,
+    800,
+    900,
+    1000,
+    1100,
+    1200,
+    1300,
+    1400,
+    1500,
+    1600,
+    1700,
+    1800,
+    1900,
+    800,
+    900,
+    1000,
+    1100
+   ],
+   "problems": [
+    {
+     "id": "powers-ljk10",
+     "skill": "powers",
+     "left": {
+      "text": "2⁵",
+      "value": 32
+     },
+     "right": {
+      "text": "2²",
+      "value": 4
+     },
+     "rating": 819,
+     "answer": "left"
+    },
+    {
+     "id": "powers-zgmmi",
+     "skill": "powers",
+     "left": {
+      "text": "4⁴",
+      "value": 256
+     },
+     "right": {
+      "text": "2⁴",
+      "value": 16
+     },
+     "rating": 902,
+     "answer": "left"
+    },
+    {
+     "id": "powers-1kjugn",
+     "skill": "powers",
+     "left": {
+      "text": "2²",
+      "value": 4
+     },
+     "right": {
+      "text": "5⁵",
+      "value": 3125
+     },
+     "rating": 1003,
+     "answer": "right"
+    },
+    {
+     "id": "powers-cyya1l",
+     "skill": "powers",
+     "left": {
+      "text": "4⁷",
+      "value": 16384
+     },
+     "right": {
+      "text": "8⁴",
+      "value": 4096
+     },
+     "rating": 1098,
+     "answer": "left"
+    },
+    {
+     "id": "powers-abs4n4",
+     "skill": "powers",
+     "left": {
+      "text": "7⁴",
+      "value": 2401
+     },
+     "right": {
+      "text": "3⁷",
+      "value": 2187
+     },
+     "rating": 1201,
+     "answer": "left"
+    },
+    {
+     "id": "powers-emg66m",
+     "skill": "powers",
+     "left": {
+      "text": "9⁴",
+      "value": 6561
+     },
+     "right": {
+      "text": "19³",
+      "value": 6859
+     },
+     "rating": 1308,
+     "answer": "right"
+    },
+    {
+     "id": "powers-6cpjww",
+     "skill": "powers",
+     "left": {
+      "text": "131²",
+      "value": 17161
+     },
+     "right": {
+      "text": "7⁵",
+      "value": 16807
+     },
+     "rating": 1412,
+     "answer": "left"
+    },
+    {
+     "id": "powers-1ij6c5",
+     "skill": "powers",
+     "left": {
+      "text": "10⁶",
+      "value": 1000000
+     },
+     "right": {
+      "text": "16⁵",
+      "value": 1048576
+     },
+     "rating": 1517,
+     "answer": "right"
+    },
+    {
+     "id": "powers-15rfp9",
+     "skill": "powers",
+     "left": {
+      "text": "14⁸",
+      "value": 1475789056
+     },
+     "right": {
+      "text": "16⁷",
+      "value": 268435456
+     },
+     "rating": 1576,
+     "answer": "left"
+    },
+    {
+     "id": "powers-bgrtek",
+     "skill": "powers",
+     "left": {
+      "text": "15⁸",
+      "value": 2562890625
+     },
+     "right": {
+      "text": "75⁵",
+      "value": 2373046875
+     },
+     "rating": 1808,
+     "answer": "left"
+    },
+    {
+     "id": "powers-aq757a",
+     "skill": "powers",
+     "left": {
+      "text": "10⁷",
+      "value": 10000000
+     },
+     "right": {
+      "text": "216³",
+      "value": 10077696
+     },
+     "rating": 1769,
+     "answer": "right"
+    },
+    {
+     "id": "powers-6ndl53",
+     "skill": "powers",
+     "left": {
+      "text": "15⁷",
+      "value": 170859375
+     },
+     "right": {
+      "text": "554³",
+      "value": 170031464
+     },
+     "rating": 1930,
+     "answer": "left"
+    },
+    {
+     "id": "powers-4jyon4",
+     "skill": "powers",
+     "left": {
+      "text": "3³",
+      "value": 27
+     },
+     "right": {
+      "text": "2³",
+      "value": 8
+     },
+     "rating": 831,
+     "answer": "left"
+    },
+    {
+     "id": "powers-dshl5d",
+     "skill": "powers",
+     "left": {
+      "text": "3⁵",
+      "value": 243
+     },
+     "right": {
+      "text": "5²",
+      "value": 25
+     },
+     "rating": 903,
+     "answer": "left"
+    },
+    {
+     "id": "powers-40z5vl",
+     "skill": "powers",
+     "left": {
+      "text": "7³",
+      "value": 343
+     },
+     "right": {
+      "text": "3⁷",
+      "value": 2187
+     },
+     "rating": 1002,
+     "answer": "right"
+    },
+    {
+     "id": "powers-ep7x2t",
+     "skill": "powers",
+     "left": {
+      "text": "7⁴",
+      "value": 2401
+     },
+     "right": {
+      "text": "12³",
+      "value": 1728
+     },
+     "rating": 1102,
+     "answer": "left"
+    },
+    {
+     "id": "powers-4xiv1o",
+     "skill": "powers",
+     "left": {
+      "text": "13⁴",
+      "value": 28561
+     },
+     "right": {
+      "text": "12⁵",
+      "value": 248832
+     },
+     "rating": 1199,
+     "answer": "right"
+    },
+    {
+     "id": "powers-6q1q3",
+     "skill": "powers",
+     "left": {
+      "text": "5⁸",
+      "value": 390625
+     },
+     "right": {
+      "text": "10⁶",
+      "value": 1000000
+     },
+     "rating": 1291,
+     "answer": "right"
+    },
+    {
+     "id": "powers-8zctsp",
+     "skill": "powers",
+     "left": {
+      "text": "12⁷",
+      "value": 35831808
+     },
+     "right": {
+      "text": "7⁶",
+      "value": 117649
+     },
+     "rating": 1401,
+     "answer": "left"
+    },
+    {
+     "id": "powers-b35s8c",
+     "skill": "powers",
+     "left": {
+      "text": "13⁷",
+      "value": 62748517
+     },
+     "right": {
+      "text": "7⁹",
+      "value": 40353607
+     },
+     "rating": 1514,
+     "answer": "left"
+    },
+    {
+     "id": "powers-71ded0",
+     "skill": "powers",
+     "left": {
+      "text": "5⁶",
+      "value": 15625
+     },
+     "right": {
+      "text": "16⁸",
+      "value": 4294967296
+     },
+     "rating": 1604,
+     "answer": "right"
+    },
+    {
+     "id": "powers-9y1g3p",
+     "skill": "powers",
+     "left": {
+      "text": "66⁴",
+      "value": 18974736
+     },
+     "right": {
+      "text": "11⁷",
+      "value": 19487171
+     },
+     "rating": 1690,
+     "answer": "right"
+    },
+    {
+     "id": "powers-9jfutq",
+     "skill": "powers",
+     "left": {
+      "text": "14⁸",
+      "value": 1475789056
+     },
+     "right": {
+      "text": "195⁴",
+      "value": 1445900625
+     },
+     "rating": 1897,
+     "answer": "left"
+    },
+    {
+     "id": "powers-cslpza",
+     "skill": "powers",
+     "left": {
+      "text": "14⁸",
+      "value": 1475789056
+     },
+     "right": {
+      "text": "195⁴",
+      "value": 1445900625
+     },
+     "rating": 1897,
+     "answer": "left"
+    },
+    {
+     "id": "powers-bhuaxa",
+     "skill": "powers",
+     "left": {
+      "text": "2⁴",
+      "value": 16
+     },
+     "right": {
+      "text": "2²",
+      "value": 4
+     },
+     "rating": 803,
+     "answer": "left"
+    },
+    {
+     "id": "powers-ghmkqq",
+     "skill": "powers",
+     "left": {
+      "text": "6²",
+      "value": 36
+     },
+     "right": {
+      "text": "9²",
+      "value": 81
+     },
+     "rating": 898,
+     "answer": "right"
+    },
+    {
+     "id": "powers-d2icfl",
+     "skill": "powers",
+     "left": {
+      "text": "2⁵",
+      "value": 32
+     },
+     "right": {
+      "text": "6²",
+      "value": 36
+     },
+     "rating": 1003,
+     "answer": "right"
+    },
+    {
+     "id": "powers-bzc9np",
+     "skill": "powers",
+     "left": {
+      "text": "8⁵",
+      "value": 32768
+     },
+     "right": {
+      "text": "4⁴",
+      "value": 256
+     },
+     "rating": 1103,
+     "answer": "left"
+    },
+    {
+     "id": "powers-2fxei0",
+     "skill": "powers",
+     "left": {
+      "text": "9⁵",
+      "value": 59049
+     },
+     "right": {
+      "text": "8⁵",
+      "value": 32768
+     },
+     "rating": 1198,
+     "answer": "left"
+    },
+    {
+     "id": "powers-a091jn",
+     "skill": "powers",
+     "left": {
+      "text": "8²",
+      "value": 64
+     },
+     "right": {
+      "text": "12⁶",
+      "value": 2985984
+     },
+     "rating": 1295,
+     "answer": "right"
+    },
+    {
+     "id": "powers-2clqqt",
+     "skill": "powers",
+     "left": {
+      "text": "8⁶",
+      "value": 262144
+     },
+     "right": {
+      "text": "22⁴",
+      "value": 234256
+     },
+     "rating": 1386,
+     "answer": "left"
+    },
+    {
+     "id": "powers-jmp7l",
+     "skill": "powers",
+     "left": {
+      "text": "7⁷",
+      "value": 823543
+     },
+     "right": {
+      "text": "95³",
+      "value": 857375
+     },
+     "rating": 1522,
+     "answer": "right"
+    },
+    {
+     "id": "powers-74gewn",
+     "skill": "powers",
+     "left": {
+      "text": "16⁸",
+      "value": 4294967296
+     },
+     "right": {
+      "text": "8⁷",
+      "value": 2097152
+     },
+     "rating": 1604,
+     "answer": "left"
+    },
+    {
+     "id": "powers-7dldm5",
+     "skill": "powers",
+     "left": {
+      "text": "15⁸",
+      "value": 2562890625
+     },
+     "right": {
+      "text": "12⁹",
+      "value": 5159780352
+     },
+     "rating": 1671,
+     "answer": "right"
+    },
+    {
+     "id": "powers-etxl0r",
+     "skill": "powers",
+     "left": {
+      "text": "270³",
+      "value": 19683000
+     },
+     "right": {
+      "text": "11⁷",
+      "value": 19487171
+     },
+     "rating": 1775,
+     "answer": "left"
+    },
+    {
+     "id": "powers-3rakv7",
+     "skill": "powers",
+     "left": {
+      "text": "12⁸",
+      "value": 429981696
+     },
+     "right": {
+      "text": "54⁵",
+      "value": 459165024
+     },
+     "rating": 1748,
+     "answer": "right"
+    },
+    {
+     "id": "powers-cry4d3",
+     "skill": "powers",
+     "left": {
+      "text": "2²",
+      "value": 4
+     },
+     "right": {
+      "text": "3³",
+      "value": 27
+     },
+     "rating": 814,
+     "answer": "right"
+    },
+    {
+     "id": "powers-8kgkjf",
+     "skill": "powers",
+     "left": {
+      "text": "2⁴",
+      "value": 16
+     },
+     "right": {
+      "text": "3⁵",
+      "value": 243
+     },
+     "rating": 900,
+     "answer": "right"
+    },
+    {
+     "id": "powers-5vklhp",
+     "skill": "powers",
+     "left": {
+      "text": "7³",
+      "value": 343
+     },
+     "right": {
+      "text": "6³",
+      "value": 216
+     },
+     "rating": 995,
+     "answer": "left"
+    },
+    {
+     "id": "powers-9h508w",
+     "skill": "powers",
+     "left": {
+      "text": "4⁵",
+      "value": 1024
+     },
+     "right": {
+      "text": "6⁴",
+      "value": 1296
+     },
+     "rating": 1101,
+     "answer": "right"
+    }
+   ]
+  }
+ ],
+ "daily": [
+  {
+   "date": "2026-10-28",
+   "seed": 3497510848,
+   "problems": [
+    {
+     "id": "multiplication-8bvw82",
+     "skill": "multiplication",
+     "left": {
+      "text": "15 × 8",
+      "value": 120
+     },
+     "right": {
+      "text": "13 × 14",
+      "value": 182
+     },
+     "rating": 1010,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-6cjqm0",
+     "skill": "percentages",
+     "left": {
+      "text": "35% of 618",
+      "value": 216.3
+     },
+     "right": {
+      "text": "70% of 896",
+      "value": 627.2
+     },
+     "rating": 1043,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-3xxgxm",
+     "skill": "fractions",
+     "left": {
+      "text": "10/11",
+      "value": 0.9090909090909091
+     },
+     "right": {
+      "text": "5/6",
+      "value": 0.8333333333333334
+     },
+     "rating": 1101,
+     "answer": "left"
+    },
+    {
+     "id": "powers-a0ugm4",
+     "skill": "powers",
+     "left": {
+      "text": "3⁷",
+      "value": 2187
+     },
+     "right": {
+      "text": "7⁴",
+      "value": 2401
+     },
+     "rating": 1201,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-dlnsow",
+     "skill": "multiplication",
+     "left": {
+      "text": "67 × 33",
+      "value": 2211
+     },
+     "right": {
+      "text": "67 × 28",
+      "value": 1876
+     },
+     "rating": 1232,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-a2mic3",
+     "skill": "percentages",
+     "left": {
+      "text": "307",
+      "value": 307
+     },
+     "right": {
+      "text": "60% of 527",
+      "value": 316.2
+     },
+     "rating": 1304,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-ei9249",
+     "skill": "fractions",
+     "left": {
+      "text": "16/33",
+      "value": 0.48484848484848486
+     },
+     "right": {
+      "text": "20/39",
+      "value": 0.5128205128205128
+     },
+     "rating": 1402,
+     "answer": "right"
+    },
+    {
+     "id": "powers-9x5lmv",
+     "skill": "powers",
+     "left": {
+      "text": "9⁸",
+      "value": 43046721
+     },
+     "right": {
+      "text": "15⁶",
+      "value": 11390625
+     },
+     "rating": 1435,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-9v1kgr",
+     "skill": "multiplication",
+     "left": {
+      "text": "41 × 70",
+      "value": 2870
+     },
+     "right": {
+      "text": "42 × 68",
+      "value": 2856
+     },
+     "rating": 1546,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-18976h",
+     "skill": "percentages",
+     "left": {
+      "text": "80% of 363",
+      "value": 290.4
+     },
+     "right": {
+      "text": "90% of 323",
+      "value": 290.7
+     },
+     "rating": 1572,
+     "answer": "right"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-29",
+   "seed": 3514288467,
+   "problems": [
+    {
+     "id": "powers-6tkdch",
+     "skill": "powers",
+     "left": {
+      "text": "7²",
+      "value": 49
+     },
+     "right": {
+      "text": "5⁵",
+      "value": 3125
+     },
+     "rating": 1004,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-4x89el",
+     "skill": "multiplication",
+     "left": {
+      "text": "11 × 4",
+      "value": 44
+     },
+     "right": {
+      "text": "12 × 4",
+      "value": 48
+     },
+     "rating": 1051,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-75s1us",
+     "skill": "percentages",
+     "left": {
+      "text": "17% of 657",
+      "value": 111.69
+     },
+     "right": {
+      "text": "54% of 572",
+      "value": 308.88
+     },
+     "rating": 1097,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-1fyd1u",
+     "skill": "fractions",
+     "left": {
+      "text": "10/11",
+      "value": 0.9090909090909091
+     },
+     "right": {
+      "text": "23/33",
+      "value": 0.696969696969697
+     },
+     "rating": 1199,
+     "answer": "left"
+    },
+    {
+     "id": "powers-91s11o",
+     "skill": "powers",
+     "left": {
+      "text": "10⁶",
+      "value": 1000000
+     },
+     "right": {
+      "text": "4⁷",
+      "value": 16384
+     },
+     "rating": 1249,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-6jtfa9",
+     "skill": "multiplication",
+     "left": {
+      "text": "451 × 17",
+      "value": 7667
+     },
+     "right": {
+      "text": "475 × 14",
+      "value": 6650
+     },
+     "rating": 1319,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-389v9b",
+     "skill": "percentages",
+     "left": {
+      "text": "5% of 972",
+      "value": 48.6
+     },
+     "right": {
+      "text": "47",
+      "value": 47
+     },
+     "rating": 1387,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-9j8693",
+     "skill": "fractions",
+     "left": {
+      "text": "19/25",
+      "value": 0.76
+     },
+     "right": {
+      "text": "42/58",
+      "value": 0.7241379310344828
+     },
+     "rating": 1422,
+     "answer": "left"
+    },
+    {
+     "id": "powers-3rhyt9",
+     "skill": "powers",
+     "left": {
+      "text": "26⁵",
+      "value": 11881376
+     },
+     "right": {
+      "text": "10⁷",
+      "value": 10000000
+     },
+     "rating": 1513,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-5cn748",
+     "skill": "multiplication",
+     "left": {
+      "text": "346 × 72",
+      "value": 24912
+     },
+     "right": {
+      "text": "398 × 63",
+      "value": 25074
+     },
+     "rating": 1654,
+     "answer": "right"
+    }
+   ]
+  },
+  {
+   "date": "2026-01-01",
+   "seed": 2049302883,
+   "problems": [
+    {
+     "id": "powers-5k48wa",
+     "skill": "powers",
+     "left": {
+      "text": "13²",
+      "value": 169
+     },
+     "right": {
+      "text": "3⁷",
+      "value": 2187
+     },
+     "rating": 994,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-dhvo8l",
+     "skill": "multiplication",
+     "left": {
+      "text": "10 × 4",
+      "value": 40
+     },
+     "right": {
+      "text": "11 × 4",
+      "value": 44
+     },
+     "rating": 1038,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-7a9z6x",
+     "skill": "percentages",
+     "left": {
+      "text": "105",
+      "value": 105
+     },
+     "right": {
+      "text": "40% of 327",
+      "value": 130.8
+     },
+     "rating": 1109,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-9qrvbi",
+     "skill": "fractions",
+     "left": {
+      "text": "3/4",
+      "value": 0.75
+     },
+     "right": {
+      "text": "17/24",
+      "value": 0.7083333333333334
+     },
+     "rating": 1201,
+     "answer": "left"
+    },
+    {
+     "id": "powers-9g0o43",
+     "skill": "powers",
+     "left": {
+      "text": "10⁶",
+      "value": 1000000
+     },
+     "right": {
+      "text": "3⁵",
+      "value": 243
+     },
+     "rating": 1248,
+     "answer": "left"
+    },
+    {
+     "id": "multiplication-g95954",
+     "skill": "multiplication",
+     "left": {
+      "text": "210 × 15",
+      "value": 3150
+     },
+     "right": {
+      "text": "238 × 12",
+      "value": 2856
+     },
+     "rating": 1296,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-5bng5g",
+     "skill": "percentages",
+     "left": {
+      "text": "442",
+      "value": 442
+     },
+     "right": {
+      "text": "85% of 515",
+      "value": 437.75
+     },
+     "rating": 1399,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-4jytsv",
+     "skill": "fractions",
+     "left": {
+      "text": "11/28",
+      "value": 0.39285714285714285
+     },
+     "right": {
+      "text": "13/34",
+      "value": 0.38235294117647056
+     },
+     "rating": 1446,
+     "answer": "left"
+    },
+    {
+     "id": "powers-b8905v",
+     "skill": "powers",
+     "left": {
+      "text": "22⁵",
+      "value": 5153632
+     },
+     "right": {
+      "text": "7⁸",
+      "value": 5764801
+     },
+     "rating": 1517,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-cc40mf",
+     "skill": "multiplication",
+     "left": {
+      "text": "337 × 78",
+      "value": 26286
+     },
+     "right": {
+      "text": "315 × 84",
+      "value": 26460
+     },
+     "rating": 1656,
+     "answer": "right"
+    }
+   ]
+  },
+  {
+   "date": "2027-02-28",
+   "seed": 4219393026,
+   "problems": [
+    {
+     "id": "fractions-e78tfv",
+     "skill": "fractions",
+     "left": {
+      "text": "5/8",
+      "value": 0.625
+     },
+     "right": {
+      "text": "5/12",
+      "value": 0.4166666666666667
+     },
+     "rating": 1003,
+     "answer": "left"
+    },
+    {
+     "id": "powers-celc4h",
+     "skill": "powers",
+     "left": {
+      "text": "5²",
+      "value": 25
+     },
+     "right": {
+      "text": "11⁴",
+      "value": 14641
+     },
+     "rating": 1068,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-d1tmgg",
+     "skill": "multiplication",
+     "left": {
+      "text": "12 × 7",
+      "value": 84
+     },
+     "right": {
+      "text": "10 × 9",
+      "value": 90
+     },
+     "rating": 1109,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-9n7jbm",
+     "skill": "percentages",
+     "left": {
+      "text": "81% of 145",
+      "value": 117.45
+     },
+     "right": {
+      "text": "127",
+      "value": 127
+     },
+     "rating": 1199,
+     "answer": "right"
+    },
+    {
+     "id": "fractions-csfiye",
+     "skill": "fractions",
+     "left": {
+      "text": "11/13",
+      "value": 0.8461538461538461
+     },
+     "right": {
+      "text": "16/21",
+      "value": 0.7619047619047619
+     },
+     "rating": 1255,
+     "answer": "left"
+    },
+    {
+     "id": "powers-8pciji",
+     "skill": "powers",
+     "left": {
+      "text": "12⁵",
+      "value": 248832
+     },
+     "right": {
+      "text": "13⁵",
+      "value": 371293
+     },
+     "rating": 1302,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-fngwo0",
+     "skill": "multiplication",
+     "left": {
+      "text": "177 × 24",
+      "value": 4248
+     },
+     "right": {
+      "text": "179 × 23",
+      "value": 4117
+     },
+     "rating": 1410,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-1wjik6",
+     "skill": "percentages",
+     "left": {
+      "text": "64% of 1376",
+      "value": 880.64
+     },
+     "right": {
+      "text": "854",
+      "value": 854
+     },
+     "rating": 1415,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-bxp7hv",
+     "skill": "fractions",
+     "left": {
+      "text": "50/59",
+      "value": 0.847457627118644
+     },
+     "right": {
+      "text": "51/59",
+      "value": 0.864406779661017
+     },
+     "rating": 1551,
+     "answer": "right"
+    },
+    {
+     "id": "powers-b6elxp",
+     "skill": "powers",
+     "left": {
+      "text": "16⁷",
+      "value": 268435456
+     },
+     "right": {
+      "text": "17⁷",
+      "value": 410338673
+     },
+     "rating": 1596,
+     "answer": "right"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-31",
+   "seed": 1294366724,
+   "problems": [
+    {
+     "id": "multiplication-g7lklt",
+     "skill": "multiplication",
+     "left": {
+      "text": "16 × 12",
+      "value": 192
+     },
+     "right": {
+      "text": "15 × 8",
+      "value": 120
+     },
+     "rating": 1005,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-5t19ev",
+     "skill": "percentages",
+     "left": {
+      "text": "95% of 752",
+      "value": 714.4
+     },
+     "right": {
+      "text": "25% of 886",
+      "value": 221.5
+     },
+     "rating": 1051,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-2r0iha",
+     "skill": "fractions",
+     "left": {
+      "text": "1/3",
+      "value": 0.3333333333333333
+     },
+     "right": {
+      "text": "4/11",
+      "value": 0.36363636363636365
+     },
+     "rating": 1100,
+     "answer": "right"
+    },
+    {
+     "id": "powers-5qg1k1",
+     "skill": "powers",
+     "left": {
+      "text": "6⁴",
+      "value": 1296
+     },
+     "right": {
+      "text": "6⁷",
+      "value": 279936
+     },
+     "rating": 1194,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-195izc",
+     "skill": "multiplication",
+     "left": {
+      "text": "40 × 26",
+      "value": 1040
+     },
+     "right": {
+      "text": "42 × 26",
+      "value": 1092
+     },
+     "rating": 1290,
+     "answer": "right"
+    },
+    {
+     "id": "percentages-dnlsrx",
+     "skill": "percentages",
+     "left": {
+      "text": "85% of 647",
+      "value": 549.95
+     },
+     "right": {
+      "text": "533",
+      "value": 533
+     },
+     "rating": 1312,
+     "answer": "left"
+    },
+    {
+     "id": "fractions-alq9y9",
+     "skill": "fractions",
+     "left": {
+      "text": "19/58",
+      "value": 0.3275862068965517
+     },
+     "right": {
+      "text": "13/37",
+      "value": 0.35135135135135137
+     },
+     "rating": 1414,
+     "answer": "right"
+    },
+    {
+     "id": "powers-651l7o",
+     "skill": "powers",
+     "left": {
+      "text": "9⁷",
+      "value": 4782969
+     },
+     "right": {
+      "text": "14⁶",
+      "value": 7529536
+     },
+     "rating": 1422,
+     "answer": "right"
+    },
+    {
+     "id": "multiplication-du28qc",
+     "skill": "multiplication",
+     "left": {
+      "text": "183 × 259",
+      "value": 47397
+     },
+     "right": {
+      "text": "177 × 259",
+      "value": 45843
+     },
+     "rating": 1551,
+     "answer": "left"
+    },
+    {
+     "id": "percentages-6tfqyf",
+     "skill": "percentages",
+     "left": {
+      "text": "49% of 1983",
+      "value": 971.67
+     },
+     "right": {
+      "text": "981",
+      "value": 981
+     },
+     "rating": 1538,
+     "answer": "right"
+    }
+   ]
+  }
+ ],
+ "elo": [
+  {
+   "player": 900,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 908.6384400047308,
+    "delta": 8.638440004730757,
+    "expected": 0.6400649998028851,
+    "score": 1
+   }
+  },
+  {
+   "player": 900,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 908.6384400047308,
+    "delta": 8.638440004730757,
+    "expected": 0.6400649998028851,
+    "score": 1
+   }
+  },
+  {
+   "player": 900,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 905.5922861585769,
+    "delta": 5.592286158576909,
+    "expected": 0.6400649998028851,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 900,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 901.4384400047308,
+    "delta": 1.4384400047307562,
+    "expected": 0.6400649998028851,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 900,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 901.4384400047308,
+    "delta": 1.4384400047307562,
+    "expected": 0.6400649998028851,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 900,
+   "problem": 800,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 884.6384400047308,
+    "delta": -15.361559995269243,
+    "expected": 0.6400649998028851,
+    "score": 0
+   }
+  },
+  {
+   "player": 900,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 916.9674070754049,
+    "delta": 16.967407075404985,
+    "expected": 0.293024705191459,
+    "score": 1
+   }
+  },
+  {
+   "player": 900,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 916.9674070754049,
+    "delta": 16.967407075404985,
+    "expected": 0.293024705191459,
+    "score": 1
+   }
+  },
+  {
+   "player": 900,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 913.9212532292511,
+    "delta": 13.921253229251134,
+    "expected": 0.293024705191459,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 900,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 909.767407075405,
+    "delta": 9.767407075404982,
+    "expected": 0.293024705191459,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 900,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 909.767407075405,
+    "delta": 9.767407075404982,
+    "expected": 0.293024705191459,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 900,
+   "problem": 1053,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 892.9674070754049,
+    "delta": -7.032592924595017,
+    "expected": 0.293024705191459,
+    "score": 0
+   }
+  },
+  {
+   "player": 900,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 921.8181818181819,
+    "delta": 21.818181818181817,
+    "expected": 0.09090909090909091,
+    "score": 1
+   }
+  },
+  {
+   "player": 900,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 921.8181818181819,
+    "delta": 21.818181818181817,
+    "expected": 0.09090909090909091,
+    "score": 1
+   }
+  },
+  {
+   "player": 900,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 918.772027972028,
+    "delta": 18.77202797202797,
+    "expected": 0.09090909090909091,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 900,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 914.6181818181818,
+    "delta": 14.618181818181817,
+    "expected": 0.09090909090909091,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 900,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 914.6181818181818,
+    "delta": 14.618181818181817,
+    "expected": 0.09090909090909091,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 900,
+   "problem": 1300,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 897.8181818181819,
+    "delta": -2.1818181818181817,
+    "expected": 0.09090909090909091,
+    "score": 0
+   }
+  },
+  {
+   "player": 900,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 923.580669804124,
+    "delta": 23.580669804124,
+    "expected": 0.017472091494833444,
+    "score": 1
+   }
+  },
+  {
+   "player": 900,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 923.580669804124,
+    "delta": 23.580669804124,
+    "expected": 0.017472091494833444,
+    "score": 1
+   }
+  },
+  {
+   "player": 900,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 920.5345159579701,
+    "delta": 20.53451595797015,
+    "expected": 0.017472091494833444,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 900,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 916.380669804124,
+    "delta": 16.380669804123997,
+    "expected": 0.017472091494833444,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 900,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 916.380669804124,
+    "delta": 16.380669804123997,
+    "expected": 0.017472091494833444,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 900,
+   "problem": 1600,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 899.580669804124,
+    "delta": -0.4193301958760026,
+    "expected": 0.017472091494833444,
+    "score": 0
+   }
+  },
+  {
+   "player": 900,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 923.9573970541005,
+    "delta": 23.957397054100568,
+    "expected": 0.0017751227458097578,
+    "score": 1
+   }
+  },
+  {
+   "player": 900,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 923.9573970541005,
+    "delta": 23.957397054100568,
+    "expected": 0.0017751227458097578,
+    "score": 1
+   }
+  },
+  {
+   "player": 900,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 920.9112432079468,
+    "delta": 20.91124320794672,
+    "expected": 0.0017751227458097578,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 900,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 916.7573970541006,
+    "delta": 16.757397054100565,
+    "expected": 0.0017751227458097578,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 900,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 916.7573970541006,
+    "delta": 16.757397054100565,
+    "expected": 0.0017751227458097578,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 900,
+   "problem": 2000,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 899.9573970541005,
+    "delta": -0.04260294589943418,
+    "expected": 0.0017751227458097578,
+    "score": 0
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 1202.1818181818182,
+    "delta": 2.1818181818181825,
+    "expected": 0.9090909090909091,
+    "score": 1
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 1202.1818181818182,
+    "delta": 2.1818181818181825,
+    "expected": 0.9090909090909091,
+    "score": 1
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 1199.1356643356644,
+    "delta": -0.8643356643356661,
+    "expected": 0.9090909090909091,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 1194.9818181818182,
+    "delta": -5.0181818181818185,
+    "expected": 0.9090909090909091,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 1194.9818181818182,
+    "delta": -5.0181818181818185,
+    "expected": 0.9090909090909091,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 800,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 1178.1818181818182,
+    "delta": -21.818181818181817,
+    "expected": 0.9090909090909091,
+    "score": 0
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 1207.2055343217105,
+    "delta": 7.205534321710604,
+    "expected": 0.6997694032620582,
+    "score": 1
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 1207.2055343217105,
+    "delta": 7.205534321710604,
+    "expected": 0.6997694032620582,
+    "score": 1
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 1204.1593804755566,
+    "delta": 4.159380475556755,
+    "expected": 0.6997694032620582,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 1200.0055343217107,
+    "delta": 0.005534321710602974,
+    "expected": 0.6997694032620582,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 1200.0055343217107,
+    "delta": 0.005534321710602974,
+    "expected": 0.6997694032620582,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 1053,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 1183.2055343217105,
+    "delta": -16.794465678289395,
+    "expected": 0.6997694032620582,
+    "score": 0
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 1215.3615599952693,
+    "delta": 15.361559995269243,
+    "expected": 0.35993500019711494,
+    "score": 1
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 1215.3615599952693,
+    "delta": 15.361559995269243,
+    "expected": 0.35993500019711494,
+    "score": 1
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 1212.3154061491155,
+    "delta": 12.315406149115391,
+    "expected": 0.35993500019711494,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 1208.1615599952693,
+    "delta": 8.16155999526924,
+    "expected": 0.35993500019711494,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 1208.1615599952693,
+    "delta": 8.16155999526924,
+    "expected": 0.35993500019711494,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 1300,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 1191.3615599952693,
+    "delta": -8.638440004730759,
+    "expected": 0.35993500019711494,
+    "score": 0
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 1221.8181818181818,
+    "delta": 21.818181818181817,
+    "expected": 0.09090909090909091,
+    "score": 1
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 1221.8181818181818,
+    "delta": 21.818181818181817,
+    "expected": 0.09090909090909091,
+    "score": 1
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 1218.772027972028,
+    "delta": 18.77202797202797,
+    "expected": 0.09090909090909091,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 1214.6181818181817,
+    "delta": 14.618181818181817,
+    "expected": 0.09090909090909091,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 1214.6181818181817,
+    "delta": 14.618181818181817,
+    "expected": 0.09090909090909091,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 1600,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 1197.8181818181818,
+    "delta": -2.1818181818181817,
+    "expected": 0.09090909090909091,
+    "score": 0
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 1223.7623762376238,
+    "delta": 23.762376237623762,
+    "expected": 0.009900990099009901,
+    "score": 1
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 1223.7623762376238,
+    "delta": 23.762376237623762,
+    "expected": 0.009900990099009901,
+    "score": 1
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 1220.71622239147,
+    "delta": 20.716222391469913,
+    "expected": 0.009900990099009901,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 1216.5623762376238,
+    "delta": 16.56237623762376,
+    "expected": 0.009900990099009901,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 1216.5623762376238,
+    "delta": 16.56237623762376,
+    "expected": 0.009900990099009901,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1200,
+   "problem": 2000,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 1199.7623762376238,
+    "delta": -0.2376237623762376,
+    "expected": 0.009900990099009901,
+    "score": 0
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 1480.469495292942,
+    "delta": 0.4694952929419056,
+    "expected": 0.9804376961274206,
+    "score": 1
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 1480.469495292942,
+    "delta": 0.4694952929419056,
+    "expected": 0.9804376961274206,
+    "score": 1
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 1477.423341446788,
+    "delta": -2.576658553211943,
+    "expected": 0.9804376961274206,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 1473.2694952929419,
+    "delta": -6.7305047070580954,
+    "expected": 0.9804376961274206,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 1473.2694952929419,
+    "delta": -6.7305047070580954,
+    "expected": 0.9804376961274206,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 800,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 1456.469495292942,
+    "delta": -23.530504707058093,
+    "expected": 0.9804376961274206,
+    "score": 0
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 1481.8925150346422,
+    "delta": 1.8925150346420887,
+    "expected": 0.921145206889913,
+    "score": 1
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 1481.8925150346422,
+    "delta": 1.8925150346420887,
+    "expected": 0.921145206889913,
+    "score": 1
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 1478.8463611884883,
+    "delta": -1.15363881151176,
+    "expected": 0.921145206889913,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 1474.6925150346422,
+    "delta": -5.307484965357912,
+    "expected": 0.921145206889913,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 1474.6925150346422,
+    "delta": -5.307484965357912,
+    "expected": 0.921145206889913,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 1053,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 1457.8925150346422,
+    "delta": -22.107484965357912,
+    "expected": 0.921145206889913,
+    "score": 0
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 1486.2853832190299,
+    "delta": 6.285383219029951,
+    "expected": 0.7381090325404187,
+    "score": 1
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 1486.2853832190299,
+    "delta": 6.285383219029951,
+    "expected": 0.7381090325404187,
+    "score": 1
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 1483.239229372876,
+    "delta": 3.2392293728761024,
+    "expected": 0.7381090325404187,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 1479.08538321903,
+    "delta": -0.9146167809700501,
+    "expected": 0.7381090325404187,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 1479.08538321903,
+    "delta": -0.9146167809700501,
+    "expected": 0.7381090325404187,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 1300,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 1462.2853832190299,
+    "delta": -17.714616780970047,
+    "expected": 0.7381090325404187,
+    "score": 0
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 1495.987346189995,
+    "delta": 15.987346189994929,
+    "expected": 0.3338605754168779,
+    "score": 1
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 1495.987346189995,
+    "delta": 15.987346189994929,
+    "expected": 0.3338605754168779,
+    "score": 1
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 1492.941192343841,
+    "delta": 12.941192343841083,
+    "expected": 0.3338605754168779,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 1488.7873461899949,
+    "delta": 8.78734618999493,
+    "expected": 0.3338605754168779,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 1488.7873461899949,
+    "delta": 8.78734618999493,
+    "expected": 0.3338605754168779,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 1600,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 1471.987346189995,
+    "delta": -8.01265381000507,
+    "expected": 0.3338605754168779,
+    "score": 0
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 1502.854558695179,
+    "delta": 22.854558695179104,
+    "expected": 0.0477267210342039,
+    "score": 1
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 1502.854558695179,
+    "delta": 22.854558695179104,
+    "expected": 0.0477267210342039,
+    "score": 1
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 1499.8084048490252,
+    "delta": 19.80840484902526,
+    "expected": 0.0477267210342039,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 1495.654558695179,
+    "delta": 15.654558695179105,
+    "expected": 0.0477267210342039,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 1495.654558695179,
+    "delta": 15.654558695179105,
+    "expected": 0.0477267210342039,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1480,
+   "problem": 2000,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 1478.854558695179,
+    "delta": -1.1454413048208938,
+    "expected": 0.0477267210342039,
+    "score": 0
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 1750.100782165953,
+    "delta": 0.10078216595295508,
+    "expected": 0.9958007430852935,
+    "score": 1
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 1750.100782165953,
+    "delta": 0.10078216595295508,
+    "expected": 0.9958007430852935,
+    "score": 1
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 1747.0546283197991,
+    "delta": -2.9453716802008936,
+    "expected": 0.9958007430852935,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 1742.900782165953,
+    "delta": -7.099217834047046,
+    "expected": 0.9958007430852935,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 800,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 1742.900782165953,
+    "delta": -7.099217834047046,
+    "expected": 0.9958007430852935,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 800,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 1726.100782165953,
+    "delta": -23.899217834047043,
+    "expected": 0.9958007430852935,
+    "score": 0
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 1750.4265048541793,
+    "delta": 0.4265048541791616,
+    "expected": 0.9822289644092016,
+    "score": 1
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 1750.4265048541793,
+    "delta": 0.4265048541791616,
+    "expected": 0.9822289644092016,
+    "score": 1
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 1747.3803510080254,
+    "delta": -2.619648991974687,
+    "expected": 0.9822289644092016,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 1743.2265048541792,
+    "delta": -6.7734951458208394,
+    "expected": 0.9822289644092016,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 1053,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 1743.2265048541792,
+    "delta": -6.7734951458208394,
+    "expected": 0.9822289644092016,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 1053,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 1726.4265048541793,
+    "delta": -23.57349514582084,
+    "expected": 0.9822289644092016,
+    "score": 0
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 1751.6741988966137,
+    "delta": 1.674198896613749,
+    "expected": 0.9302417126410938,
+    "score": 1
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 1751.6741988966137,
+    "delta": 1.674198896613749,
+    "expected": 0.9302417126410938,
+    "score": 1
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 1748.6280450504598,
+    "delta": -1.3719549495400996,
+    "expected": 0.9302417126410938,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 1744.4741988966136,
+    "delta": -5.525801103386252,
+    "expected": 0.9302417126410938,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 1300,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 1744.4741988966136,
+    "delta": -5.525801103386252,
+    "expected": 0.9302417126410938,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 1300,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 1727.6741988966137,
+    "delta": -22.32580110338625,
+    "expected": 0.9302417126410938,
+    "score": 0
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 1757.118759916676,
+    "delta": 7.118759916676113,
+    "expected": 0.7033850034718286,
+    "score": 1
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 1757.118759916676,
+    "delta": 7.118759916676113,
+    "expected": 0.7033850034718286,
+    "score": 1
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 1754.0726060705222,
+    "delta": 4.072606070522264,
+    "expected": 0.7033850034718286,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 1749.9187599166762,
+    "delta": -0.08124008332388843,
+    "expected": 0.7033850034718286,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 1600,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 1749.9187599166762,
+    "delta": -0.08124008332388843,
+    "expected": 0.7033850034718286,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 1600,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 1733.118759916676,
+    "delta": -16.88124008332389,
+    "expected": 0.7033850034718286,
+    "score": 0
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 300,
+   "result": {
+    "next": 1769.399624141187,
+    "delta": 19.399624141187005,
+    "expected": 0.19168232745054142,
+    "score": 1
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 800,
+   "result": {
+    "next": 1769.399624141187,
+    "delta": 19.399624141187005,
+    "expected": 0.19168232745054142,
+    "score": 1
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 3000,
+   "result": {
+    "next": 1766.353470295033,
+    "delta": 16.35347029503316,
+    "expected": 0.19168232745054142,
+    "score": 0.873076923076923
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 6000,
+   "result": {
+    "next": 1762.199624141187,
+    "delta": 12.199624141187003,
+    "expected": 0.19168232745054142,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 2000,
+   "correct": true,
+   "timeMs": 8000,
+   "result": {
+    "next": 1762.199624141187,
+    "delta": 12.199624141187003,
+    "expected": 0.19168232745054142,
+    "score": 0.7
+   }
+  },
+  {
+   "player": 1750,
+   "problem": 2000,
+   "correct": false,
+   "timeMs": 1500,
+   "result": {
+    "next": 1745.399624141187,
+    "delta": -4.600375858812994,
+    "expected": 0.19168232745054142,
+    "score": 0
+   }
+  }
+ ],
+ "targetRatings": [
+  {
+   "player": 1000,
+   "target": 852.8092858821623
+  },
+  {
+   "player": 1200,
+   "target": 1052.8092858821624
+  },
+  {
+   "player": 1500,
+   "target": 1352.8092858821624
+  },
+  {
+   "player": 1800,
+   "target": 1652.8092858821624
+  }
+ ],
+ "picks": [
+  {
+   "skills": {
+    "multiplication": 1200,
+    "percentages": 1200,
+    "fractions": 1200,
+    "powers": 1200
+   },
+   "seed": 31,
+   "picks": [
+    "fractions",
+    "powers",
+    "fractions",
+    "multiplication",
+    "percentages",
+    "percentages",
+    "multiplication",
+    "powers",
+    "powers",
+    "fractions",
+    "percentages",
+    "fractions",
+    "fractions",
+    "percentages",
+    "fractions",
+    "multiplication",
+    "fractions",
+    "powers",
+    "powers",
+    "percentages",
+    "powers",
+    "powers",
+    "powers",
+    "powers",
+    "powers",
+    "fractions",
+    "fractions",
+    "multiplication",
+    "multiplication",
+    "multiplication"
+   ]
+  },
+  {
+   "skills": {
+    "multiplication": 1500,
+    "percentages": 1350,
+    "fractions": 1100,
+    "powers": 1250
+   },
+   "seed": 32,
+   "picks": [
+    "fractions",
+    "powers",
+    "percentages",
+    "powers",
+    "fractions",
+    "fractions",
+    "multiplication",
+    "fractions",
+    "powers",
+    "powers",
+    "percentages",
+    "multiplication",
+    "percentages",
+    "fractions",
+    "fractions",
+    "percentages",
+    "percentages",
+    "percentages",
+    "fractions",
+    "fractions",
+    "fractions",
+    "fractions",
+    "percentages",
+    "powers",
+    "powers",
+    "percentages",
+    "percentages",
+    "fractions",
+    "powers",
+    "powers"
+   ]
+  },
+  {
+   "skills": {
+    "multiplication": 1000,
+    "percentages": 1900,
+    "fractions": 1450,
+    "powers": 1000
+   },
+   "seed": 33,
+   "picks": [
+    "fractions",
+    "powers",
+    "fractions",
+    "multiplication",
+    "percentages",
+    "powers",
+    "multiplication",
+    "fractions",
+    "powers",
+    "powers",
+    "multiplication",
+    "powers",
+    "multiplication",
+    "powers",
+    "powers",
+    "powers",
+    "fractions",
+    "multiplication",
+    "multiplication",
+    "multiplication",
+    "powers",
+    "multiplication",
+    "powers",
+    "fractions",
+    "fractions",
+    "fractions",
+    "powers",
+    "powers",
+    "percentages",
+    "powers"
+   ]
+  }
+ ]
+}
