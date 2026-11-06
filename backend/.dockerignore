@@ -1,0 +1,8 @@
+# Keep secrets and local junk out of the build context (the Dockerfile copies only what it needs anyway).
+.env
+.env.*
+!.env.example
+.venv
+**/__pycache__
+**/.pytest_cache
+**/*.pyc

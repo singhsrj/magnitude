@@ -13,7 +13,7 @@
  */
 import { useSyncExternalStore } from "react";
 import { ApiError, SYNC_ENABLED, apiFetch } from "./api";
-import { ensureToken, getToken } from "./auth";
+import { authToken, authTokenNow } from "./auth";
 import { migrateProfile, type Profile } from "./engine";
 import { replaceProfile } from "./profile";
 import { eventKey, type OutboxEvent, type SyncResponse, type Ticket } from "./syncTypes";
@@ -115,6 +115,11 @@ export function onProfile(listener: (p: Profile) => void): () => void {
   return () => profileListeners.delete(listener);
 }
 
+/** Shows a profile that didn't come from a sync (after an account switch or sign-out). */
+export function publishProfile(p: Profile): void {
+  profileListeners.forEach((l) => l(p));
+}
+
 function adoptServerProfile(raw: unknown): void {
   const server = migrateProfile(raw);
   if (!server) {
@@ -155,7 +160,7 @@ export function refillTickets(): Promise<void> {
   if (!SYNC_ENABLED || typeof window === "undefined") return Promise.resolve();
   refilling ??= (async () => {
     try {
-      const token = await ensureToken();
+      const token = await authToken();
       while (freshTickets().length < TICKET_POOL) {
         const ticket = await apiFetch<Ticket>("/v1/sessions", { method: "POST", token });
         write(TICKETS_KEY, [...freshTickets(), ticket]);
@@ -252,8 +257,10 @@ export function flush({ keepalive = false }: { keepalive?: boolean } = {}): Prom
   if (!SYNC_ENABLED || typeof window === "undefined" || status.accountLost) return Promise.resolve();
   if (keepalive) return run(true);
   if (inFlight) {
+    // The running pass may have read the outbox before the newest answers landed. Callers expect "what's
+    // waiting now has been tried", so follow up once it ends (stops when empty, or a retry is scheduled).
     rerun = true;
-    return inFlight;
+    return inFlight.then(() => (readOutbox().length > 0 && retryTimer === null ? flush() : undefined));
   }
   inFlight = (async () => {
     try {
@@ -278,7 +285,7 @@ async function withLock(fn: () => Promise<void>): Promise<void> {
 async function run(keepalive: boolean): Promise<void> {
   setStatus({ syncing: true });
   try {
-    const token = keepalive ? getToken() : await ensureToken();
+    const token = keepalive ? authTokenNow() : await authToken();
     if (!token) return;
     if (keepalive && readOutbox().length === 0) return; // leaving a screen with nothing to send
     const limit = keepalive ? KEEPALIVE_MAX : BATCH_MAX;
@@ -326,6 +333,17 @@ function succeed(): void {
 
 // ------------------------------------------------------------------------------------------ lifecycle
 let started = false;
+
+/** Forgets everything this device holds for the previous identity: outbox, tickets, retry state. */
+export function resetSyncState(): void {
+  write(OUTBOX_KEY, []);
+  write(DEAD_KEY, []);
+  write(TICKETS_KEY, []);
+  if (retryTimer) clearTimeout(retryTimer);
+  retryTimer = null;
+  retryAttempt = 0;
+  setStatus({ pending: 0, tickets: 0, unsyncedSince: null, offline: false, accountLost: false, lastError: null });
+}
 
 /** Installs the background triggers (idempotent): tab hidden or closing, connection back, leftovers from last visit. */
 export function startSync(): void {

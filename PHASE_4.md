@@ -1,4 +1,4 @@
-# Phase 4: Connect the UI to the backend without adding latency
+/# Phase 4: Connect the UI to the backend without adding latency
 
 This is the implementation spec. Work through the steps in order; each one ends in a state that can be checked.
 Background: `OVERVIEW.md`. Backend reference: `backend/README.md`.

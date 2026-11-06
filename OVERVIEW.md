@@ -37,7 +37,8 @@ own copy of the engine, grades your answers itself, and applies Elo to the autho
 
 | Path | Role |
 | --- | --- |
-| `app/page.tsx` → `/` | Home dashboard: rating chart, skill ratings, daily set card, last 20 rounds, 14-day activity strip |
+| `app/page.tsx` → `/` | Landing page: an interactive example duel, how it works, sign-in / sign-up (Clerk) |
+| `app/home/page.tsx` → `/home` | Home dashboard: rating chart, skill ratings, daily set card, last 20 rounds, 14-day activity strip |
 | `app/duel/page.tsx` → `/duel` | Endless practice rounds |
 | `app/duel/daily/page.tsx` → `/duel/daily` | 10-problem daily set, the same for everyone on a given date |
 | `components/ui/` | Small shared pieces: `KeyCap`, `StatPill`, `Logo` |
@@ -94,6 +95,10 @@ exceed the real time elapsed, answers can't be from the future or from before th
 Duplicates are acknowledged without being applied again, which makes retries safe. Rejecting a practice answer breaks
 its session; other sessions and daily answers carry on. The response is the authoritative profile.
 
+**Accounts:** the browser can also sign in with Clerk. `lib/account.ts` calls `POST /v1/players/link` once per page load
+(attaching the account to this device's player, or asking before replacing local progress with an existing account's),
+and from then on requests carry Clerk's session token (`lib/auth.ts`). Signed-out play is unchanged. See `backend/README.md`.
+
 Other safeguards: rate limits (Redis), `/readyz` checks the database and Redis, the Neon pooler URL is adjusted for asyncpg.
 
 ## Scripts
@@ -115,9 +120,9 @@ Other safeguards: rate limits (Redis), `/readyz` checks the database and Redis, 
   parity tests (exact problem equality over 1,200 session problems and six 60-round replays), 49 SQLite tests, 4 tests
   against real Postgres (including concurrent syncs), the Node e2e (10 runs in a row) and the Chrome e2e.
 - Still open from Phase 4: calibrating difficulty from real play data (see Known limits below).
-- Phase 5: deploy to AWS (ECS + a scheduled Lambda), plus CI and metrics.
+- Phase 5: deploy the backend to Render (`render.yaml`) and the frontend to Vercel or Netlify (`DEPLOY.md`), then CI and metrics.
 
 **Known limits:** Above about 1600–1800 the generator's problems get easier than the target. Because a correct answer
-always scores at least 0.70, ratings settle a little low. Accounts are anonymous with no way to recover them. Answer times
+always scores at least 0.70, ratings settle a little low. Anonymous (signed-out) players have no way to recover their progress; signing in fixes that. Answer times
 are client-reported (bounded by the server's checks, enough for one player, not for a public leaderboard). "Reset
 progress" is hidden when sync is on, because the server holds the real profile and there is no server-side reset yet.

@@ -17,7 +17,7 @@ export function DailySummaryView({ summary }: { summary: DailySummary }) {
       {alreadyDone && <p className="text-sm text-ink-tertiary">A new set unlocks at midnight.</p>}
       <div className="flex w-full flex-col gap-3 sm:flex-row">
         <Link
-          href="/"
+          href="/home"
           className="inline-flex h-14 flex-1 items-center justify-center rounded-control bg-accent text-base font-semibold text-ink-onAccent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
         >
           Back home

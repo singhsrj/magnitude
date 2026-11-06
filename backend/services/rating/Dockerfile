@@ -12,11 +12,14 @@ RUN pip install -r requirements.txt
 COPY services/rating/app ./app
 COPY services/rating/alembic.ini ./alembic.ini
 COPY services/rating/migrations ./migrations
+COPY services/rating/start.sh ./start.sh
 
 RUN useradd --system --uid 10001 app && chown -R app /srv
 USER app
 
+ENV PORT=8000
 EXPOSE 8000
 HEALTHCHECK --interval=15s --timeout=3s --start-period=10s \
-  CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz', timeout=2)"
-CMD ["uvicorn", "app.main:create_app", "--factory", "--host", "0.0.0.0", "--port", "8000", "--proxy-headers"]
+  CMD python -c "import os, urllib.request; urllib.request.urlopen('http://127.0.0.1:%s/healthz' % os.environ['PORT'], timeout=2)"
+# start.sh: optional migrations (RUN_MIGRATIONS=1), then uvicorn on $PORT behind the platform's proxy.
+CMD ["sh", "./start.sh"]

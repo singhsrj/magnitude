@@ -61,12 +61,14 @@ If you change the engine in either language, change the other and regenerate the
 
 ## API
 
-All routes except sign-up and health need `Authorization: Bearer <token>`. JSON is camelCase, and
+All routes except sign-up and health need `Authorization: Bearer <token>`, where the token is either this device's
+anonymous token or, when signed in, a Clerk session token (see Accounts below). JSON is camelCase, and
 `GET /v1/profile` returns exactly the frontend's `Profile` type.
 
 | Method and path | Purpose |
 | --- | --- |
 | `POST /v1/players` | Create an anonymous player. Returns `{playerId, token}`; the token is shown once, only its SHA-256 is stored. The body is optional: `{"import": <Profile>}` takes a pre-Phase-4 browser profile once, unverified. |
+| `POST /v1/players/link` | Attaches the signed-in Clerk account to a player (bearer = the Clerk token). Body (optional): `{anonymousToken?, import?}`. Returns `{playerId, status}` where status is `linked` (this device's player is now the account's), `created` (a new player was made) or `existing` (the account already had one). `409 device_account_linked_elsewhere` if that device token belongs to another account. Idempotent. |
 | `GET /v1/profile` | Rating, peak, per-skill ratings, streaks, last 200 rounds, per-day counts, daily results. Cached 30s. |
 | `POST /v1/sessions` | A practice session ticket `{sessionId, seed, expiresAt}`. 30 per minute per player. |
 | `POST /v1/sync` | `{events: [...]}` (1 to 200). Returns `{acked, rejected, profile}`. `acked` includes duplicates. A `409` means a concurrent request conflicted: retry. |
@@ -74,6 +76,20 @@ All routes except sign-up and health need `Authorization: Bearer <token>`. JSON 
 
 An event is either `{kind: "practice", sessionId, index, startSkills?, choice, timeMs, at, localDate, problemId, skill, problemRating, correct}`
 or `{kind: "daily", date, index, choice, timeMs, at, problemId, skill, problemRating, correct}`. `startSkills` goes with index 0 only.
+
+### Accounts (Clerk)
+
+A person is anonymous until they sign in. Signing in doesn't replace the player system: it attaches a Clerk user id
+(`players.clerk_user_id`, unique) to a player, so the same player can be reached from any device.
+
+- **Verification** (`app/clerk.py`): RS256 only, signature checked against Clerk's JWKS (cached, refetched when Clerk
+  rotates keys), issuer, expiry and not-before (10 s leeway), and `azp` (the origin the token was issued to) must be one of
+  `CORS_ORIGINS` / match `CORS_ORIGIN_REGEX`. The issuer comes from `CLERK_PUBLISHABLE_KEY`; no secret key is used.
+- **Both credentials work** for every route. Tokens that look like JWTs go to Clerk verification, others are device tokens.
+  A valid Clerk token for an account with no player yet gets `401 account not linked` until `/v1/players/link` runs.
+- **Linking** never merges two players: an account that already has one keeps it (`existing`), and the browser decides
+  whether to discard its own anonymous progress (it asks first).
+- Without `CLERK_PUBLISHABLE_KEY`, Clerk tokens are refused (`401`) and only device tokens work.
 
 ### Importing an old profile
 
@@ -117,6 +133,9 @@ cd backend
 cp .env.example .env          # fill in the Neon and Upstash strings
 docker compose up --build     # migrate (one-shot), then rating on :8000
 ```
+
+In production it runs on Render from `render.yaml` at the repo root (see `DEPLOY.md`). The container reads `$PORT`,
+and `RUN_MIGRATIONS=1` makes it apply migrations at start (Render's free plan has no pre-deploy step).
 
 Offline, with local Postgres and Redis containers instead of Neon and Upstash:
 `docker compose -f docker-compose.yml -f docker-compose.local.yml up --build`
@@ -163,18 +182,20 @@ From the repo root, `npm run e2e:sync` and `node scripts/e2e-browser.mjs` drive 
 
 ### Status
 
-Run and passing: parity (11), pure rules (12), rating service (49 on SQLite, 4 more against live Postgres), problem service (9),
-the migrations (0001 and 0002 apply, 0002 downgrades and re-applies), the Docker images, and both end-to-end scripts.
+Run and passing: parity (11), pure rules (12), rating service (73 on SQLite, 4 more against live Postgres), problem service (9),
+the migrations (0001 to 0003 apply, 0003 downgrades and re-applies on Postgres), the Docker images, and both end-to-end scripts.
 The test suites found two small bugs in tests when first run (Windows default encoding when reading the golden file, and a
 substring assertion that matched `"answered"`); both are fixed.
 
 ## Known limits
 
-- **Anonymous accounts.** The token lives in the browser; lose it and the player is gone. There is no recovery or login.
+- **Anonymous play has no recovery.** The device token lives in the browser; lose it and that player is gone. Signing in
+  with Clerk fixes this for anyone who does it.
 - **Time is client-reported.** The server bounds it (floor, wall-clock total, no future answers) but can't prove think
   time. Fine for one player; not for a public leaderboard, which would need server-issued seeds every N rounds.
-- **Rate limiting fails open** if Redis is down, and sign-up limiting keys on the connecting IP (behind a proxy,
-  configure forwarded headers).
+- **Rate limiting fails open** if Redis is down. Sign-up limiting keys on the client IP from `X-Forwarded-For`, which
+  `start.sh` trusts by default (`FORWARDED_ALLOW_IPS=*`), as is right behind Render's proxy. If the port were exposed
+  directly, a client could forge that header, so set `FORWARDED_ALLOW_IPS` to the proxy's address.
 - **The client can compute upcoming problems from the seed.** Not an exploit: both expressions are on screen anyway.
 - **A midnight edge case.** A daily set started just before local midnight and finished just after is stored under its
   own date, while the browser's heat strip counts rounds by the day each was answered. The server's view wins on the next sync.

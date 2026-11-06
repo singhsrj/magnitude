@@ -146,5 +146,20 @@ class ProfileImport(Wire):
     daily: dict[str, DailyResultOut] = Field(default_factory=dict, max_length=400)
 
 
+class LinkIn(Wire):
+    """`anonymous_token`: this device's existing token, to attach its progress to the account.
+    `import_profile`: pre-Phase-4 progress, used only when the account gets a brand-new player."""
+
+    anonymous_token: str | None = Field(default=None, max_length=200)
+    import_profile: ProfileImport | None = Field(default=None, alias="import")
+
+
+class LinkOut(Wire):
+    player_id: UUID
+    # linked: this device's player is now the account's. created: a new player was made for the account.
+    # existing: the account already had a player (its progress is what the account sees).
+    status: Literal["linked", "created", "existing"]
+
+
 class PlayerCreateIn(Wire):
     import_profile: ProfileImport | None = Field(default=None, alias="import")

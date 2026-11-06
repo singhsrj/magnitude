@@ -19,6 +19,8 @@ npm run e2e:sync       # play 250 rounds through the real sync code against a ru
 Progress is then stored and verified on the server. Without `.env.local` the app runs entirely in the browser, as before.
 Browser-level check in real Chrome: `node scripts/e2e-browser.mjs` (header of the file says what it needs).
 
+**Deploying:** backend on Render, frontend on Vercel (or Netlify). See `DEPLOY.md`.
+
 Controls: `←` / `→` answer, `Space` or `Enter` continues, `Esc` leaves.
 
 ## Phases
@@ -30,7 +32,7 @@ Controls: `←` / `→` answer, `Space` or `Enter` continues, `Esc` leaves.
 | 2 | Home dashboard from Figma (rating chart, skills, daily set, last 20 rounds), playable daily set, wrong-answer shake, mobile layouts | done |
 | 3 | Backend in `backend/` (FastAPI, Neon Postgres, Upstash Redis, Docker Compose); engine parity-tested against this app | done |
 | 4 | Play locally from a server-issued seed, sync in the background, server replays and verifies (`PHASE_4.md`) | done; difficulty calibration from real play is still open |
-| 5 | AWS deploy (ECS + scheduled Lambda), CI, metrics | |
+| 5 | Deploy: backend on Render (`render.yaml`), frontend on Vercel or Netlify (`DEPLOY.md`); then CI and metrics | config ready, first deploy is manual |
 
 ## How the rating works
 
@@ -67,17 +69,20 @@ Controls: `←` / `→` answer, `Space` or `Enter` continues, `Esc` leaves.
 ## Layout
 
 ```
-app/                 routes (/, /duel, /duel/daily)
+app/                 routes: / (landing), /home (dashboard), /duel, /duel/daily, /sign-in, /sign-up (Clerk)
 components/ui/       KeyCap, StatPill, Logo        (Figma components)
 components/duel/     ExprCard, TimerBar, DuelScreen, DailySummary
+components/landing/  landing page pieces: HeroDuel, AuthControls (Clerk), AuthShell
 components/home/     Dashboard, RatingCard + RatingChart, SkillsCard, DailyCard, RecentCard
 hooks/useDuel.ts     duel state machine (practice and daily modes)
 lib/engine/          pure game logic: elo, problems, session, stats, daily, dates, seeded rng (no React)
 lib/format.ts        number and time formatting
 lib/profile.ts       local copy of the profile (a cache when sync is on)
-lib/api.ts, auth.ts  backend access and the anonymous account token (Phase 4)
+lib/api.ts, auth.ts  backend access; the anonymous device token and the Clerk session token (Phase 4)
+lib/account.ts       links a signed-in Clerk account to this device's progress; components/AccountSync.tsx drives it
 lib/sync.ts          session tickets, outbox, background sync (Phase 4); lib/reconcile.ts is its pure core
 scripts/             engine verification, golden-vector generator
+render.yaml          Render Blueprint for the backend; vercel.json for the frontend (DEPLOY.md)
 backend/             FastAPI rating service, Alembic migrations, Docker Compose (see backend/README.md)
 ```
 

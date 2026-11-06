@@ -12,6 +12,7 @@
     "e2e:sync": "tsx scripts/e2e-sync.ts"
   },
   "dependencies": {
+    "@clerk/nextjs": "^7.9.25",
     "next": "^15.5.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"

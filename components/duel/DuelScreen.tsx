@@ -20,13 +20,13 @@ export function DuelScreen({ mode = "practice" }: { mode?: DuelMode }) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.repeat || e.metaKey || e.ctrlKey || e.altKey) return;
-      if (e.key === "Escape") { router.push("/"); return; }
+      if (e.key === "Escape") { router.push("/home"); return; }
       if ((e.target as HTMLElement | null)?.closest("a")) return; // let focused links act normally
       if (e.key === "ArrowLeft") { e.preventDefault(); answer("left"); }
       else if (e.key === "ArrowRight") { e.preventDefault(); answer("right"); }
       else if (e.key === " " || e.key === "Enter") {
         e.preventDefault();
-        if (phase === "summary") router.push("/");
+        if (phase === "summary") router.push("/home");
         else next();
       }
     };
@@ -96,7 +96,7 @@ export function DuelScreen({ mode = "practice" }: { mode?: DuelMode }) {
           <StatPill label="Streak" value={String(profile.streak)} />
           <StatPill label="Avg" value={avg} />
         </div>
-        <Link href="/" className="hidden text-sm text-ink-tertiary hover:text-ink-secondary md:inline">
+        <Link href="/home" className="hidden text-sm text-ink-tertiary hover:text-ink-secondary md:inline">
           Esc &middot; menu
         </Link>
       </header>

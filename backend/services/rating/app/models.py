@@ -29,7 +29,8 @@ class Base(DeclarativeBase):
 
 
 class Player(Base):
-    """One anonymous player per device. `token_hash` is the SHA-256 of the bearer token."""
+    """A player. Anonymous at first (one per device, `token_hash` is the SHA-256 of its bearer token), and attached to a
+    Clerk account once the person signs in. Several devices can reach the same player through that account."""
 
     __tablename__ = "players"
 
@@ -44,6 +45,8 @@ class Player(Base):
     skills: Mapped[dict[str, float]] = mapped_column(JSONType, default=default_skills)
     # True once a pre-Phase-4 browser profile has been imported (that can happen only once, unverified).
     imported: Mapped[bool] = mapped_column(Boolean, default=False, server_default=text("false"))
+    # The Clerk account this player belongs to, once the player signed in (unique; one account, one player).
+    clerk_user_id: Mapped[str | None] = mapped_column(String(128), unique=True, nullable=True, default=None)
 
 
 class GameSession(Base):

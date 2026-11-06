@@ -322,6 +322,16 @@ async def test_cors_preflight_is_cacheable(client):
     assert r.status_code == 200 and r.headers["access-control-max-age"] == "86400"
 
 
+async def test_cors_origin_regex_allows_preview_deploys(make_client):
+    c = await make_client(cors_origins="https://magnitude.vercel.app", cors_origin_regex=r"^https://magnitude(-[a-z0-9-]+)?\.vercel\.app$")
+    pre = {"Access-Control-Request-Method": "POST", "Access-Control-Request-Headers": "authorization,content-type"}
+    for origin in ("https://magnitude.vercel.app", "https://magnitude-git-main-suraj.vercel.app"):
+        r = await c.options("/v1/sync", headers={"Origin": origin, **pre})
+        assert r.status_code == 200 and r.headers["access-control-allow-origin"] == origin
+    r = await c.options("/v1/sync", headers={"Origin": "https://evil.vercel.app", **pre})
+    assert r.status_code == 400
+
+
 # ------------------------------------------------------------------ daily set through sync
 def daily_events(day: str, n: int = DAILY_LENGTH, wrong_at: set[int] = frozenset(), start_ms: int | None = None) -> list[dict]:
     clock = start_ms if start_ms is not None else now_ms() - 30_000

@@ -44,8 +44,8 @@ async def make_client(engine, redis):
     """Factory so a test can build an app with its own settings."""
     clients = []
 
-    async def build(**overrides) -> AsyncClient:
-        app = create_app(make_settings(**overrides), engine=engine, redis=redis)
+    async def build(clerk=None, **overrides) -> AsyncClient:
+        app = create_app(make_settings(**overrides), engine=engine, redis=redis, clerk=clerk)
         c = AsyncClient(transport=ASGITransport(app=app), base_url="http://test")
         clients.append(c)
         return c

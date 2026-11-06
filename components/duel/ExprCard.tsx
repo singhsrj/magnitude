@@ -10,6 +10,8 @@ type ExprCardProps = {
   value: string;
   state: CardState;
   disabled: boolean;
+  /** Smaller type and height, for narrow spots such as the landing page */
+  compact?: boolean;
   onSelect: () => void;
 };
 
@@ -30,7 +32,7 @@ const BADGE: Record<CardState, { text: string; color: string } | null> = {
   wrong: { text: "Wrong", color: "text-wrong" },
 };
 
-export function ExprCard({ side, expression, value, state, disabled, onSelect }: ExprCardProps) {
+export function ExprCard({ side, expression, value, state, disabled, compact, onSelect }: ExprCardProps) {
   const badge = BADGE[state];
   return (
     <button
@@ -38,13 +40,13 @@ export function ExprCard({ side, expression, value, state, disabled, onSelect }:
       onClick={onSelect}
       disabled={disabled}
       aria-label={`Choose ${expression}`}
-      className={`flex h-[200px] w-full max-w-[520px] flex-col justify-between rounded-card p-6 text-left transition-colors duration-150 disabled:cursor-default md:h-[340px] md:p-8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${SURFACE[state]}`}
+      className={`flex h-[200px] w-full max-w-[520px] flex-col justify-between rounded-card p-6 text-left transition-colors duration-150 disabled:cursor-default ${compact ? "md:h-[260px] md:p-6" : "md:h-[340px] md:p-8"} focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${SURFACE[state]}`}
     >
       <span className="flex w-full items-center justify-between">
         <KeyCap glyph={side === "left" ? "←" : "→"} />
         {badge && <span className={`label-caps ${badge.color}`}>{badge.text}</span>}
       </span>
-      <span className="text-center font-mono text-[40px] font-medium tracking-[-0.02em] text-ink-primary md:text-[64px]">
+      <span className={`text-center font-mono text-[40px] font-medium tracking-[-0.02em] text-ink-primary ${compact ? "whitespace-nowrap md:text-[36px]" : "md:text-[64px]"}`}>
         {expression}
       </span>
       <span className={`text-center font-mono text-base ${VALUE_COLOR[state]}`}>{value}</span>

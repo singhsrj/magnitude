@@ -2,13 +2,13 @@ from __future__ import annotations
 
 import logging
 
-from fastapi import APIRouter, Depends, HTTPException, Request, Response
+from fastapi import APIRouter, Depends, Header, HTTPException, Request, Response
 from sqlalchemy import text
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from . import schemas, service, sync
-from .deps import current_player, enforce_limit, get_session
+from .deps import bearer, clerk_user_id, current_player, enforce_limit, get_session
 from .models import Player, utcnow
 from .rules import datetime_to_ms
 
@@ -29,6 +29,49 @@ async def sign_up(
     await enforce_limit(request, f"signup:{ip}", request.app.state.settings.signup_limit_per_hour, 3600)
     player, token = await service.create_player(session, body.import_profile if body else None)
     return schemas.PlayerCreated(player_id=player.id, token=token)
+
+
+@v1.post("/players/link", response_model=schemas.LinkOut)
+async def link_account(
+    request: Request,
+    body: schemas.LinkIn | None = None,
+    authorization: str | None = Header(default=None),
+    db: AsyncSession = Depends(get_session),
+):
+    """Attaches a Clerk account to a player. Send the Clerk session token as the bearer token.
+
+    - the account already has a player: `existing` (this device's anonymous progress is not merged)
+    - else, with a valid `anonymousToken` that isn't taken: that player becomes the account's: `linked`
+    - else a new player is made for the account: `created` (an `import` profile may seed it)
+    Safe to call on every page load: it is idempotent."""
+    token = bearer(authorization)
+    user_id = await clerk_user_id(request, token)
+    await enforce_limit(request, f"link:{user_id}", request.app.state.settings.session_limit_per_minute, 60)
+    body = body or schemas.LinkIn()
+
+    existing = await service.find_player_by_clerk(db, user_id)
+    if existing is not None:
+        return schemas.LinkOut(player_id=existing.id, status="existing")
+
+    anon = await service.find_player_by_token(db, body.anonymous_token) if body.anonymous_token else None
+    if anon is not None and anon.clerk_user_id is not None:
+        # This browser's anonymous player already belongs to somebody else's account (a shared computer).
+        raise HTTPException(status_code=409, detail="device_account_linked_elsewhere")
+
+    try:
+        if anon is not None:
+            anon.clerk_user_id = user_id
+            await db.commit()
+            return schemas.LinkOut(player_id=anon.id, status="linked")
+        player, _ = await service.create_player(db, body.import_profile, clerk_user_id=user_id)
+        return schemas.LinkOut(player_id=player.id, status="created")
+    except IntegrityError:
+        # Two tabs linked the same account at once; the other one won.
+        await db.rollback()
+        winner = await service.find_player_by_clerk(db, user_id)
+        if winner is None:
+            raise HTTPException(status_code=409, detail="conflicting link, retry") from None
+        return schemas.LinkOut(player_id=winner.id, status="existing")
 
 
 @v1.get("/profile", response_model=schemas.ProfileOut)

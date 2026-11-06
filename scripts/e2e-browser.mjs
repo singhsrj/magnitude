@@ -2,7 +2,7 @@
  * Browser-level check of Phase 4 with real Chrome (headless), driven over the DevTools Protocol. No dependencies.
  *
  *   (in backend/)  docker compose -f docker-compose.yml -f docker-compose.local.yml up -d --build
- *   (in repo root) NEXT_PUBLIC_API_URL=http://localhost:8000 NEXT_PUBLIC_SYNC=on npx next dev -p 3000
+ *   (in repo root) npm run build && npx next start -p 3000   (NEXT_PUBLIC_API_URL / NEXT_PUBLIC_SYNC=on set in .env.local)
  *   (in repo root) node scripts/e2e-browser.mjs
  *
  * Checks, in the real app:
@@ -126,7 +126,7 @@ const play = async (n, label) => {
 
 async function checkSyncOn() {
   // ---- 1) dashboard: account + tickets
-  await send("Page.navigate", { url: `${APP}/` });
+  await send("Page.navigate", { url: `${APP}/home` });
   await waitFor("account token", () => ls("magnitude:token:v1"));
   const tickets = await waitFor("2 tickets in the pool", async () => {
     const t = JSON.parse((await ls("magnitude:tickets:v1")) ?? "[]");
@@ -157,7 +157,7 @@ async function checkSyncOn() {
   console.log(`ok  rounds were sent in the background (${requests.filter((r) => r.url === "/v1/sync").length} sync requests after 12 answers)`);
 
   // ---- 3) leaving the duel sends the rest; the server has every round
-  await send("Page.navigate", { url: `${APP}/` });
+  await send("Page.navigate", { url: `${APP}/home` });
   await waitFor("outbox drained", async () => (await outboxLen()) === 0);
   assert.equal((await serverProfile()).rounds, 12);
   console.log("ok  server has all 12 rounds; outbox is empty");
@@ -169,7 +169,7 @@ async function checkSyncOn() {
   await send("Network.setBlockedURLs", { urls: [`${API}/*`] });
   await play(6, "offline");
   assert.equal(await outboxLen(), 6, "6 rounds wait in the outbox");
-  await send("Page.navigate", { url: `${APP}/` });
+  await send("Page.navigate", { url: `${APP}/home` });
   const pill = await waitFor("the offline pill", () => evaluate(`document.querySelector('[role=status]')?.textContent ?? ''`), 10000);
   assert.match(pill, /Offline.*6 unsynced/);
   console.log(`ok  offline: 6 rounds held locally; the dashboard pill says "${pill}"`);
@@ -184,7 +184,7 @@ async function checkSyncOn() {
   await play(10, "daily set");
   // play() already pressed Space after the 10th result ("Space to see your score"), which opens the summary
   await waitFor("the daily summary", async () => /daily/i.test(await evaluate("document.body.innerText")));
-  await send("Page.navigate", { url: `${APP}/` });
+  await send("Page.navigate", { url: `${APP}/home` });
   await waitFor("outbox drained", async () => (await outboxLen()) === 0);
   const final = await serverProfile();
   const dailyDays = Object.keys(final.daily);
@@ -198,12 +198,12 @@ async function checkSyncOn() {
 
 async function checkSyncOff() {
   // NEXT_PUBLIC_SYNC unset/off: the app must behave exactly as before Phase 4 and never touch a backend.
-  await send("Page.navigate", { url: `${APP}/` });
+  await send("Page.navigate", { url: `${APP}/home` });
   await waitFor("the dashboard", async () => /Start your first duel/i.test(await evaluate("document.body.innerText")));
   await send("Page.navigate", { url: `${APP}/duel` });
   await waitFor("first question", async () => (await status()) === "Which is bigger?");
   await play(6, "sync off");
-  await send("Page.navigate", { url: `${APP}/` });
+  await send("Page.navigate", { url: `${APP}/home` });
   await waitFor("the dashboard", async () => /Start duel/i.test(await evaluate("document.body.innerText")));
   assert.match(await evaluate("document.body.innerText"), /Reset progress/, "the local reset button is still there");
   assert.deepEqual(requests, [], `the app contacted the API with sync off: ${JSON.stringify(requests)}`);

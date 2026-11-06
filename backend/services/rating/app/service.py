@@ -73,11 +73,16 @@ def import_profile(session: AsyncSession, player: Player, data: schemas.ProfileI
             session.add(DailyResult(player_id=player.id, day=day, correct=res.correct, total=res.total, time_ms=res.time_ms))
 
 
-async def create_player(session: AsyncSession, imported: schemas.ProfileImport | None = None) -> tuple[Player, str]:
+async def create_player(
+    session: AsyncSession, imported: schemas.ProfileImport | None = None, clerk_user_id: str | None = None
+) -> tuple[Player, str]:
+    """`clerk_user_id` makes the player the account's. Its device token is then unused (the account signs requests),
+    but the column is required and unique, so it still gets one."""
     token = secrets.token_urlsafe(32)
     player = Player(
         id=uuid.uuid4(),
         token_hash=hash_token(token),
+        clerk_user_id=clerk_user_id,
         rating=DEFAULT_RATING,
         peak=DEFAULT_RATING,
         streak=0,
@@ -95,6 +100,11 @@ async def create_player(session: AsyncSession, imported: schemas.ProfileImport |
 
 async def find_player_by_token(session: AsyncSession, token: str) -> Player | None:
     result = await session.execute(select(Player).where(Player.token_hash == hash_token(token)))
+    return result.scalar_one_or_none()
+
+
+async def find_player_by_clerk(session: AsyncSession, clerk_user_id: str) -> Player | None:
+    result = await session.execute(select(Player).where(Player.clerk_user_id == clerk_user_id))
     return result.scalar_one_or_none()
 
 

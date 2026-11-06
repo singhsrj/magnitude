@@ -1,0 +1,39 @@
+# Render Blueprint for the Magnitude backend (rating service).
+# Render dashboard > New > Blueprint > pick this repo. Secrets marked `sync: false` are asked for once, in the dashboard.
+# Postgres stays on Neon and Redis on Upstash (Render's free Postgres expires after 30 days).
+services:
+  - type: web
+    name: magnitude-api
+    runtime: docker
+    # Free: sleeps after 15 min idle, ~1 min cold start. Play is never blocked by it (the browser keeps a ticket
+    # pool and an outbox), only the very first visit waits. "starter" stays awake and allows preDeployCommand.
+    plan: free
+    # Keep this in the same region as Neon and Upstash: every sync is a few database round trips.
+    region: singapore
+    dockerContext: ./backend
+    dockerfilePath: ./backend/services/rating/Dockerfile
+    healthCheckPath: /healthz
+    autoDeploy: true
+    buildFilter:
+      paths:
+        - backend/**
+        - render.yaml
+    # On a paid plan, prefer this to RUN_MIGRATIONS (it runs once per deploy, before traffic switches):
+    # preDeployCommand: alembic upgrade head
+    envVars:
+      - key: DATABASE_URL          # Neon, pooled (host contains -pooler)
+        sync: false
+      - key: DIRECT_DATABASE_URL   # Neon, direct (no -pooler); used only for migrations
+        sync: false
+      - key: REDIS_URL             # Upstash, rediss://default:...@....upstash.io:6379
+        sync: false
+      - key: CORS_ORIGINS          # your frontend, e.g. https://magnitude.vercel.app (comma-separated, no trailing /)
+        sync: false
+      - key: CLERK_PUBLISHABLE_KEY # same pk_... as NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY on Vercel (public, not a secret)
+        sync: false
+      - key: CORS_ORIGIN_REGEX     # optional, for preview deploys, e.g. ^https://magnitude(-[a-z0-9-]+)?\.vercel\.app$
+        sync: false
+      - key: RUN_MIGRATIONS        # run `alembic upgrade head` at container start (free plan has no pre-deploy step)
+        value: "1"
+      - key: LOG_LEVEL
+        value: INFO

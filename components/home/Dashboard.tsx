@@ -7,6 +7,7 @@ import type { Profile } from "@/lib/engine";
 import { loadProfile, resetProfile } from "@/lib/profile";
 import { SYNC_ENABLED, onProfile, startSync } from "@/lib/sync";
 import { Logo } from "@/components/ui/Logo";
+import { AuthControls } from "@/components/landing/AuthControls";
 import { DailyCard } from "./DailyCard";
 import { RatingCard } from "./RatingCard";
 import { RecentCard } from "./RecentCard";
@@ -52,6 +53,7 @@ export function Dashboard() {
         <div className="flex items-center gap-4">
           <SyncPill />
           <span className="hidden text-sm text-ink-tertiary md:inline">Space &middot; start</span>
+          <AuthControls dashboardLink={false} />
         </div>
       </header>
 
