@@ -5,20 +5,27 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import type { Profile } from "@/lib/engine";
 import { loadProfile, resetProfile } from "@/lib/profile";
+import { SYNC_ENABLED, onProfile, startSync } from "@/lib/sync";
 import { Logo } from "@/components/ui/Logo";
 import { DailyCard } from "./DailyCard";
 import { RatingCard } from "./RatingCard";
 import { RecentCard } from "./RecentCard";
 import { SkillsCard } from "./SkillsCard";
+import { SyncPill } from "./SyncPill";
 
 /** Mirrors the Figma frame "Home — Dashboard". */
 export function Dashboard() {
   const router = useRouter();
   const [profile, setProfile] = useState<Profile | null>(null);
 
-  // localStorage only exists in the browser, so the dashboard fills in after mount.
+  // localStorage only exists in the browser, so the dashboard fills in after mount. It renders from the local
+  // copy straight away; with sync on, the server's profile replaces it a moment later (no spinner in between).
   useEffect(() => {
     setProfile(loadProfile());
+    if (!SYNC_ENABLED) return;
+    const stop = onProfile(setProfile);
+    startSync();
+    return stop;
   }, []);
 
   useEffect(() => {
@@ -42,7 +49,10 @@ export function Dashboard() {
     <main className="mx-auto flex min-h-dvh w-full max-w-[1440px] flex-col px-6 py-6 md:px-12">
       <header className="flex items-center justify-between py-1">
         <Logo />
-        <span className="hidden text-sm text-ink-tertiary md:inline">Space &middot; start</span>
+        <div className="flex items-center gap-4">
+          <SyncPill />
+          <span className="hidden text-sm text-ink-tertiary md:inline">Space &middot; start</span>
+        </div>
       </header>
 
       {profile && (
@@ -66,9 +76,12 @@ export function Dashboard() {
       )}
 
       <footer className="mt-auto flex justify-end pt-10 text-sm text-ink-tertiary">
-        <button type="button" onClick={onReset} className="rounded-key px-2 py-1 hover:text-ink-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent">
-          Reset progress
-        </button>
+        {/* With sync on the server holds the real profile, so a local reset would just come back on the next refresh. */}
+        {!SYNC_ENABLED && (
+          <button type="button" onClick={onReset} className="rounded-key px-2 py-1 hover:text-ink-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent">
+            Reset progress
+          </button>
+        )}
       </footer>
     </main>
   );

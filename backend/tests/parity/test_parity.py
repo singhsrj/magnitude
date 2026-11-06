@@ -14,9 +14,10 @@ sys.path.insert(0, str(ROOT / "packages" / "engine"))
 from magnitude_engine import (  # noqa: E402
     DAILY_LENGTH, daily_problem, daily_seed, generate_problem, mulberry32,
     pick_skill, target_problem_rating, update_player,
+    next_gen_skills, normalize_time, round_rng, session_problem,
 )
 
-GOLDEN = json.loads((pathlib.Path(__file__).parent / "golden.json").read_text())
+GOLDEN = json.loads((pathlib.Path(__file__).parent / "golden.json").read_text(encoding="utf-8"))
 
 
 def problem_dict(p):
@@ -69,6 +70,45 @@ class Parity(unittest.TestCase):
             rng = mulberry32(case["seed"])
             got = [pick_skill(rng, case["skills"]) for _ in case["picks"]]
             self.assertEqual(got, case["picks"])
+
+    # ---- Phase 4: practice sessions
+    def test_round_rng(self):
+        for case in GOLDEN["roundRngs"]:
+            rng = round_rng(case["seed"], case["index"])
+            self.assertEqual([rng() for _ in case["values"]], case["values"], f"index {case['index']}")
+
+    def test_normalize_time(self):
+        for case in GOLDEN["normalizeCases"]:
+            self.assertEqual(normalize_time(case["ms"]), case["result"], f"{case['ms']}ms")
+
+    def test_session_problems(self):
+        for case in GOLDEN["sessionProblems"]:
+            for index, want in enumerate(case["problems"]):
+                got = problem_dict(session_problem(case["seed"], index, case["gen"]))
+                self.assertEqual(got, want, f"seed {case['seed']} gen#{case['g']} round {index}")
+
+    def test_session_replays(self):
+        """Replay scripted sessions round by round: same problem, same grading, same ratings and gen skills."""
+        for run in GOLDEN["sessionReplays"]:
+            seed = run["seed"]
+            gen = dict(run["startSkills"])
+            rating = run["startRating"]
+            skills = dict(run["startSkills"])
+            for r in run["rounds"]:
+                where = f"seed {seed} round {r['index']}"
+                p = session_problem(seed, r["index"], gen)
+                self.assertEqual((p.id, p.skill, p.rating, p.answer), (r["problemId"], r["skill"], r["problemRating"], r["answer"]), where)
+                time_ms = r["timeMs"] if r["choice"] is None else normalize_time(r["rawMs"])
+                self.assertEqual(time_ms, r["timeMs"], where)
+                correct = r["choice"] is not None and r["choice"] == p.answer
+                self.assertEqual(correct, r["correct"], where)
+                rating = update_player(rating, p.rating, correct, time_ms).next
+                skills[p.skill] = update_player(skills[p.skill], p.rating, correct, time_ms).next
+                gen = next_gen_skills(gen, p.skill, p.rating, correct, time_ms)
+                self.assertAlmostEqual(rating, r["rating"], places=9, msg=where)
+                for s in skills:
+                    self.assertAlmostEqual(skills[s], r["skills"][s], places=9, msg=f"{where} {s}")
+                    self.assertAlmostEqual(gen[s], r["gen"][s], places=9, msg=f"{where} gen {s}")
 
 
 if __name__ == "__main__":

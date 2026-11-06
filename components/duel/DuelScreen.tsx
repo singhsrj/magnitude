@@ -14,7 +14,7 @@ import { TimerBar } from "./TimerBar";
 
 export function DuelScreen({ mode = "practice" }: { mode?: DuelMode }) {
   const router = useRouter();
-  const { profile, problem, phase, result, runKey, winChance, answer, next, index, summary, lastInSet } = useDuel(mode);
+  const { profile, problem, phase, result, runKey, winChance, answer, next, index, summary, lastInSet, connecting } = useDuel(mode);
 
   // Keyboard: ← / → answer, Space or Enter continues, Esc leaves.
   useEffect(() => {
@@ -134,7 +134,9 @@ export function DuelScreen({ mode = "practice" }: { mode?: DuelMode }) {
           <footer className="flex flex-wrap items-center justify-between gap-2 px-6 py-5 text-sm md:px-12 md:py-6">
             <span className="text-ink-secondary">
               {!problem
-                ? "Loading\u2026"
+                ? connecting
+                  ? "Connecting\u2026 can\u2019t reach the server yet, retrying"
+                  : "Loading\u2026"
                 : mode === "daily"
                   ? `Daily set \u00b7 ${index + 1} of ${DAILY_LENGTH} \u00b7 ${SKILL_LABEL[problem.skill]}`
                   : `Round ${profile.rounds + (inResult ? 0 : 1)} \u00b7 ${SKILL_LABEL[problem.skill]} \u00b7 problem rated ${fmtInt(problem.rating)}`}

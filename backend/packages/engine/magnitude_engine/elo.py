@@ -4,14 +4,20 @@ from __future__ import annotations
 from dataclasses import dataclass
 import math
 
-from .jsmath import clamp
+from .jsmath import clamp, js_round
 
 DEFAULT_RATING = 1200.0
 K_FACTOR = 24
 TIME_FAST_MS = 800
 TIME_SLOW_MS = 6000
 ROUND_LIMIT_MS = 8000
+MIN_TIME_MS = 250  # fastest time that is scored; also the server's floor
 TARGET_WIN_RATE = 0.7
+
+
+def normalize_time(ms: float) -> int:
+    """Think time as whole ms in [MIN_TIME_MS, ROUND_LIMIT_MS]. Mirrors normalizeTime in elo.ts."""
+    return int(clamp(js_round(ms), MIN_TIME_MS, ROUND_LIMIT_MS))
 
 
 def expected_score(player: float, problem: float) -> float:

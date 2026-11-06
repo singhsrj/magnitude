@@ -8,10 +8,16 @@ at the edge of what you can do quickly. Designed in Figma ("Magnitude — UI/UX"
 ```bash
 npm install
 npm run dev            # http://localhost:3000
-npm run verify:engine  # engine sanity checks (Elo, generator, simulated players)
+npm run verify:engine  # engine sanity checks (Elo, generator, sessions, reconcile, simulated players)
 npm run golden         # regenerate the test vectors the Python engine is checked against
 npm run typecheck
+npm run e2e:sync       # play 250 rounds through the real sync code against a running backend (see below)
 ```
+
+**With the backend (Phase 4):** copy `.env.example` to `.env.local`, start the backend
+(`cd backend && docker compose -f docker-compose.yml -f docker-compose.local.yml up -d --build`), then `npm run dev`.
+Progress is then stored and verified on the server. Without `.env.local` the app runs entirely in the browser, as before.
+Browser-level check in real Chrome: `node scripts/e2e-browser.mjs` (header of the file says what it needs).
 
 Controls: `←` / `→` answer, `Space` or `Enter` continues, `Esc` leaves.
 
@@ -22,8 +28,8 @@ Controls: `←` / `→` answer, `Space` or `Enter` continues, `Esc` leaves.
 | 0 | Scaffold, Figma design tokens in Tailwind, Geist fonts, primitives (KeyCap, StatPill, ExprCard) | done |
 | 1 | Playable duel: problem generator, speed-adjusted Elo, keyboard play, local persistence | done |
 | 2 | Home dashboard from Figma (rating chart, skills, daily set, last 20 rounds), playable daily set, wrong-answer shake, mobile layouts | done |
-| 3 | Backend in `backend/` (FastAPI problem + rating services, Neon Postgres, Upstash Redis, Docker Compose); engine parity-tested against this app | built, see status in `backend/README.md` |
-| 4 | Wire the UI to the API; server-side daily set; problem difficulty calibrated from real play | |
+| 3 | Backend in `backend/` (FastAPI, Neon Postgres, Upstash Redis, Docker Compose); engine parity-tested against this app | done |
+| 4 | Play locally from a server-issued seed, sync in the background, server replays and verifies (`PHASE_4.md`) | done; difficulty calibration from real play is still open |
 | 5 | AWS deploy (ECS + scheduled Lambda), CI, metrics | |
 
 ## How the rating works
@@ -55,7 +61,8 @@ Controls: `←` / `→` answer, `Space` or `Enter` continues, `Esc` leaves.
   runs nearer 80% than 70%. Phase 4 calibrates this with real play data.
 - The daily set's top difficulty lands around 1500, not the 1650 target, because the percentage and fraction
   generators top out near 1600 (see above).
-- Profile data lives in the browser (`localStorage`) until the backend exists, so progress doesn't sync across devices.
+- With sync off, profile data lives in the browser (`localStorage`) and doesn't follow you across devices. With sync on
+  the server holds it (anonymous account per device; lose the token and the account is gone).
 
 ## Layout
 
@@ -67,9 +74,11 @@ components/home/     Dashboard, RatingCard + RatingChart, SkillsCard, DailyCard,
 hooks/useDuel.ts     duel state machine (practice and daily modes)
 lib/engine/          pure game logic: elo, problems, session, stats, daily, dates, seeded rng (no React)
 lib/format.ts        number and time formatting
-lib/profile.ts       persistence (swapped for the API in Phase 4)
+lib/profile.ts       local copy of the profile (a cache when sync is on)
+lib/api.ts, auth.ts  backend access and the anonymous account token (Phase 4)
+lib/sync.ts          session tickets, outbox, background sync (Phase 4); lib/reconcile.ts is its pure core
 scripts/             engine verification, golden-vector generator
-backend/             Phase 3: FastAPI services, Alembic migrations, Docker Compose (see backend/README.md)
+backend/             FastAPI rating service, Alembic migrations, Docker Compose (see backend/README.md)
 ```
 
 The engine in `lib/engine` is deliberately framework-free so Phase 3 can port it to the Python service

@@ -8,7 +8,8 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "verify:engine": "tsx scripts/verify-engine.ts",
-    "golden": "tsx scripts/generate-golden.ts"
+    "golden": "tsx scripts/generate-golden.ts",
+    "e2e:sync": "tsx scripts/e2e-sync.ts"
   },
   "dependencies": {
     "next": "^15.5.0",

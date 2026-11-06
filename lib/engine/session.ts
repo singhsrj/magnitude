@@ -1,6 +1,7 @@
-import { DEFAULT_RATING, updatePlayer } from "./elo";
+import { DEFAULT_RATING, targetProblemRating, updatePlayer } from "./elo";
 import { dateKey } from "./dates";
-import type { Rng } from "./rng";
+import { generateProblem } from "./problems";
+import { mulberry32, type Rng } from "./rng";
 import { SKILLS, type DailyResult, type Problem, type Profile, type Skill } from "./types";
 
 const HISTORY_CAP = 200;
@@ -89,4 +90,50 @@ export function pickSkill(rng: Rng, skills: Record<Skill, number>): Skill {
     if (roll <= 0) return SKILLS[i];
   }
   return SKILLS[SKILLS.length - 1];
+}
+
+// ---------------------------------------------------------------------------------------------------------
+// Practice sessions (Phase 4). The server issues a seed; every problem is a pure function of
+// (seed, round index, generation skills), so the server can replay a session the client played offline.
+// Mirrored by backend/packages/engine/magnitude_engine/session.py. Change both, then `npm run golden`.
+// ---------------------------------------------------------------------------------------------------------
+
+/** A session ends after this many rounds; the next one starts with a fresh seed. */
+export const SESSION_MAX_ROUNDS = 500;
+
+/** One generator per round, so rounds are independent of each other (same idea as dailyProblem). */
+export function roundRng(seed: number, index: number): Rng {
+  return mulberry32(seed ^ Math.imul(index + 1, 0x9e3779b1));
+}
+
+/** Ratings as whole numbers: problem choice then depends only on integers, never on float noise. */
+export function roundSkills(skills: Record<Skill, number>): Record<Skill, number> {
+  return {
+    multiplication: Math.round(skills.multiplication),
+    percentages: Math.round(skills.percentages),
+    fractions: Math.round(skills.fractions),
+    powers: Math.round(skills.powers),
+  };
+}
+
+/**
+ * Problem `index` of a practice session. `gen` are the session's generation skills before this round
+ * (they start as the player's skill ratings and roll forward with `nextGenSkills`).
+ */
+export function sessionProblem(seed: number, index: number, gen: Record<Skill, number>): Problem {
+  const rng = roundRng(seed, index);
+  const rounded = roundSkills(gen);
+  const skill = pickSkill(rng, rounded);
+  const targetRating = Math.round(targetProblemRating(rounded[skill]));
+  return generateProblem({ skill, targetRating, rng });
+}
+
+/** Generation skills after a round. Floats are kept; they are only rounded when a problem is picked. */
+export function nextGenSkills(
+  gen: Record<Skill, number>,
+  problem: Pick<Problem, "skill" | "rating">,
+  correct: boolean,
+  timeMs: number,
+): Record<Skill, number> {
+  return { ...gen, [problem.skill]: updatePlayer(gen[problem.skill], problem.rating, correct, timeMs).next };
 }

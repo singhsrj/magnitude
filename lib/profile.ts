@@ -1,9 +1,11 @@
 import { migrateProfile, newProfile } from "./engine/session";
 import type { Profile } from "./engine/types";
+import { reconcileProfile } from "./reconcile";
+import type { OutboxEvent } from "./syncTypes";
 
 /**
- * Persistence: the browser's localStorage for now.
- * Phase 4 swaps this for the rating service API; keep the Profile shape the same.
+ * The local copy of the profile: what the app renders and plays from, always, even offline.
+ * With sync on, the server is the source of truth and this is a cache that `replaceProfile` keeps current.
  */
 const KEY = "magnitude:profile:v1";
 
@@ -32,4 +34,14 @@ export function resetProfile(): Profile {
   const fresh = newProfile();
   saveProfile(fresh);
   return fresh;
+}
+
+/**
+ * Adopts the server's profile (plus rounds it hasn't acknowledged yet) as the local one.
+ * Returns the profile that was stored.
+ */
+export function replaceProfile(server: Profile, pending: readonly OutboxEvent[]): Profile {
+  const next = reconcileProfile(server, pending);
+  saveProfile(next);
+  return next;
 }

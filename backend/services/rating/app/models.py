@@ -42,6 +42,31 @@ class Player(Base):
     best_streak: Mapped[int] = mapped_column(Integer, default=0)
     rounds: Mapped[int] = mapped_column(Integer, default=0)
     skills: Mapped[dict[str, float]] = mapped_column(JSONType, default=default_skills)
+    # True once a pre-Phase-4 browser profile has been imported (that can happen only once, unverified).
+    imported: Mapped[bool] = mapped_column(Boolean, default=False, server_default=text("false"))
+
+
+class GameSession(Base):
+    """A practice session: the server issues the seed, the browser plays offline, then /v1/sync replays it.
+
+    `gen_skills` are the generation skills before round `next_index` (see session_problem in the engine).
+    `first_at` is when round 0 *started* on the client (its answer time minus its think time).
+    """
+
+    __tablename__ = "sessions"
+
+    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=uuid.uuid4)
+    player_id: Mapped[uuid.UUID] = mapped_column(Uuid, ForeignKey("players.id", ondelete="CASCADE"))
+    seed: Mapped[int] = mapped_column(BigInteger)  # uint32: too big for a signed int4
+    issued_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+    expires_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    gen_skills: Mapped[dict[str, float] | None] = mapped_column(JSONType, nullable=True)
+    next_index: Mapped[int] = mapped_column(Integer, default=0, server_default=text("0"))
+    first_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    time_sum_ms: Mapped[int] = mapped_column(BigInteger, default=0, server_default=text("0"))
+    status: Mapped[str] = mapped_column(String(8), default="open", server_default=text("'open'"))  # open | broken
+
+    __table_args__ = (Index("ix_sessions_player", "player_id", "issued_at"),)
 
 
 class Round(Base):
@@ -60,6 +85,8 @@ class Round(Base):
     mode: Mapped[str] = mapped_column(String(8))  # "practice" | "daily"
     local_date: Mapped[date] = mapped_column(Date)  # the player's own calendar day
     daily_index: Mapped[int | None] = mapped_column(SmallInteger, nullable=True)
+    session_id: Mapped[uuid.UUID | None] = mapped_column(Uuid, ForeignKey("sessions.id", ondelete="SET NULL"), nullable=True)
+    round_index: Mapped[int | None] = mapped_column(Integer, nullable=True)
 
     __table_args__ = (
         Index("ix_rounds_player_at", "player_id", "at"),
@@ -71,6 +98,14 @@ class Round(Base):
             unique=True,
             postgresql_where=text("mode = 'daily'"),
             sqlite_where=text("mode = 'daily'"),
+        ),
+        # A practice round of a session can only be stored once (this is what makes /v1/sync idempotent).
+        Index(
+            "uq_rounds_session",
+            "session_id", "round_index",
+            unique=True,
+            postgresql_where=text("session_id IS NOT NULL"),
+            sqlite_where=text("session_id IS NOT NULL"),
         ),
     )
 

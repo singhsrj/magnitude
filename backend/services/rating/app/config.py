@@ -11,15 +11,11 @@ class Settings(BaseSettings):
     # Upstash, TLS form: rediss://default:<password>@<host>.upstash.io:6379
     redis_url: str
 
-    problem_service_url: str = "http://problem:8001"
-    internal_api_key: str
-
     cors_origins: str = "http://localhost:3000"
     rate_limit_per_minute: int = 120
     signup_limit_per_hour: int = 10
-    problem_ttl_seconds: int = 30
+    session_limit_per_minute: int = 30
     profile_cache_seconds: int = 30
-    daily_cache_seconds: int = 129_600  # 36 hours
     log_level: str = "INFO"
 
     @property

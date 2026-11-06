@@ -5,10 +5,13 @@
 import assert from "node:assert/strict";
 import {
   DAILY_LENGTH, SKILLS, addDays, applyRound, dailyProblem, dayIntensity, dayStreak, expectedScore,
-  generateProblem, lastDays, migrateProfile, mulberry32, newProfile, outcomeScore, pickSkill,
-  ratingSeries, recordDaily, targetProblemRating, updatePlayer, weakestSkill, weekDelta,
+  MIN_TIME_MS, ROUND_LIMIT_MS, SESSION_MAX_ROUNDS, dateKey, generateProblem, lastDays, migrateProfile, mulberry32,
+  newProfile, nextGenSkills, normalizeTime, outcomeScore, pickSkill, ratingSeries, recordDaily, roundRng,
+  sessionProblem, targetProblemRating, updatePlayer, weakestSkill, weekDelta,
   type Skill,
 } from "../lib/engine";
+import { profileToImport, reconcileProfile } from "../lib/reconcile";
+import type { OutboxEvent } from "../lib/syncTypes";
 
 // 1) Elo basics
 {
@@ -180,4 +183,74 @@ console.log("ok  simulated players converge");
   const p2 = recordDaily(p1, "2026-10-28", { correct: 1, total: 10, timeMs: 1 });
   assert.equal(p2.daily["2026-10-28"].correct, 8, "first completion wins");
   console.log("ok  migration and recordDaily");
+}
+
+// 12) Phase 4: sessions are reproducible, and the engine's session/time helpers behave
+{
+  const gen = { multiplication: 1200, percentages: 1300, fractions: 1100, powers: 1250 };
+  assert.deepEqual(sessionProblem(7, 3, gen), sessionProblem(7, 3, gen), "same seed + index + skills -> same problem");
+  assert.notEqual(sessionProblem(7, 3, gen).id, sessionProblem(8, 3, gen).id, "different seed -> different problem");
+  assert.notEqual(sessionProblem(7, 3, gen).id, sessionProblem(7, 4, gen).id, "different index -> different problem");
+  // a round's problem doesn't depend on how many numbers earlier rounds drew
+  assert.deepEqual(roundRng(9, 5)(), roundRng(9, 5)());
+  // float noise in the skills can't change the problem (they are rounded first)
+  assert.deepEqual(sessionProblem(7, 3, gen), sessionProblem(7, 3, { ...gen, multiplication: 1200.2, powers: 1249.6 }));
+  assert.equal(normalizeTime(0), MIN_TIME_MS);
+  assert.equal(normalizeTime(249.6), 250);
+  assert.equal(normalizeTime(99999), ROUND_LIMIT_MS);
+  assert.equal(normalizeTime(1234.5), 1235);
+  const p = sessionProblem(7, 0, gen);
+  const next = nextGenSkills(gen, p, true, 600);
+  assert.ok(next[p.skill] > gen[p.skill] || p.rating < gen[p.skill], "gen skill rolls forward");
+  assert.equal(SESSION_MAX_ROUNDS, 500);
+  console.log("ok  session problems are reproducible");
+}
+
+// 13) Phase 4: reconcile = server profile + rounds the server hasn't acknowledged
+{
+  const event = (i: number, correct: boolean, at: number): OutboxEvent => ({
+    kind: "practice", sessionId: "s", index: i, choice: correct ? "left" : "right", timeMs: 900, at, localDate: dateKey(at),
+    problemId: `p${i}`, skill: SKILLS[i % 4], problemRating: 1230 + i, correct,
+  });
+  const t0 = new Date(2026, 10, 5, 10, 0, 0).getTime();
+  const events = Array.from({ length: 8 }, (_, i) => event(i, i % 3 !== 0, t0 + i * 4000));
+
+  // "what the app already shows": all 8 applied locally
+  let local = newProfile();
+  for (const e of events) local = applyRound(local, { skill: e.skill, rating: e.problemRating } as never, e.correct, e.timeMs, e.at).profile;
+  // "what the server holds": the first 5 applied. The last 3 are still pending.
+  let server = newProfile();
+  for (const e of events.slice(0, 5)) server = applyRound(server, { skill: e.skill, rating: e.problemRating } as never, e.correct, e.timeMs, e.at).profile;
+
+  const merged = reconcileProfile(server, events.slice(5));
+  assert.deepEqual(merged, local, "server + pending equals what the player already sees");
+  assert.deepEqual(reconcileProfile(local, []), local, "nothing pending: the server profile is adopted as is");
+  assert.equal(server.rounds, 5, "reconcile never mutates its input");
+
+  // a complete daily set that is still unsynced is shown as done
+  const daily: OutboxEvent[] = Array.from({ length: DAILY_LENGTH }, (_, i) => ({
+    kind: "daily", date: "2026-11-05", index: i, choice: "left", timeMs: 1000, at: t0 + i * 3000,
+    problemId: `d${i}`, skill: SKILLS[i % 4], problemRating: 1100 + 50 * i, correct: i !== 2,
+  }));
+  const withDaily = reconcileProfile(newProfile(), daily);
+  assert.deepEqual(withDaily.daily["2026-11-05"], { correct: 9, total: 10, timeMs: 10000 });
+  assert.equal(withDaily.rounds, 10);
+  assert.equal(reconcileProfile(newProfile(), daily.slice(0, 6)).daily["2026-11-05"], undefined, "a partial set isn't reported as done");
+  console.log("ok  reconcile");
+}
+
+// 14) Phase 4: the one-time import payload
+{
+  let p = newProfile();
+  const t0 = new Date(2026, 10, 5, 23, 30).getTime();
+  for (let i = 0; i < 230; i++) {
+    p = applyRound(p, { skill: SKILLS[i % 4], rating: 1200 + (i % 50) } as never, i % 4 !== 0, 1000 + i, t0 + i * 60_000).profile;
+  }
+  const out = profileToImport(p);
+  assert.equal(out.history.length, 200, "history is capped at what the server accepts");
+  assert.equal(out.history[0].localDate, dateKey(out.history[0].at), "carries the player's own calendar day");
+  assert.equal(out.rounds, 230);
+  assert.deepEqual(out.skills, p.skills);
+  assert.ok(Object.keys(out.days).length >= 2, "the run crossed midnight, so two days are reported");
+  console.log("ok  import payload");
 }

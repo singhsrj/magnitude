@@ -12,10 +12,20 @@ export const K_FACTOR = 24;
 export const TIME_FAST_MS = 800;
 export const TIME_SLOW_MS = 6000;
 export const ROUND_LIMIT_MS = 8000;
+/** Fastest time the game will score. Faster presses are treated as this (also the server's floor). */
+export const MIN_TIME_MS = 250;
 /** The game aims to serve problems you'd "win" this often */
 export const TARGET_WIN_RATE = 0.7;
 
 const clamp = (n: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, n));
+
+/**
+ * Think time as a whole number of ms in [MIN_TIME_MS, ROUND_LIMIT_MS]. The client scores with this value and
+ * sends exactly this value, so client and server compute identical Elo.
+ */
+export function normalizeTime(ms: number): number {
+  return clamp(Math.round(ms), MIN_TIME_MS, ROUND_LIMIT_MS);
+}
 
 export function expectedScore(player: number, problem: number): number {
   return 1 / (1 + Math.pow(10, (problem - player) / 400));

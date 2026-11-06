@@ -3,10 +3,13 @@
 """
 import ssl
 import unittest
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
 
 from app.dburl import prepare_database_url
-from app.rules import LATENCY_SLACK_MS, MIN_TIME_MS, effective_time_ms, local_date_ok, timed_out
+from app.rules import (
+    TIME_SLACK_PER_ROUND_MS, at_plausible, datetime_to_ms, local_date_matches, ms_to_datetime,
+    session_time_plausible, start_skills_plausible,
+)
 
 NEON_POOLED = "postgresql://neondb_owner:pw@ep-cool-123-pooler.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
 NEON_DIRECT = "postgresql://neondb_owner:pw@ep-cool-123.us-east-2.aws.neon.tech/neondb?sslmode=require"
@@ -48,32 +51,41 @@ class DbUrl(unittest.TestCase):
         self.assertEqual(prepare_database_url("sqlite+aiosqlite://"), ("sqlite+aiosqlite://", {}))
 
 
-class Rules(unittest.TestCase):
-    def test_client_time_is_used_when_plausible(self):
-        self.assertEqual(effective_time_ms(1500, 2500), 1500)
-        self.assertEqual(effective_time_ms(1500, None), 1500)
+class SyncRules(unittest.TestCase):
+    NOW = datetime(2026, 11, 6, 12, 0, tzinfo=timezone.utc)
 
-    def test_client_cannot_claim_a_much_faster_time_than_the_server_saw(self):
-        self.assertEqual(effective_time_ms(200, 7000), 7000 - LATENCY_SLACK_MS)
+    def test_ms_round_trip_is_exact(self):
+        for ms in (0, 1, 1_730_000_000_123, 1_730_000_000_999, 1_762_430_400_001):
+            self.assertEqual(datetime_to_ms(ms_to_datetime(ms)), ms)
+        self.assertEqual(datetime_to_ms(ms_to_datetime(1_730_000_000_123).replace(tzinfo=None)), 1_730_000_000_123)  # naive = UTC
 
-    def test_floor_and_ceiling(self):
-        self.assertEqual(effective_time_ms(0, None), MIN_TIME_MS)
-        self.assertEqual(effective_time_ms(99_999, None), 8000)
-        self.assertEqual(effective_time_ms(500, 60_000), 8000)
+    def test_answers_cannot_be_from_the_future_or_before_the_ticket(self):
+        self.assertTrue(at_plausible(self.NOW, self.NOW))
+        self.assertTrue(at_plausible(self.NOW + timedelta(seconds=59), self.NOW))
+        self.assertFalse(at_plausible(self.NOW + timedelta(seconds=61), self.NOW))
+        issued = self.NOW - timedelta(hours=1)
+        self.assertTrue(at_plausible(issued - timedelta(seconds=30), self.NOW, issued))
+        self.assertFalse(at_plausible(issued - timedelta(minutes=5), self.NOW, issued))
 
-    def test_timeouts(self):
-        self.assertTrue(timed_out(None, 100))
-        self.assertTrue(timed_out("left", 8000 + LATENCY_SLACK_MS + 1))
-        self.assertFalse(timed_out("left", 5000))
-        self.assertFalse(timed_out("right", None))
+    def test_local_day_is_within_a_day_of_the_utc_day_of_the_answer(self):
+        at = datetime(2026, 11, 6, 0, 30, tzinfo=timezone.utc)
+        self.assertTrue(local_date_matches(date(2026, 11, 5), at))
+        self.assertTrue(local_date_matches(date(2026, 11, 7), at))
+        self.assertFalse(local_date_matches(date(2026, 11, 8), at))
+        self.assertFalse(local_date_matches(date(2026, 11, 1), at))
 
-    def test_local_date_window(self):
-        today = date(2026, 10, 28)
-        self.assertTrue(local_date_ok(date(2026, 10, 27), today))
-        self.assertTrue(local_date_ok(date(2026, 10, 29), today))
-        self.assertFalse(local_date_ok(date(2026, 10, 30), today))
-        self.assertFalse(local_date_ok(date(2026, 10, 26), today))
+    def test_start_skills_must_be_close_to_the_servers(self):
+        server = {"multiplication": 1200, "percentages": 1250, "fractions": 1100, "powers": 1300}
+        self.assertTrue(start_skills_plausible(dict(server), server))
+        self.assertTrue(start_skills_plausible({**server, "powers": 1590.5}, server))
+        self.assertFalse(start_skills_plausible({**server, "powers": 1700}, server))
+        self.assertFalse(start_skills_plausible({"multiplication": 1200}, server))  # missing skills
+        self.assertFalse(start_skills_plausible({**server, "powers": "x"}, server))
 
-
-if __name__ == "__main__":
-    unittest.main()
+    def test_think_times_cannot_outrun_the_clock(self):
+        start = self.NOW
+        at = start + timedelta(seconds=10)
+        self.assertTrue(session_time_plausible(10_000, start, at, 5))
+        self.assertTrue(session_time_plausible(10_000 + 5 * TIME_SLACK_PER_ROUND_MS, start, at, 5))
+        self.assertFalse(session_time_plausible(10_001 + 5 * TIME_SLACK_PER_ROUND_MS, start, at, 5))
+        self.assertFalse(session_time_plausible(40_000, start, at, 1))

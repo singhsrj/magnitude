@@ -4,7 +4,7 @@ from __future__ import annotations
 import hashlib
 import secrets
 import uuid
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 
 from sqlalchemy import case, func, select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -12,6 +12,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from magnitude_engine import DEFAULT_RATING, EloUpdate, update_player
 
 from . import schemas
+from .rules import datetime_to_ms, ms_to_datetime
 from .models import DailyResult, Player, Round, default_skills, utcnow
 
 
@@ -20,12 +21,59 @@ def hash_token(token: str) -> str:
 
 
 def to_ms(dt: datetime) -> int:
-    if dt.tzinfo is None:  # SQLite drops tzinfo; everything we store is UTC
-        dt = dt.replace(tzinfo=timezone.utc)
-    return int(dt.timestamp() * 1000)
+    return datetime_to_ms(dt)  # integer arithmetic: int(ts * 1000) can be 1 ms off
 
 
-async def create_player(session: AsyncSession) -> tuple[Player, str]:
+def _iso_date(key: str) -> date | None:
+    try:
+        return date.fromisoformat(key)
+    except ValueError:
+        return None
+
+
+def import_profile(session: AsyncSession, player: Player, data: schemas.ProfileImport) -> None:
+    """One-time import of a pre-Phase-4 browser profile (decision 1 in PHASE_4.md). Not verified: it can't be.
+
+    Stats go on the player row. History becomes `rounds` rows. Day counts and the day streak come from rounds
+    too, so days the last-200 history doesn't cover get placeholder rows (mode "imported"), which the profile's
+    history and the daily set both ignore.
+    """
+    player.rating, player.peak = data.rating, max(data.peak, data.rating)
+    player.skills = {s: float(v) for s, v in data.skills.items()}
+    player.streak, player.best_streak, player.rounds = data.streak, max(data.best_streak, data.streak), data.rounds
+    player.imported = True
+
+    seen: dict[date, list[int]] = {}  # day -> [rounds, correct] already covered by real history rows
+    rating = data.rating
+    for rec in reversed(data.history):  # newest first, so rating_after steps back through the deltas
+        at = ms_to_datetime(rec.at)
+        day = rec.local_date
+        counted = seen.setdefault(day, [0, 0])
+        counted[0] += 1
+        counted[1] += 1 if rec.correct else 0
+        session.add(Round(
+            player_id=player.id, at=at, skill=rec.skill, correct=rec.correct, time_ms=rec.time_ms, delta=rec.delta,
+            rating_after=rating, problem_rating=rec.problem_rating, problem_id="imported", mode="practice", local_date=day,
+        ))
+        rating -= rec.delta
+    for key, stat in data.days.items():
+        day = _iso_date(key)
+        if day is None:
+            continue
+        have = seen.get(day, [0, 0])
+        for i in range(max(0, stat.rounds - have[0])):
+            session.add(Round(
+                player_id=player.id, at=datetime(day.year, day.month, day.day, 12, tzinfo=timezone.utc),
+                skill="multiplication", correct=i < stat.correct - have[1], time_ms=0, delta=0.0, rating_after=data.rating,
+                problem_rating=0, problem_id="imported", mode="imported", local_date=day,
+            ))
+    for key, res in data.daily.items():
+        day = _iso_date(key)
+        if day is not None:
+            session.add(DailyResult(player_id=player.id, day=day, correct=res.correct, total=res.total, time_ms=res.time_ms))
+
+
+async def create_player(session: AsyncSession, imported: schemas.ProfileImport | None = None) -> tuple[Player, str]:
     token = secrets.token_urlsafe(32)
     player = Player(
         id=uuid.uuid4(),
@@ -38,6 +86,9 @@ async def create_player(session: AsyncSession) -> tuple[Player, str]:
         skills=default_skills(),
     )
     session.add(player)
+    if imported is not None:
+        await session.flush()  # the rounds below reference the player row
+        import_profile(session, player, imported)
     await session.commit()
     return player, token
 
@@ -67,6 +118,9 @@ def apply_outcome(
     mode: str,
     local_date,
     daily_index: int | None = None,
+    at: datetime | None = None,
+    session_id: uuid.UUID | None = None,
+    round_index: int | None = None,
 ) -> EloUpdate:
     """Updates the (locked) player in memory and queues the round row. The caller commits."""
     overall = update_player(player.rating, problem_rating, correct, time_ms)
@@ -92,37 +146,12 @@ def apply_outcome(
             mode=mode,
             local_date=local_date,
             daily_index=daily_index,
+            session_id=session_id,
+            round_index=round_index,
+            **({"at": at} if at is not None else {}),
         )
     )
     return overall
-
-
-def answer_out(player: Player, update: EloUpdate, *, correct: bool, answer: str, left: float, right: float) -> dict:
-    return {
-        "correct": correct,
-        "answer": answer,
-        "values": schemas.Revealed(left=left, right=right),
-        "delta": update.delta,
-        "expected": update.expected,
-        "score": update.score,
-        "rating": player.rating,
-        "peak": player.peak,
-        "streak": player.streak,
-        "skills": dict(player.skills),
-        "rounds": player.rounds,
-    }
-
-
-async def daily_answered_count(session: AsyncSession, player_id: uuid.UUID, day) -> int:
-    result = await session.execute(
-        select(func.count()).select_from(Round).where(Round.player_id == player_id, Round.local_date == day, Round.mode == "daily")
-    )
-    return int(result.scalar_one())
-
-
-async def daily_result(session: AsyncSession, player_id: uuid.UUID, day) -> DailyResult | None:
-    result = await session.execute(select(DailyResult).where(DailyResult.player_id == player_id, DailyResult.day == day))
-    return result.scalar_one_or_none()
 
 
 async def finish_daily(session: AsyncSession, player: Player, day) -> tuple[schemas.DailyResultOut, float]:
@@ -146,7 +175,10 @@ async def build_profile(session: AsyncSession, player: Player) -> schemas.Profil
     history_rows = (
         (
             await session.execute(
-                select(Round).where(Round.player_id == player.id).order_by(Round.at.desc(), Round.id.desc()).limit(200)
+                select(Round)
+                .where(Round.player_id == player.id, Round.mode != "imported")
+                .order_by(Round.at.desc(), Round.id.desc())
+                .limit(200)
             )
         )
         .scalars()

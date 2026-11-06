@@ -1,4 +1,3 @@
-import random
 from datetime import datetime, timezone
 
 import fakeredis
@@ -10,27 +9,11 @@ from sqlalchemy.pool import StaticPool
 from app.config import Settings
 from app.main import create_app
 from app.models import Base
-from magnitude_engine import daily_set, generate_problem
-
-
-class FakeProblems:
-    """Stands in for the problem service: same engine, no HTTP."""
-
-    async def generate(self, skill, target_rating):
-        return generate_problem(skill, target_rating, random.Random().random)
-
-    async def daily(self, day):
-        return daily_set(day)
-
-    async def healthy(self):
-        return True
-
-    async def aclose(self):
-        pass
+from tests import helpers
 
 
 def make_settings(**overrides) -> Settings:
-    base = dict(database_url="sqlite+aiosqlite://", redis_url="redis://unused", internal_api_key="test", rate_limit_per_minute=1000)
+    base = dict(database_url="sqlite+aiosqlite://", redis_url="redis://unused", rate_limit_per_minute=1000)
     base.update(overrides)
     return Settings(**base)
 
@@ -62,7 +45,7 @@ async def make_client(engine, redis):
     clients = []
 
     async def build(**overrides) -> AsyncClient:
-        app = create_app(make_settings(**overrides), engine=engine, redis=redis, problems=FakeProblems())
+        app = create_app(make_settings(**overrides), engine=engine, redis=redis)
         c = AsyncClient(transport=ASGITransport(app=app), base_url="http://test")
         clients.append(c)
         return c
@@ -75,3 +58,10 @@ async def make_client(engine, redis):
 @pytest_asyncio.fixture
 async def client(make_client):
     return await make_client()
+
+
+@pytest_asyncio.fixture(autouse=True)
+async def _expose_engine(engine):
+    helpers.ENGINE["engine"] = engine
+    yield
+    helpers.ENGINE.clear()

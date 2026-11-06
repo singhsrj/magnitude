@@ -1,38 +1,53 @@
 """Game rules that don't need a database or Redis. Pure functions, easy to test."""
 from __future__ import annotations
 
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
+from typing import Mapping
 
-from magnitude_engine import ROUND_LIMIT_MS
+from magnitude_engine import SKILLS
 
-MIN_TIME_MS = 120
-# Server-observed time includes network travel both ways, so allow this much before
-# treating the client's own (smaller) clock as suspicious.
-LATENCY_SLACK_MS = 2000
+# ---- Phase 4 (offline play + sync) tolerances
+SESSION_TTL = timedelta(days=7)  # unused ticket lifetime, and how long after play its events are accepted
+FUTURE_SLACK = timedelta(seconds=60)  # the client clock may run a little ahead of ours
+START_SKILL_TOLERANCE = 300  # a session's declared starting skills vs. the server's
+TIME_SLACK_PER_ROUND_MS = 2000  # the sum of think times may exceed wall-clock time by this much per round
 
-
-def effective_time_ms(client_ms: int, server_elapsed_ms: float | None) -> int:
-    """Time used for scoring.
-
-    The client measures its own think time, which is the fair number. But a client could claim
-    a fast time it didn't earn, so it can't be lower than what the server observed minus slack.
-    """
-    t = min(max(client_ms, MIN_TIME_MS), ROUND_LIMIT_MS)
-    if server_elapsed_ms is not None:
-        t = max(t, min(ROUND_LIMIT_MS, int(server_elapsed_ms) - LATENCY_SLACK_MS))
-    return t
+# ---------------------------------------------------------------------------- Phase 4: sync plausibility
+def ms_to_datetime(ms: int) -> datetime:
+    """Exact (integer) conversion: going through float seconds would lose a millisecond now and then."""
+    return datetime(1970, 1, 1, tzinfo=timezone.utc) + timedelta(milliseconds=ms)
 
 
-def timed_out(choice: str | None, server_elapsed_ms: float | None) -> bool:
-    if choice is None:
-        return True
-    return server_elapsed_ms is not None and server_elapsed_ms > ROUND_LIMIT_MS + LATENCY_SLACK_MS
+def as_utc(dt: datetime) -> datetime:
+    """SQLite drops tzinfo; everything we store is UTC."""
+    return dt if dt.tzinfo is not None else dt.replace(tzinfo=timezone.utc)
 
 
-def local_date_ok(client_date: date, utc_today: date) -> bool:
-    """A client's local day is within one day of UTC's (timezones run from UTC-12 to UTC+14)."""
-    return abs((client_date - utc_today).days) <= 1
+def datetime_to_ms(dt: datetime) -> int:
+    return (as_utc(dt) - datetime(1970, 1, 1, tzinfo=timezone.utc)) // timedelta(milliseconds=1)
 
 
-def days_back(today: date, n: int) -> date:
-    return today - timedelta(days=n)
+def at_plausible(at: datetime, now: datetime, not_before: datetime | None = None) -> bool:
+    """An answer can't be from the future, or from before its session was issued."""
+    if at > now + FUTURE_SLACK:
+        return False
+    return not_before is None or at >= as_utc(not_before) - FUTURE_SLACK
+
+
+def local_date_matches(local_date: date, at: datetime) -> bool:
+    """The player's calendar day is within one day of the UTC day of the moment they answered."""
+    return abs((local_date - as_utc(at).date()).days) <= 1
+
+
+def start_skills_plausible(declared: Mapping[str, float], server: Mapping[str, float]) -> bool:
+    """A session's starting skills must be close to the server's (they only steer problem difficulty)."""
+    try:
+        return all(abs(float(declared[s]) - float(server[s])) <= START_SKILL_TOLERANCE for s in SKILLS)
+    except (KeyError, TypeError, ValueError):
+        return False
+
+
+def session_time_plausible(time_sum_ms: int, round_zero_start: datetime, at: datetime, rounds: int) -> bool:
+    """Think times can't add up to more time than actually passed since round 0 began."""
+    elapsed_ms = (as_utc(at) - as_utc(round_zero_start)) // timedelta(milliseconds=1)
+    return time_sum_ms <= elapsed_ms + TIME_SLACK_PER_ROUND_MS * rounds
